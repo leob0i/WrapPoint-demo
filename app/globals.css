@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* NAVBAR LOGO – pakotetaan koko isoksi */
+.nav-logo {
+  width: 100px;
+  height: 100px;
+}
