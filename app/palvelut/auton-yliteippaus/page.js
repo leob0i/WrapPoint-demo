@@ -3,157 +3,9 @@
 export default function AutonYliteippausPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
-      {/* YLÄVALIKKO – sama kuin etusivulla, linkit vie /-sivulle */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl backdrop-saturate-150 supports-backdrop-blur:bg-slate-950/50">
-        <div className="px-3 sm:px-4 lg:px-8 py-2 lg:py-3">
-          {/* Desktop: vasen nav – keskellä logo – oikealla CTA + some */}
-          <div className="hidden items-center md:flex">
-            {/* VASEN: navigaatio */}
-            <nav className="flex flex-1 items-center gap-6 text-sm text-slate-200 md:-ml-2 lg:-ml-4">
-              <a
-                href="/#etusivu"
-                className="transition-colors hover:text-amber-300"
-              >
-                Etusivu
-              </a>
-              <a
-                href="/#palvelut"
-                className="transition-colors hover:text-amber-300"
-              >
-                Palvelut
-              </a>
-              <a
-                href="/#galleria"
-                className="transition-colors hover:text-amber-300"
-              >
-                Galleria
-              </a>
-              <a
-                href="/#hinnasto"
-                className="transition-colors hover:text-amber-300"
-              >
-                Hinnasto
-              </a>
-              <a
-                href="/#meista"
-                className="transition-colors hover:text-amber-300"
-              >
-                Meistä
-              </a>
-              <a
-                href="/#yhteys"
-                className="transition-colors hover:text-amber-300"
-              >
-                Yhteystiedot
-              </a>
-            </nav>
+      {/* HEADER tulee globaalisti MainHeader-komponentista */}
 
-            {/* KESKI: iso logo */}
-            <a
-              href="/#etusivu"
-              className="flex min-w-[80px] items-center justify-center px-4"
-            >
-              <div className="relative flex h-9 w-24 md:h-10 md:w-28 items-center justify-center overflow-visible">
-                <img
-                  src="/logo-visualwraps.png"
-                  alt="Visual Wraps logo"
-                  className="h-full w-auto object-contain scale-[6.9] md:scale-[4.1]"
-                />
-              </div>
-            </a>
-
-            {/* OIKEA: some + CTA */}
-            <div className="flex flex-1 items-center justify-end gap-4">
-              <div className="flex items-center gap-2 text-xs text-slate-300">
-                {/* Instagram */}
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/5 hover:border-amber-400 hover:text-amber-300"
-                  aria-label="Instagram"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="h-4 w-4"
-                    aria-hidden="true"
-                  >
-                    <rect
-                      x="3"
-                      y="3"
-                      width="18"
-                      height="18"
-                      rx="5"
-                      ry="5"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="4"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                    />
-                    <circle cx="17" cy="7" r="1" fill="currentColor" />
-                  </svg>
-                </a>
-
-                {/* TikTok */}
-                <a
-                  href="https://tiktok.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/5 hover:border-amber-400 hover:text-amber-300"
-                  aria-label="TikTok"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="h-4 w-4"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M15.5 5.5c.6 1.1 1.6 2 2.8 2.4.3.1.6.2.9.2v2.2c-.5 0-1-.1-1.5-.2-.9-.3-1.7-.8-2.4-1.5v5.6c0 2.6-2.1 4.7-4.7 4.7S6 16.8 6 14.2 8.1 9.5 10.7 9.5c.3 0 .6 0 .9.1v2.3c-.3-.1-.6-.1-.9-.1-1.3 0-2.4 1.1-2.4 2.4S9.4 16.6 10.7 16.6s2.4-1.1 2.4-2.4V4.5h2.4v1z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </a>
-              </div>
-
-              <a
-                href="/#yhteys"
-                className="rounded-full bg-amber-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-950 shadow-md transition-colors hover:bg-amber-400"
-              >
-                Pyydä tarjous
-              </a>
-            </div>
-          </div>
-
-          {/* Mobiili: logo + CTA-tekstilinkki */}
-          <div className="flex items-center justify-between md:hidden">
-            <a href="/#etusivu" className="flex items-center">
-              <div className="relative flex h-8 w-24 items-center justify-center overflow-visible">
-                <img
-                  src="/logo-visualwraps.png"
-                  alt="Visual Wraps logo"
-                  className="h-full w-auto object-contain scale-[1.9]"
-                />
-              </div>
-            </a>
-
-            <a
-              href="/#yhteys"
-              className="text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-300"
-            >
-              Pyydä tarjous
-            </a>
-          </div>
-        </div>
-      </header>
-
-                  {/* HERO / JOHDANTO – taustakuva + tumma sävy */}
+      {/* HERO / JOHDANTO – taustakuva + tumma sävy */}
       <section className="relative overflow-hidden border-b border-white/10 bg-slate-950">
         {/* Taustakuva */}
         <div className="pointer-events-none absolute inset-0">
@@ -167,7 +19,8 @@ export default function AutonYliteippausPage() {
         </div>
 
         {/* Varsinainen sisältö */}
-        <div className="relative mx-auto max-w-6xl px-4 py-12 md:py-14">
+        <div className="relative mx-auto max-w-6xl px-4 pt-24 pb-12 md:pt-28 md:pb-14">
+
           {/* Otsikko – yhdelle riville, “sporttisempi” look */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[0.05em] uppercase whitespace-nowrap">
             Auton yliteippaus
@@ -259,8 +112,6 @@ export default function AutonYliteippausPage() {
           </div>
         </div>
       </section>
-
-
 
       {/* TAATTU KESTÄVYYS */}
       <section className="border-t border-white/10 bg-slate-950">
@@ -542,4 +393,3 @@ export default function AutonYliteippausPage() {
     </main>
   );
 }
-

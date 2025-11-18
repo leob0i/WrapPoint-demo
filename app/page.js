@@ -6,142 +6,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
 
-
-      {/* YLÄVALIKKO */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl backdrop-saturate-150 supports-backdrop-blur:bg-slate-950/50">
-        <div className="px-3 sm:px-4 lg:px-8 py-2 lg:py-3">
-          {/* Desktop: vasen nav – keskellä logo – oikealla CTA + some */}
-          <div className="hidden items-center md:flex">
-            {/* VASEN: navigaatio */}
-            <nav className="flex flex-1 items-center gap-6 text-sm text-slate-200 md:-ml-2 lg:-ml-4">
-              <a href="#etusivu" className="transition-colors hover:text-amber-300">
-                Etusivu
-              </a>
-              <a href="#palvelut" className="transition-colors hover:text-amber-300">
-                Palvelut
-              </a>
-              <a href="#galleria" className="transition-colors hover:text-amber-300">
-                Galleria
-              </a>
-              <a href="#hinnasto" className="transition-colors hover:text-amber-300">
-                Hinnasto
-              </a>
-              <a href="#meista" className="transition-colors hover:text-amber-300">
-                Meistä
-              </a>
-              <a href="#yhteys" className="transition-colors hover:text-amber-300">
-                Yhteystiedot
-              </a>
-            </nav>
-
-            {/* KESKI: iso logo – keskellä navbariin nähden, mutta header ei veny */}
-            <a
-              href="#etusivu"
-              className="flex min-w-[80px] items-center justify-center px-4"
-            >
-              <div className="relative flex h-9 w-24 md:h-10 md:w-28 items-center justify-center overflow-visible">
-                <img
-                  src="/logo-visualwraps.png"
-                  alt="Visual Wraps logo"
-                  className="h-full w-auto object-contain scale-[6.9] md:scale-[4.1]"
-                />
-              </div>
-            </a>
-
-            {/* OIKEA: some + CTA */}
-            <div className="flex flex-1 items-center justify-end gap-4">
-              <div className="flex items-center gap-2 text-xs text-slate-300">
-                {/* Instagram */}
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/5 hover:border-amber-400 hover:text-amber-300"
-                  aria-label="Instagram"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="h-4 w-4"
-                    aria-hidden="true"
-                  >
-                    <rect
-                      x="3"
-                      y="3"
-                      width="18"
-                      height="18"
-                      rx="5"
-                      ry="5"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                    />
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="4"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                    />
-                    <circle cx="17" cy="7" r="1" fill="currentColor" />
-                  </svg>
-                </a>
-
-                {/* TikTok */}
-                <a
-                  href="https://tiktok.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/5 hover:border-amber-400 hover:text-amber-300"
-                  aria-label="TikTok"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="h-4 w-4"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M15.5 5.5c.6 1.1 1.6 2 2.8 2.4.3.1.6.2.9.2v2.2c-.5 0-1-.1-1.5-.2-.9-.3-1.7-.8-2.4-1.5v5.6c0 2.6-2.1 4.7-4.7 4.7S6 16.8 6 14.2 8.1 9.5 10.7 9.5c.3 0 .6 0 .9.1v2.3c-.3-.1-.6-.1-.9-.1-1.3 0-2.4 1.1-2.4 2.4S9.4 16.6 10.7 16.6s2.4-1.1 2.4-2.4V4.5h2.4v1z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </a>
-              </div>
-
-              <a
-                href="#yhteys"
-                className="rounded-full bg-amber-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-950 shadow-md transition-colors hover:bg-amber-400"
-              >
-                Pyydä tarjous
-              </a>
-            </div>
-          </div>
-
-          {/* Mobiili: logo + CTA-tekstilinkki */}
-          <div className="flex items-center justify-between md:hidden">
-            <a href="#etusivu" className="flex items-center">
-              <div className="relative flex h-8 w-24 items-center justify-center overflow-visible">
-                <img
-                  src="/logo-visualwraps.png"
-                  alt="Visual Wraps logo"
-                  className="h-full w-auto object-contain scale-[1.9]"
-                />
-              </div>
-            </a>
-
-            <a
-              href="#yhteys"
-              className="text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-300"
-            >
-              Pyydä tarjous
-            </a>
-          </div>
-        </div>
-      </header>
-
-
-
-
       {/* HERO-OSIO (etusivun yläosa) */}
       {/* HERO-OSIO (etusivun yläosa) videotaustalla */}
       <section
@@ -163,7 +27,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-slate-950/70" />
 
         {/* Sisältö videon päällä */}
-        <div className="relative mx-auto grid min-h-[520px] max-w-6xl gap-12 px-4 py-16 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:py-24">
+        <div className="relative mx-auto grid min-h-[520px] max-w-6xl gap-12 px-4 pt-24 pb-16 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:pt-32 md:pb-24">
+
           {/* Tekstit vasemmalla */}
           <div className="space-y-7">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-300">
@@ -219,7 +84,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Oikean puolen “mockup”-boksi videon päällä */}
+          {/* Oikean puolen “mockup”-boksi videon päällä 
           <div className="relative">
             <div className="absolute -inset-6 rounded-3xl bg-amber-500/20 blur-2xl" />
             <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-black/40 shadow-2xl backdrop-blur-sm">
@@ -253,16 +118,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+
         </div>
       </section>
 
-
-
-
-
-
-      {/* PALVELUT-OSIO – grid kuten referenssissä */}
+            {/* PALVELUT-OSIO – mobiilissa horisontaalinen slider, desktopissa grid */}
       <section id="palvelut" className="bg-slate-950/90 py-16">
         <div className="mx-auto max-w-6xl px-4">
           <div className="max-w-2xl">
@@ -278,48 +139,67 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <ServiceCard
-                 title="Auton yliteippaus"
-                description="Vaihda auton ilme täysin ilman maalausta. Laadukkaat kalvot, siisti työnjälki ja helposti purettava pinta."
-               imageSrc="/services/yliteippaus.jpg"
-                href="/palvelut/auton-yliteippaus"
-            />
+          {/* Kortit: mobiilissa vaakaskrollattava rivi, md+: grid */}
+          <div className="mt-8 -mx-4 px-4">
+            <div
+              className="
+                flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory
+                md:grid md:gap-6 md:overflow-visible md:snap-none
+                md:grid-cols-2 lg:grid-cols-3
+              "
+            >
+              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
+                <ServiceCard
+                  title="Auton yliteippaus"
+                  description="Vaihda auton ilme täysin ilman maalausta. Laadukkaat kalvot, siisti työnjälki ja helposti purettava pinta."
+                  imageSrc="/services/yliteippaus.jpg"
+                  href="/palvelut/auton-yliteippaus"
+                />
+              </div>
 
-            <ServiceCard
-              title="Mainosteippaukset"
-              description="Näyttävät ja kestävät mainosteippaukset autoihin, pakettiautoihin ja ikkunoihin – muutetaan ajoneuvosi tehokkaaksi liikkuvaksi mainokseksi, joka jää mieleen."
-              imageSrc="/services/carsticker.jpg"
-            />
-            <ServiceCard
-              title="Kyltit ja banderollit"
-              description="Laadukkaat kyltit, opasteet ja banderollit yrityksen näkyvyyden lisäämiseen – sisä- ja ulkokäyttöön, kestävillä materiaaleilla."
-              imageSrc="/services/windowtint.jpg"
-            />
+              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
+                <ServiceCard
+                  title="Mainosteippaukset"
+                  description="Näyttävät ja kestävät mainosteippaukset autoihin, pakettiautoihin ja ikkunoihin – muutetaan ajoneuvosi tehokkaaksi liikkuvaksi mainokseksi, joka jää mieleen."
+                  imageSrc="/services/carsticker.jpg"
+                />
+              </div>
 
-            <ServiceCard
-              title="Vaatepainatukset"
-              description="Räätälöidyt vaatteiden painatukset yrityksille ja yksityisille – logot, tekstit ja grafiikat terävällä ja kestävällä jäljellä."
-              imageSrc="/services/vaatepainatus.jpg"
-            />
+              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
+                <ServiceCard
+                  title="Kyltit ja banderollit"
+                  description="Laadukkaat kyltit, opasteet ja banderollit yrityksen näkyvyyden lisäämiseen – sisä- ja ulkokäyttöön, kestävillä materiaaleilla."
+                  imageSrc="/services/windowtint.jpg"
+                />
+              </div>
 
-            <ServiceCard
-              title="Toimitilateippaukset ja ikkunateippaukset"
-              description="Yrityksen tilojen ja näyteikkunoiden teippaukset – logot, brändielementit ja opasteet, jotka tuovat näkyvyyttä ja ammattimaisen ilmeen."
-              imageSrc="/services/julkisivu.jpg"
-            />
+              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
+                <ServiceCard
+                  title="Vaatepainatukset"
+                  description="Räätälöidyt vaatteiden painatukset yrityksille ja yksityisille – logot, tekstit ja grafiikat terävällä ja kestävällä jäljellä."
+                  imageSrc="/services/vaatepainatus.jpg"
+                />
+              </div>
 
-            <ServiceCard
-              title="Kuvan ja teippauksen suunnittelu"
-              description="Ammattitason suunnittelupalvelu – luomme näyttävät teippauskokonaisuudet ja valmiit grafiikat ajoneuvoihin, ikkunoihin ja mainospintoihin."
-              imageSrc="/services/kivenisku.jpg"
-            />
+              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
+                <ServiceCard
+                  title="Toimitilateippaukset ja ikkunateippaukset"
+                  description="Yrityksen tilojen ja näyteikkunoiden teippaukset – logot, brändielementit ja opasteet, jotka tuovat näkyvyyttä ja ammattimaisen ilmeen."
+                  imageSrc="/services/Julkisivu.jpg"
+                />
+              </div>
 
+              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
+                <ServiceCard
+                  title="Kuvan ja teippauksen suunnittelu"
+                  description="Ammattitason suunnittelupalvelu – luomme näyttävät teippauskokonaisuudet ja valmiit grafiikat ajoneuvoihin, ikkunoihin ja mainospintoihin."
+                  imageSrc="/services/kivenisku.jpg"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
-
-
 
 
       {/* MEISTÄ-OSIO */}
@@ -386,8 +266,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
 
       {/* GALLERIA, HINNASTO & YHTEYS – placeholderit nyt, tarkennetaan myöhemmin */}
       <section id="galleria" className="border-b border-white/5 bg-slate-950">
@@ -462,7 +340,7 @@ export default function Home() {
         </div>
       </section>
 
-            {/* YHTEYDENOTTO / CTA – taustakuva + tumma overlay */}
+      {/* YHTEYDENOTTO / CTA – taustakuva + tumma overlay */}
       <section
         id="yhteys"
         className="relative bg-slate-950 overflow-hidden"
@@ -544,7 +422,6 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* FOOTER */}
       <footer className="border-t border-white/10 bg-slate-950">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
@@ -558,8 +435,6 @@ export default function Home() {
     </main>
   );
 }
-
-
 
 //palvelukortti-komponentti
 function ServiceCard({ title, description, imageSrc, href }) {
@@ -618,4 +493,3 @@ function ServiceCard({ title, description, imageSrc, href }) {
     </div>
   );
 }
-
