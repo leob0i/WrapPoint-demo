@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import MainHeader from "./MainHeader";
+import Footer from "./Footer.js"; // 👈 UUSI RIVI
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,8 +26,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} bg-slate-950 text-slate-50 antialiased`}
       >
         <MainHeader />
-        {children}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
 }
+

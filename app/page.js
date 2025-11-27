@@ -2,6 +2,9 @@
 // Visual Wraps - etusivun layout, inspiroitunut restyling.fi-rakenteesta,
 // mutta omilla teksteillä ja tyyleillä.
 
+import Image from "next/image";
+
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
@@ -84,42 +87,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Oikean puolen “mockup”-boksi videon päällä 
-          <div className="relative">
-            <div className="absolute -inset-6 rounded-3xl bg-amber-500/20 blur-2xl" />
-            <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-black/40 shadow-2xl backdrop-blur-sm">
-              <div className="flex items-center justify-between border-b border-white/10 px-4 py-3 text-xs text-slate-100">
-                <span className="font-medium">Visual Wraps — demo layout</span>
-                <span className="rounded-full bg-green-500/40 px-2 py-0.5 text-[11px] text-green-100">
-                  Online
-                </span>
-              </div>
-              <div className="grid gap-4 px-5 pb-5 pt-4 md:grid-cols-[1.2fr_1fr]">
-                <div className="space-y-3">
-                  <div className="h-32 rounded-2xl bg-slate-900/60" />
-                  <div className="space-y-2">
-                    <div className="h-3 w-3/4 rounded-full bg-slate-400/70" />
-                    <div className="h-3 w-2/3 rounded-full bg-slate-500/70" />
-                  </div>
-                  <div className="grid grid-cols-3 gap-2">
-                    <div className="h-16 rounded-xl bg-slate-900/60" />
-                    <div className="h-16 rounded-xl bg-slate-900/60" />
-                    <div className="h-16 rounded-xl bg-slate-900/60" />
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <div className="h-5 w-24 rounded-full bg-amber-400/90" />
-                  <div className="space-y-2">
-                    <div className="h-3 w-full rounded-full bg-slate-400/70" />
-                    <div className="h-3 w-5/6 rounded-full bg-slate-500/70" />
-                    <div className="h-3 w-4/6 rounded-full bg-slate-600/70" />
-                  </div>
-                  <div className="h-20 rounded-2xl bg-slate-900/60" />
-                </div>
-              </div>
-            </div>
-          </div> */}
-
         </div>
       </section>
 
@@ -162,6 +129,7 @@ export default function Home() {
                   title="Mainosteippaukset"
                   description="Näyttävät ja kestävät mainosteippaukset autoihin, pakettiautoihin ja ikkunoihin – muutetaan ajoneuvosi tehokkaaksi liikkuvaksi mainokseksi, joka jää mieleen."
                   imageSrc="/services/carsticker.jpg"
+                  href="/palvelut/mainosteippaus"
                 />
               </div>
 
@@ -170,6 +138,7 @@ export default function Home() {
                   title="Kyltit ja banderollit"
                   description="Laadukkaat kyltit, opasteet ja banderollit yrityksen näkyvyyden lisäämiseen – sisä- ja ulkokäyttöön, kestävillä materiaaleilla."
                   imageSrc="/services/windowtint.jpg"
+                   href="/palvelut/kyltit.banderollit"
                 />
               </div>
 
@@ -191,9 +160,9 @@ export default function Home() {
 
               <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
                 <ServiceCard
-                  title="Kuvan ja teippauksen suunnittelu"
-                  description="Ammattitason suunnittelupalvelu – luomme näyttävät teippauskokonaisuudet ja valmiit grafiikat ajoneuvoihin, ikkunoihin ja mainospintoihin."
-                  imageSrc="/services/kivenisku.jpg"
+                  title="Meistä"
+                  description="Tähän vaikka meistä-osio, tarina? Osoite ja karttaupotettusijainti?"
+                  imageSrc="/services/visualwraps.musta.png"
                 />
               </div>
             </div>
@@ -306,132 +275,265 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="hinnasto" className="border-b border-white/5 bg-slate-950">
+          {/* ARVOSTELUT – scrollattavat kortit mobiilissa */}
+      <section id="arvostelut" className="border-b border-slate-800 bg-slate-900">
         <div className="mx-auto max-w-6xl px-4 py-14 md:py-18">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-            Hinnasto (rakenne)
-          </h2>
-          <p className="mt-3 max-w-xl text-sm text-slate-300">
-            Tähän voidaan tehdä kortit eri palvelupaketeille (esim. perus,
-            laaja, premium) tai ohjata suoraan tarjouspyyntöön.
-          </p>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-slate-900/80 p-5">
-              <div className="text-sm font-semibold">Perustyöt</div>
-              <div className="mt-2 text-xs text-slate-400">
-                Esim. yksittäiset tummennukset, pienet teippaukset. Täytetään
-                tarkemmin myöhemmin.
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-amber-300">
+              Arvostelut
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold text-slate-50 md:text-4xl">
+              Asiakkaat kertovat yhteistyöstä
+            </h2>
+            <p className="mt-3 text-sm text-slate-300 md:text-base">
+              Tähän tuodaan myöhemmin oikeita palautteita Visual Wrapsin
+              tekemistä yliteippauksista, PPF-suojauksista, tummennuksista ja
+              mainosteippauksista. Alla esimerkkejä siitä, miltä sisältö voi
+              näyttää valmiina.
+            </p>
+          </div>
+
+          <div className="mt-8 -mx-4 px-4">
+            <div
+              className="
+                flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory
+                md:grid md:gap-6 md:overflow-visible md:snap-none
+                md:grid-cols-3
+              "
+            >
+              {/* Arvostelu 1 */}
+              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
+                <div className="flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-sm">
+                  <div className="mb-2 text-lg">⭐⭐⭐⭐⭐</div>
+                  <p className="text-sm text-slate-200">
+                    "Auton yliteippaus onnistui juuri niin kuin toivoin. Auto
+                    näyttää nyt täysin uudelta ja viimeistely on todella siisti."
+                  </p>
+                  <div className="mt-4 text-xs font-semibold text-slate-200">
+                    – Antti, BMW 5-sarja
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="rounded-2xl border border-amber-500/40 bg-slate-900/80 p-5">
-              <div className="text-sm font-semibold">Suojapaketit</div>
-              <div className="mt-2 text-xs text-slate-400">
-                PPF- ja pinnoitepaketit uusille autoille. Voidaan hinnoitella
-                alkaen-hinnoin.
+
+              {/* Arvostelu 2 */}
+              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
+                <div className="flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-sm">
+                  <div className="mb-2 text-lg">⭐⭐⭐⭐⭐</div>
+                  <p className="text-sm text-slate-200">
+                    "PPF-suojaus tehtiin uuteen autoon heti luovutuksen jälkeen.
+                    Kivet ja pesujäljet eivät enää pelota, ja pinta on helppo
+                    pitää puhtaana."
+                  </p>
+                  <div className="mt-4 text-xs font-semibold text-slate-200">
+                    – Laura, Tesla Model Y
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-slate-900/80 p-5">
-              <div className="text-sm font-semibold">Räätälöidyt ratkaisut</div>
-              <div className="mt-2 text-xs text-slate-400">
-                Yritysautot, laajat kalvotukset ja kiinteistökohteet.
+
+              {/* Arvostelu 3 */}
+              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
+                <div className="flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-sm">
+                  <div className="mb-2 text-lg">⭐⭐⭐⭐⭐</div>
+                  <p className="text-sm text-slate-200">
+                    "Yritysauton mainosteippaus saatiin tehtyä sovitussa
+                    aikataulussa. Auto toimii nyt liikkuvana mainoksena ja
+                    ilme sopii brändiin täydellisesti."
+                  </p>
+                  <div className="mt-4 text-xs font-semibold text-slate-200">
+                    – Jari, yritysasiakas
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* YHTEYDENOTTO / CTA – taustakuva + tumma overlay */}
-      <section
-        id="yhteys"
-        className="relative bg-slate-950 overflow-hidden"
-      >
-        {/* Taustakuva */}
-        <div className="pointer-events-none absolute inset-0">
-          <img
-            src="/porsche-orange.jpg" // vaihda halutessasi
-            alt="Auton yliteippaus – taustakuva yhteydenottoon"
-            className="h-full w-full object-cover"
+
+              {/* Yhteydenottolomake */}
+<section className="relative bg-slate-950 py-16 md:py-20">
+  {/* Taustakuva */}
+  <div className="absolute inset-0">
+    <Image
+      src="/gallery/porsche-orange.jpg" // Taustakuva
+      alt="Taustakuva kylteistä ja banderolleista."
+      fill
+      className="h-full w-full object-cover"
+    />
+    {/* Tumma overlay, että lomake erottuu */}
+    <div className="absolute inset-0 bg-slate-950/80" />
+  </div>
+
+  <div className="relative mx-auto max-w-4xl px-4">
+    <div className="mx-auto max-w-2xl space-y-3 text-center">
+      <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+        Pyydä tarjous tai kysy lisää{" "}
+        <span className="text-amber-300">
+          teippauksista, tarroista ja kylteistä
+        </span>
+      </h2>
+      <p className="text-sm leading-relaxed text-slate-100 sm:text-base">
+        Kerro lyhyesti autosta, tilasta tai muusta kohteesta sekä toivotusta
+        ratkaisusta. Voit valita alta, mikä palvelu kiinnostaa eniten – ja
+        halutessasi voit liittää kuvan, luonnoksen tai PDF-tiedoston mukaan.
+        Palaamme sinulle mahdollisimman pian.
+      </p>
+    </div>
+
+    <form className="mt-10 space-y-6 rounded-2xl border border-white/10 bg-slate-900/70 p-6 shadow-xl backdrop-blur">
+      <div className="grid gap-4 md:grid-cols-2">
+        <div className="space-y-1.5 text-sm">
+          <label
+            htmlFor="name"
+            className="block text-xs font-medium uppercase tracking-[0.18em] text-slate-300"
+          >
+            Nimi
+          </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none ring-0 transition focus:border-amber-400"
+            placeholder="Etunimi Sukunimi"
           />
-          {/* Tumma sävy, että teksti erottuu */}
-          <div className="absolute inset-0 bg-slate-950/70" />
         </div>
 
-        {/* Varsinainen sisältö */}
-        <div className="relative mx-auto max-w-6xl px-4 py-16 md:py-20">
-          <div className="grid gap-10 md:grid-cols-2">
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                Pyydä tarjous tai kysy lisää
-              </h2>
-              <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
-                Tähän tulee myöhemmin oikeat yhteystiedot: puhelinnumero,
-                sähköposti, osoite ja yhteydenottolomake. Nyt voit käyttää tätä
-                pohjana rakenteelle.
-              </p>
-              <div className="space-y-1 text-sm text-slate-200">
-                <div>Puhelin: 000 000 000</div>
-                <div>Sähköposti: info@visualwraps.fi</div>
-                <div>Osoite: Esimerkkikatu 1, 00100 Helsinki</div>
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-slate-900/80 p-5">
-              <form className="space-y-4">
-                <div className="space-y-2">
-                  <label className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
-                    Nimi
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none ring-amber-500/60 focus:ring-2"
-                    placeholder="Etunimi Sukunimi"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
-                    Sähköposti
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none ring-amber-500/60 focus:ring-2"
-                    placeholder="sinä@esimerkki.fi"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
-                    Viesti
-                  </label>
-                  <textarea
-                    className="min-h-[120px] w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none ring-amber-500/60 focus:ring-2"
-                    placeholder="Kerro autosta ja toivotusta työstä..."
-                  />
-                </div>
-                <button
-                  type="button"
-                  className="w-full rounded-full bg-amber-500 px-4 py-2.5 text-sm font-semibold text-slate-950 shadow-lg hover:bg-amber-400"
-                >
-                  Lähetä viesti (ei vielä toimi)
-                </button>
-                <p className="text-[11px] text-slate-500">
-                  Lomake on aluksi vain ulkoasua varten. Myöhemmin yhdistämme
-                  sen backendille (esim. sähköposti tai oma API).
-                </p>
-              </form>
-            </div>
-          </div>
+        <div className="space-y-1.5 text-sm">
+          <label
+            htmlFor="company"
+            className="block text-xs font-medium uppercase tracking-[0.18em] text-slate-300"
+          >
+            Yritys (valinnainen)
+          </label>
+          <input
+            id="company"
+            name="company"
+            type="text"
+            className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none transition focus:border-amber-400"
+            placeholder="Yrityksen nimi"
+          />
         </div>
-      </section>
+      </div>
 
-      {/* FOOTER */}
-      <footer className="border-t border-white/10 bg-slate-950">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <div>© {new Date().getFullYear()} Visual Wraps. Kaikki oikeudet pidätetään.</div>
-          <div className="flex flex-wrap gap-3">
-            <span>Layout rakennettu Next.js + Tailwindilla.</span>
-            <span className="text-slate-600">Sisällöt päivitetään myöhemmin.</span>
-          </div>
+      <div className="grid gap-4 md:grid-cols-2">
+        <div className="space-y-1.5 text-sm">
+          <label
+            htmlFor="email"
+            className="block text-xs font-medium uppercase tracking-[0.18em] text-slate-300"
+          >
+            Sähköposti
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none transition focus:border-amber-400"
+            placeholder="nimi@yritys.fi"
+          />
         </div>
-      </footer>
+
+        <div className="space-y-1.5 text-sm">
+          <label
+            htmlFor="phone"
+            className="block text-xs font-medium uppercase tracking-[0.18em] text-slate-300"
+          >
+            Puhelin
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none transition focus:border-amber-400"
+            placeholder="Puhelinnumero"
+          />
+        </div>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        <div className="space-y-1.5 text-sm">
+          <label
+            htmlFor="type"
+            className="block text-xs font-medium uppercase tracking-[0.18em] text-slate-300"
+          >
+            Kiinnostuksen kohde
+          </label>
+          <select
+            id="type"
+            name="type"
+            className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none transition focus:border-amber-400"
+          >
+            <option value="">Valitse aihe</option>
+            <option>Auton yliteippaus</option>
+            <option>Mainosteippaukset</option>
+            <option>Custom tarrat</option>
+            <option>Kyltit ja banderollit</option>
+            <option>Vaatepainatukset</option>
+            <option>Toimitilateippaukset ja ikkunateippaukset</option>
+            <option>Kuvan ja teippauksen suunnittelu</option>
+            <option>Muu</option>
+          </select>
+        </div>
+
+        {/* Tiedoston liittäminen */}
+        <div className="space-y-1.5 text-sm">
+          <label
+            htmlFor="attachment"
+            className="block text-xs font-medium uppercase tracking-[0.18em] text-slate-300"
+          >
+            Liitä tiedosto (valinnainen)
+          </label>
+          <input
+            id="attachment"
+            name="attachment"
+            type="file"
+            accept="image/*,application/pdf"
+            className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-xs text-slate-50 file:mr-3 file:rounded-lg file:border-0 file:bg-amber-500 file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-slate-950 hover:file:bg-amber-400"
+          />
+          <p className="text-[11px] text-slate-400">
+            Voit liittää kuvan, luonnoksen tai PDF-tiedoston, joka auttaa
+            hahmottamaan kohdetta.
+          </p>
+        </div>
+      </div>
+
+      <div className="space-y-1.5 text-sm">
+        <label
+          htmlFor="message"
+          className="block text-xs font-medium uppercase tracking-[0.18em] text-slate-300"
+        >
+          Kerro kohteesta ja toiveista
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows={4}
+          required
+          className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none transition focus:border-amber-400"
+          placeholder="Kuvaile lyhyesti kohde (auto, liiketila, kyltti tms.), toivottu lopputulos, aikataulu ja budjettiraami..."
+        />
+      </div>
+
+      <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-[11px] leading-relaxed text-slate-400">
+          Lähettämällä lomakkeen hyväksyt, että otamme sinuun yhteyttä
+          tarjouksen ja lisäkysymysten kanssa.
+        </p>
+        <button
+          type="submit"
+          className="inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/30 transition hover:bg-amber-400"
+        >
+          Lähetä tarjouspyyntö
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+      
+
+     
     </main>
   );
 }
