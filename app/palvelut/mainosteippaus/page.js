@@ -15,7 +15,7 @@ export default function MainosteippausCustomTarratPage() {
           {/* Taustakuva */}
           <div className="absolute inset-0">
             <Image
-              src="/gallery/esimerkkiauto.jpg" // Taustakuva
+              src="/gallery/mustapaku.jpg" // Taustakuva
               alt="Drifting-auto ja yritysauto custom mainosteippauksilla."
               fill
               priority
@@ -132,21 +132,21 @@ export default function MainosteippausCustomTarratPage() {
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden border border-white/10 bg-slate-950/70">
                 <Image
-                  src="/services/carsticker.jpg" // VAIHDA omaan kuvaan
-                  alt="Yritysauton kylkimainoksen luonnos."
+                  src="/gallery/paku1.jpg" // VAIHDA omaan kuvaan
+                  alt="Yritysauton muuntaminen mainostauluksi."
                   fill
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3 text-xs text-slate-100">
-                  Selkeä mainos kylkeen – logo, palvelut ja yhteystiedot.
+                  Selkeä ja näyttävä mainos kylkeen – logo, palvelut ja yhteystiedot.
                 </div>
               </div>
 
               <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden border border-white/10 bg-slate-950/70">
                 <Image
                   src="/gallery/mainos-suunnittelu-2.jpg" // VAIHDA omaan kuvaan
-                  alt="Mainoslayout pakettiauton kylkeen."
+                  alt="Tyyliä liikkuvaan kotiisi."
                   fill
                   className="h-full w-full object-cover"
                 />
@@ -158,7 +158,7 @@ export default function MainosteippausCustomTarratPage() {
 
               <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden border border-white/10 bg-slate-950/70">
                 <Image
-                  src="/gallery/mainos-suunnittelu-3.jpg" // VAIHDA omaan kuvaan
+                  src="/gallery/billboard.jpg" // VAIHDA omaan kuvaan
                   alt="Valmis mainos valmiina tulostettavaksi teipille."
                   fill
                   className="h-full w-full object-cover"

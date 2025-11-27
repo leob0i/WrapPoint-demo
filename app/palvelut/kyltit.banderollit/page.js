@@ -67,7 +67,7 @@ export default function KyltitJaBanderollitPage() {
                   {/* Kuva + overlay */}
                   <div className="relative h-40 w-full overflow-hidden">
                     <img
-                      src="/gallery/esimerkkiautokeltainen.jpg" // vaihda halutessasi omaan kuvaan
+                      src="/gallery/rautaranta.avif" // vaihda halutessasi omaan kuvaan
                       alt="Liiketilat ja julkisivut"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
@@ -95,7 +95,7 @@ export default function KyltitJaBanderollitPage() {
                 <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 shadow-lg">
                   <div className="relative h-40 w-full overflow-hidden">
                     <img
-                      src="/gallery/billboard.jpg" // vaihda halutessasi omaan kuvaan
+                      src="/gallery/rautaranta2.jpg" // vaihda halutessasi omaan kuvaan
                       alt="Messut ja tapahtumat"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
@@ -121,7 +121,7 @@ export default function KyltitJaBanderollitPage() {
                 <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 shadow-lg">
                   <div className="relative h-40 w-full overflow-hidden">
                     <img
-                      src="/gallery/esimerkkiauto.jpg" // vaihda halutessasi omaan kuvaan
+                      src="/gallery/kyltti.jpg" // vaihda halutessasi omaan kuvaan
                       alt="Rakennus- ja työmaakyltit"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />

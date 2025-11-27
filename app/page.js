@@ -44,9 +44,8 @@ export default function Home() {
             </h1>
 
             <p className="max-w-xl text-sm leading-relaxed text-slate-100 sm:text-base">
-              Visual Wraps toteuttaa kivensuojakalvot, yliteippaukset, lasien
-              tummennukset ja pinnoitteet huolellisesti. Tämä on demo-layout,
-              johon kirjoitamme myöhemmin juuri sinun yrityksesi tekstit.
+              Visual Wraps toteuttaa yliteippaukset, mainosteipit, tarrat, tekstiilit, banderollit, 
+              tummennukset huolellisesti. 
             </p>
 
             {/* Pieni “luottamus”-boksi, vähän kuin arvostelut */}
@@ -60,14 +59,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col">
-                <span className="text-[11px] uppercase tracking-[0.18em] text-slate-200/80">
-                  Erikoistuminen
-                </span>
-                <span className="text-sm text-slate-50">
-                  PPF, teippaukset, tummennukset & pinnoitteet
-                </span>
-              </div>
+             
             </div>
 
             {/* CTA-napit */}
@@ -128,7 +120,7 @@ export default function Home() {
                 <ServiceCard
                   title="Mainosteippaukset"
                   description="Näyttävät ja kestävät mainosteippaukset autoihin, pakettiautoihin ja ikkunoihin – muutetaan ajoneuvosi tehokkaaksi liikkuvaksi mainokseksi, joka jää mieleen."
-                  imageSrc="/services/carsticker.jpg"
+                  imageSrc="/gallery/halonen.jpg"
                   href="/palvelut/mainosteippaus"
                 />
               </div>
@@ -137,7 +129,7 @@ export default function Home() {
                 <ServiceCard
                   title="Kyltit ja banderollit"
                   description="Laadukkaat kyltit, opasteet ja banderollit yrityksen näkyvyyden lisäämiseen – sisä- ja ulkokäyttöön, kestävillä materiaaleilla."
-                  imageSrc="/services/windowtint.jpg"
+                  imageSrc="/gallery/rautaranta.avif"
                    href="/palvelut/kyltit.banderollit"
                 />
               </div>
@@ -146,7 +138,8 @@ export default function Home() {
                 <ServiceCard
                   title="Vaatepainatukset"
                   description="Räätälöidyt vaatteiden painatukset yrityksille ja yksityisille – logot, tekstit ja grafiikat terävällä ja kestävällä jäljellä."
-                  imageSrc="/services/vaatepainatus.jpg"
+                  imageSrc="/gallery/lippis.jpg"
+                  href="/palvelut/tekstiilit"
                 />
               </div>
 
@@ -155,6 +148,7 @@ export default function Home() {
                   title="Toimitilateippaukset ja ikkunateippaukset"
                   description="Yrityksen tilojen ja näyteikkunoiden teippaukset – logot, brändielementit ja opasteet, jotka tuovat näkyvyyttä ja ammattimaisen ilmeen."
                   imageSrc="/services/Julkisivu.jpg"
+                  href="/palvelut/toimitila"
                 />
               </div>
 
@@ -162,7 +156,8 @@ export default function Home() {
                 <ServiceCard
                   title="Meistä"
                   description="Tähän vaikka meistä-osio, tarina? Osoite ja karttaupotettusijainti?"
-                  imageSrc="/services/visualwraps.musta.png"
+                  imageSrc="/services/visualwrapsmusta.png"
+                  href="/palvelut/meista"
                 />
               </div>
             </div>
@@ -181,8 +176,7 @@ export default function Home() {
               </h2>
               <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
                 Tähän tulee myöhemmin tarkempi “Meistä”-teksti: tarina,
-                tausta, osaaminen ja arvot. Layout on rakennettu niin, että
-                voit kirjoittaa pidemmän kuvauksen ilman että rakenne hajoaa.
+                Mikä on yrityksesi?
               </p>
               <p className="text-sm leading-relaxed text-slate-400">
                 Ajatuksena on sama kuin referenssisivulla: selkeä kokonaisuus,
@@ -240,24 +234,21 @@ export default function Home() {
       <section id="galleria" className="border-b border-white/5 bg-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-14 md:py-18">
           <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-            Galleria (tulee myöhemmin)
+            Galleria
           </h2>
-          <p className="mt-3 max-w-xl text-sm text-slate-300">
-            Tähän rakennetaan myöhemmin kuvakaruselli ja referenssikuvat
-            autoista. Rakenne on jo valmiina, jotta lisäys on helppo.
-          </p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+         
+          <div className="mt-6 grid gap-2 sm:grid-cols-3">
             <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
               <img
                 src="/gallery/esimerkkiauto.jpg"
-                alt="Auton yliteippaus"
+                alt="Auton teippaus"
                 className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
 
             <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
               <img
-                src="/gallery/esimerkkiautokeltainen.jpg"
+                src="/gallery/mustapaku.jpg"
                 alt="Mainosteippaukset pakettiautoon"
                 className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -265,8 +256,8 @@ export default function Home() {
 
             <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
               <img
-                src="/gallery/billboard.jpg"
-                alt="Ikkunateippaus yrityksen tiloihin"
+                src="/gallery/halonen.jpg"
+                alt="Mainosteippaus"
                 className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
