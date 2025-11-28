@@ -6,13 +6,22 @@ import Link from "next/link";
 export default function MeistaPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
-      {/* HERO – Meistä */}
+            {/* HERO – Meistä */}
       <section className="relative border-b border-white/10 overflow-hidden">
-        {/* Taustakuva tai tumma gradientti */}
+        {/* Taustakuva */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" />
+          <Image
+            src="/services/visualwrapsmusta.png" // sama kuva kuin ennen
+            alt="Visual Wraps studio ja tiimi hallissa"
+            fill
+            priority
+            className="h-full w-full object-cover"
+          />
+          {/* Tummennus kuvon päälle */}
+          <div className="absolute inset-0 bg-slate-950/80" />
           <div className="pointer-events-none absolute -right-10 top-1/4 h-72 w-72 rounded-full bg-amber-300/10 blur-3xl" />
         </div>
+
 
         <div className="relative mx-auto max-w-6xl px-4 py-24 sm:py-28 lg:py-32">
           <div className="grid gap-10 lg:grid-cols-[1.3fr,1fr] items-center">
@@ -26,15 +35,12 @@ export default function MeistaPage() {
                 jossa yksityiskohdat ratkaisevat.
               </h1>
               <p className="text-sm sm:text-base text-slate-200/85">
+               Tänne sivulle laitetaan Visual Wrapsin esittely ja vaikka enempi yhteystietoja kuten asentajien esittelyt yms.
+              </p>
+              <p className="text-sm sm:text-base text-slate-300/90">
                 Rakennamme autoista, vaatteista, ikkunoista ja julkisivuista
                 yhtenäisiä kokonaisuuksia. Meille tärkeintä on, että työ näyttää
                 hyvältä läheltä katsottuna – ja erottuu kaukaa.
-              </p>
-              <p className="text-sm sm:text-base text-slate-300/90">
-                Olemme tottuneet työskentelemään sekä yksittäisten harrasteautojen
-                että isompien yritysflottien ja kiinteistöjen kanssa. Jokaisen
-                projektin alussa kuuntelemme, mitä haluat viestiä – ja
-                suunnittelemme teippauksen sen pohjalta.
               </p>
             </div>
 

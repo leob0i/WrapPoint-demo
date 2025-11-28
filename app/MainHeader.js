@@ -78,9 +78,10 @@ export default function MainHeader() {
 
               Meistä
             </a>
-            <a href="#yhteys" className="transition-colors hover:text-amber-300">
-              Yhteystiedot
-            </a>
+            <a href="/#yhteys" className="transition-colors hover:text-amber-300">
+  Yhteystiedot
+</a>
+
           </nav>
 
           {/* KESKI: logo-linkki etusivulle */}
@@ -190,7 +191,8 @@ export default function MainHeader() {
       { href: "/#palvelut", label: "Palvelut" },
       { href: "/palvelut/galleria", label: "Galleria" },
       { href: "/palvelut/meista", label: "Meistä" },
-      { href: "#yhteys", label: "Yhteystiedot" },
+      { href: "/#yhteys", label: "Yhteystiedot" },
+
     ].map((item) => (
 
               <a

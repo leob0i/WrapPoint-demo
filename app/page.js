@@ -58,18 +58,21 @@ export default function Home() {
             </p>
 
             {/* Pieni “luottamus”-boksi, vähän kuin arvostelut */}
-            <div className="flex flex-wrap items-center gap-4 text-xs text-slate-100">
-              <div className="flex items-center gap-2 rounded-full border border-white/20 bg-black/30 px-3 py-2">
-                <span className="text-lg">⭐</span>
-                <div className="leading-tight">
-                  <div className="font-semibold">Laadukas työnjälki</div>
-                  <div className="text-[11px] text-slate-200/80">
-                    Arvostelut ja referenssit lisätään tänne myöhemmin.
-                  </div>
-                </div>
-              </div>
-             
-            </div>
+<div className="flex flex-wrap items-center gap-4 text-xs text-slate-100">
+  <a
+    href="#arvostelut"
+    className="flex items-center gap-2 rounded-full border border-white/20 bg-black/30 px-3 py-2 hover:border-amber-400 hover:bg-black/50 transition-colors"
+  >
+    <span className="text-lg">⭐</span>
+    <div className="leading-tight">
+      <div className="font-semibold">Laadukas työnjälki</div>
+      <div className="text-[11px] text-slate-200/80">
+        Lue arvostelujamme
+      </div>
+    </div>
+  </a>
+</div>
+
 
             {/* CTA-napit */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -321,7 +324,7 @@ export default function Home() {
 
       <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
         <img
-          src="/gallery/halonen.jpg"
+          src="/gallery/Halonen.jpg"
           alt="Mainosteippaus"
           className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
@@ -418,8 +421,9 @@ export default function Home() {
       </section>
 
 
-              {/* Yhteydenottolomake */}
-<section className="relative bg-slate-950 py-16 md:py-20">
+ {/* Yhteydenottolomake */}
+<section id="yhteys" className="relative bg-slate-950 py-16 md:py-20">
+
   {/* Taustakuva */}
   <div className="absolute inset-0">
     <Image
@@ -627,9 +631,7 @@ function ServiceCard({ title, description, imageSrc, href }) {
 
         {/* Teksti kuvan alareunaan */}
         <div className="absolute inset-x-0 bottom-0 z-10 p-4">
-          <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-slate-300">
-            Palvelu
-          </p>
+          
           <h3 className="text-lg font-semibold text-white">
             {title}
           </h3>
