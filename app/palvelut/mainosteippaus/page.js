@@ -26,7 +26,9 @@ export default function MainosteippausCustomTarratPage() {
           </div>
 
           {/* Varsinainen sisältö */}
-          <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
+          // UUSI
+<div className="relative mx-auto max-w-6xl px-4 py-14 md:py-18">
+
             <div className="max-w-xl space-y-6">
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-amber-300">
                 Mainosteippaus · Custom tarrat
@@ -145,7 +147,7 @@ export default function MainosteippausCustomTarratPage() {
 
               <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden border border-white/10 bg-slate-950/70">
                 <Image
-                  src="/gallery/mainos-suunnittelu-2.jpg" // VAIHDA omaan kuvaan
+                  src="/gallery/rekka.jpg" // VAIHDA omaan kuvaan
                   alt="Tyyliä liikkuvaan kotiisi."
                   fill
                   className="h-full w-full object-cover"
@@ -158,7 +160,7 @@ export default function MainosteippausCustomTarratPage() {
 
               <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden border border-white/10 bg-slate-950/70">
                 <Image
-                  src="/gallery/billboard.jpg" // VAIHDA omaan kuvaan
+                  src="/gallery/halonensivu.jpg" // VAIHDA omaan kuvaan
                   alt="Valmis mainos valmiina tulostettavaksi teipille."
                   fill
                   className="h-full w-full object-cover"
@@ -211,7 +213,8 @@ export default function MainosteippausCustomTarratPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3 text-xs text-slate-100">
-                  Yritysauto, jossa selkeä logo, palvelut ja yhteystiedot.
+                  Autamme myös suunnittelussa.
+                
                 </div>
               </div>
 
@@ -224,7 +227,7 @@ export default function MainosteippausCustomTarratPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3 text-xs text-slate-100">
-                  Drifting-tyylinen kokonaisuus – numerot, sponsorilogot ja raidat.
+                 Toteutamme kaikki työt yksityiskohtaisesti.
                 </div>
               </div>
 
@@ -237,7 +240,7 @@ export default function MainosteippausCustomTarratPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3 text-xs text-slate-100">
-                  Pienemmät custom tarrat: banderollit, ikkunatarrat ja yksityiskohdat.
+                  Isoista teippauksista pienempiin custom tarroihin.
                 </div>
               </div>
             </div>

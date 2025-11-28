@@ -16,14 +16,23 @@ export default function Home() {
         className="relative border-b border-white/5 overflow-hidden"
       >
         {/* Taustavideo */}
+                {/* Taustavideo */}
         <video
           className="absolute inset-0 h-full w-full object-cover"
           autoPlay
           muted
           loop
           playsInline
+          poster="/gallery/esimerkkiauto.jpg" // 👈 HERO-KUVAN POSTER, vaihda polku tarvittaessa
         >
           <source src="/visualwrap-hero.mp4" type="video/mp4" />
+
+          {/* Fallback-kuva, jos video ei toimi ollenkaan */}
+          <img
+            src="/gallery/esimerkkiautokeltainen.jpg" // 👈 sama kuva varalle
+            alt="Visual Wraps – auton teippaus"
+            className="h-full w-full object-cover"
+          />
         </video>
 
         {/* Tumma overlay että teksti erottuu */}
@@ -35,7 +44,7 @@ export default function Home() {
           {/* Tekstit vasemmalla */}
           <div className="space-y-7">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-300">
-              Auton suojaus & ulkonäkö
+              Teipit & ja mainokset
             </p>
 
             <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
@@ -120,7 +129,7 @@ export default function Home() {
                 <ServiceCard
                   title="Mainosteippaukset"
                   description="Näyttävät ja kestävät mainosteippaukset autoihin, pakettiautoihin ja ikkunoihin – muutetaan ajoneuvosi tehokkaaksi liikkuvaksi mainokseksi, joka jää mieleen."
-                  imageSrc="/gallery/halonen.jpg"
+                  imageSrc="/gallery/Halonen.jpg"
                   href="/palvelut/mainosteippaus"
                 />
               </div>
@@ -154,10 +163,10 @@ export default function Home() {
 
               <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
                 <ServiceCard
-                  title="Meistä"
-                  description="Tähän vaikka meistä-osio, tarina? Osoite ja karttaupotettusijainti?"
-                  imageSrc="/services/visualwrapsmusta.png"
-                  href="/palvelut/meista"
+                  title="Tarrat"
+                  description="Teetämme myös isoja ja pieniä sekä isolla määrällä tai ihan yksittäisiä tarroja esimerksiki messuille tai muutenvaan."
+                  imageSrc="/services/tarrat.jpg"
+                  href="/palvelut/tarrat"
                 />
               </div>
             </div>
@@ -166,105 +175,173 @@ export default function Home() {
       </section>
 
 
-      {/* MEISTÄ-OSIO */}
-      <section id="meista" className="border-b border-white/5 bg-slate-950">
-        <div className="mx-auto max-w-6xl px-4 py-14 md:py-18">
-          <div className="grid gap-10 md:grid-cols-2">
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                Visual Wraps lyhyesti
-              </h2>
-              <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
-                Tähän tulee myöhemmin tarkempi “Meistä”-teksti: tarina,
-                Mikä on yrityksesi?
-              </p>
-              <p className="text-sm leading-relaxed text-slate-400">
-                Ajatuksena on sama kuin referenssisivulla: selkeä kokonaisuus,
-                jossa asiakas ymmärtää miksi juuri sinun yrityksesi on
-                turvallinen ja laadukas valinta auton suojaukseen ja
-                ulkonäön parantamiseen.
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-white/10 bg-slate-900 px-4 py-4">
-                <div className="text-3xl">🎯</div>
-                <div className="mt-2 text-sm font-semibold">
-                  Laatu & viimeistelty työnjälki
-                </div>
-                <div className="mt-1 text-xs text-slate-400">
-                  Tähän voit lisätä konkreettisia lupauksia, esim.
-                  tarkastusprosessi, materiaalit ja tyytyväisyystakuu.
-                </div>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-slate-900 px-4 py-4">
-                <div className="text-3xl">🕒</div>
-                <div className="mt-2 text-sm font-semibold">
-                  Selkeä aikataulu & yhteydenpito
-                </div>
-                <div className="mt-1 text-xs text-slate-400">
-                  Kerro, miten pidät asiakkaan ajan tasalla työn etenemisestä.
-                </div>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-slate-900 px-4 py-4">
-                <div className="text-3xl">🛡️</div>
-                <div className="mt-2 text-sm font-semibold">
-                  Huolella valitut kalvot ja pinnoitteet
-                </div>
-                <div className="mt-1 text-xs text-slate-400">
-                  Tähän voidaan myöhemmin kirjoittaa brändit, takuut ja
-                  sertifikaatit.
-                </div>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-slate-900 px-4 py-4">
-                <div className="text-3xl">📍</div>
-                <div className="mt-2 text-sm font-semibold">
-                  Sijainti & toiminta-alue
-                </div>
-                <div className="mt-1 text-xs text-slate-400">
-                  Kaupunki, alue ja miten asiakkaan on helpoin tuoda auto
-                  paikalle.
-                </div>
-              </div>
-            </div>
-          </div>
+       {/* MEISTÄ-OSIO */}
+<section
+  id="meista"
+  className="relative border-b border-white/5 bg-slate-950 overflow-hidden"
+>
+  {/* Taustakuva + tumma overlay */}
+  <div className="pointer-events-none absolute inset-0">
+    <Image
+      src="/services/visualwrapsmusta.png" // taustakuva
+      alt="Visual Wraps – auton teippaus ja tiimi"
+      fill
+      className="h-full w-full object-cover"
+    />
+    <div className="absolute inset-0 bg-slate-950/80" /> {/* tumma overlay */}
+  </div>
+
+  {/* Varsinainen sisältö (täysin ennallaan + napit) */}
+  <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-18">
+    <div className="grid gap-10 md:grid-cols-2">
+      <div className="space-y-4">
+        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+          Visual Wraps lyhyesti
+        </h2>
+        <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
+          Tähän tulee myöhemmin tarkempi “Meistä”-teksti: tarina,
+          Mikä on yrityksesi?
+        </p>
+        <p className="text-sm leading-relaxed text-slate-400">
+          Ajatuksena on sama kuin referenssisivulla: selkeä kokonaisuus,
+          jossa asiakas ymmärtää miksi juuri sinun yrityksesi on
+          turvallinen ja laadukas valinta auton suojaukseen ja
+          ulkonäön parantamiseen.
+        </p>
+
+        {/* DESKTOP / TABLET -nappi tekstin jälkeen */}
+        <div className="pt-2">
+          <a
+            href="/palvelut/meista"
+            className="hidden md:inline-flex items-center rounded-full border border-amber-400/60 bg-amber-400/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-300 hover:bg-amber-400/20"
+          >
+            Lue lisää meistä
+          </a>
         </div>
-      </section>
+      </div>
 
-      {/* GALLERIA, HINNASTO & YHTEYS – placeholderit nyt, tarkennetaan myöhemmin */}
-      <section id="galleria" className="border-b border-white/5 bg-slate-950">
-        <div className="mx-auto max-w-6xl px-4 py-14 md:py-18">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-            Galleria
-          </h2>
-         
-          <div className="mt-6 grid gap-2 sm:grid-cols-3">
-            <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
-              <img
-                src="/gallery/esimerkkiauto.jpg"
-                alt="Auton teippaus"
-                className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-
-            <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
-              <img
-                src="/gallery/mustapaku.jpg"
-                alt="Mainosteippaukset pakettiautoon"
-                className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-
-            <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
-              <img
-                src="/gallery/halonen.jpg"
-                alt="Mainosteippaus"
-                className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-          </div>
-
+      <div className="grid gap-4 sm:grid-cols-2">
+  <div className="rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-sm px-4 py-4">
+    <div className="flex items-start gap-2">
+      <div className="text-xl pt-0.5">🎯</div>
+      <div>
+        <div className="text-sm font-semibold">
+          Laatu & viimeistelty työnjälki
         </div>
-      </section>
+        <div className="mt-1 text-xs text-slate-400">
+          Tähän voit lisätä konkreettisia lupauksia, esim.
+          tarkastusprosessi, materiaalit ja tyytyväisyystakuu.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-sm px-4 py-4">
+    <div className="flex items-start gap-2">
+      <div className="text-xl pt-0.5">🕒</div>
+      <div>
+        <div className="text-sm font-semibold">
+          Selkeä aikataulu & yhteydenpito
+        </div>
+        <div className="mt-1 text-xs text-slate-400">
+          Kerro, miten pidät asiakkaan ajan tasalla työn etenemisestä.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-sm px-4 py-4">
+    <div className="flex items-start gap-2">
+      <div className="text-xl pt-0.5">🛡️</div>
+      <div>
+        <div className="text-sm font-semibold">
+          Huolella valitut kalvot ja pinnoitteet
+        </div>
+        <div className="mt-1 text-xs text-slate-400">
+          Tähän voidaan myöhemmin kirjoittaa brändit, takuut ja
+          sertifikaatit.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-sm px-4 py-4">
+    <div className="flex items-start gap-2">
+      <div className="text-xl pt-0.5">📍</div>
+      <div>
+        <div className="text-sm font-semibold">
+          Sijainti & toiminta-alue
+        </div>
+        <div className="mt-1 text-xs text-slate-400">
+          Kaupunki, alue ja miten asiakkaan on helpoin tuoda auto
+          paikalle.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    {/* MOBIILI – nappi meistä-osion loppuun */}
+    <div className="mt-6 md:hidden">
+      <a
+        href="/palvelut/meista"
+        className="inline-flex w-full items-center justify-center rounded-full border border-amber-400/60 bg-amber-400/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-300 hover:bg-amber-400/20"
+      >
+        Lue lisää meistä
+      </a>
+    </div>
+  </div>
+</section>
+
+   {/* GALLERIA, HINNASTO & YHTEYS – placeholderit nyt, tarkennetaan myöhemmin */}
+<section id="galleria" className="border-b border-white/5 bg-slate-950">
+  <div className="mx-auto max-w-6xl px-4 py-14 md:py-18">
+    <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+      Galleria
+    </h2>
+    
+    <div className="mt-6 grid gap-2 sm:grid-cols-3">
+      <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
+        <img
+          src="/gallery/esimerkkiauto.jpg"
+          alt="Auton teippaus"
+          className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
+        <img
+          src="/gallery/mustapaku.jpg"
+          alt="Mainosteippaukset pakettiautoon"
+          className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
+        <img
+          src="/gallery/halonen.jpg"
+          alt="Mainosteippaus"
+          className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+    </div>
+
+    {/* MOBIILI – nappi galleriasivulle osion loppuun */}
+    <div className="mt-6 flex justify-center">
+
+
+      <a
+        href="/palvelut/galleria"
+       className="inline-flex w-full md:w-auto items-center justify-center rounded-full border border-amber-400/60 bg-amber-400/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-300 hover:bg-amber-400/20"
+
+      >
+        Katso galleriamme
+      </a>
+    </div>
+  </div>
+</section>
 
           {/* ARVOSTELUT – scrollattavat kortit mobiilissa */}
       <section id="arvostelut" className="border-b border-slate-800 bg-slate-900">

@@ -65,16 +65,17 @@ export default function MainHeader() {
             <a href="/#etusivu" className="transition-colors hover:text-amber-300">
               Etusivu
             </a>
-            <a href="#palvelut" className="transition-colors hover:text-amber-300">
+            <a href="/#palvelut" className="transition-colors hover:text-amber-300">
+
               Palvelut
             </a>
-            <a href="#galleria" className="transition-colors hover:text-amber-300">
+            <a href="/palvelut/galleria" className="transition-colors hover:text-amber-300">
+
               Galleria
             </a>
-            <a href="#hinnasto" className="transition-colors hover:text-amber-300">
-              Hinnasto
-            </a>
-            <a href="#meista" className="transition-colors hover:text-amber-300">
+            
+           <a href="/palvelut/meista" className="transition-colors hover:text-amber-300">
+
               Meistä
             </a>
             <a href="#yhteys" className="transition-colors hover:text-amber-300">
@@ -100,7 +101,7 @@ export default function MainHeader() {
           <div className="flex flex-1 items-center justify-end gap-3">
             <div className="flex items-center gap-2">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/visual.wraps/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-white/5 text-slate-100 hover:border-amber-400 hover:text-amber-300"
@@ -109,7 +110,7 @@ export default function MainHeader() {
                 <InstagramIcon className="h-4.5 w-4.5" />
               </a>
               <a
-                href="https://tiktok.com"
+                href="https://www.tiktok.com/@visual.wraps"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-white/5 text-slate-100 hover:border-amber-400 hover:text-amber-300"
@@ -159,11 +160,13 @@ export default function MainHeader() {
 
           {/* Logo keskellä – vie aina etusivun hero-osioon */}
           <a href="/#etusivu" className="flex items-center">
-            <div className="relative flex h-8 w-24 items-center justify-center overflow-visible">
+            <div className="relative flex h-10 w-32 items-center justify-center overflow-visible">
+
               <img
                 src="/logo-visualwraps.png"
                 alt="Visual Wraps logo"
-                className="h-full w-auto object-contain scale-[2.4]"
+                className="h-full w-auto object-contain scale-[3.2]"
+
               />
             </div>
           </a>
@@ -182,14 +185,14 @@ export default function MainHeader() {
         {/* MOBIILI: avautuva valikko hampurilaisesta */}
         {mobileMenuOpen && (
           <nav className="mt-2 flex flex-col gap-1 pb-2 text-sm text-slate-100 md:hidden">
-            {[
-              { href: "/#etusivu", label: "Etusivu" },
-              { href: "#palvelut", label: "Palvelut" },
-              { href: "#galleria", label: "Galleria" },
-              { href: "#hinnasto", label: "Hinnasto" },
-              { href: "#meista", label: "Meistä" },
-              { href: "#yhteys", label: "Yhteystiedot" },
-            ].map((item) => (
+                {[
+      { href: "/#etusivu", label: "Etusivu" },
+      { href: "/#palvelut", label: "Palvelut" },
+      { href: "/palvelut/galleria", label: "Galleria" },
+      { href: "/palvelut/meista", label: "Meistä" },
+      { href: "#yhteys", label: "Yhteystiedot" },
+    ].map((item) => (
+
               <a
                 key={item.href + item.label}
                 href={item.href}
@@ -202,25 +205,26 @@ export default function MainHeader() {
 
             {/* SOME-ikonit viimeiseksi, samalle riville – SAMAT KUIN EKA HEADER */}
             <div className="mt-2 flex items-center justify-start gap-2 pl-3">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/5 text-slate-100 hover:border-amber-400 hover:text-amber-300"
-                aria-label="Instagram"
-              >
-                <InstagramIcon className="h-4 w-4" />
-              </a>
-              <a
-                href="https://tiktok.com"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/5 text-slate-100 hover:border-amber-400 hover:text-amber-300"
-                aria-label="TikTok"
-              >
-                <TiktokIcon className="h-4 w-4" />
-              </a>
-            </div>
+  <a
+    href="https://www.instagram.com/visual.wraps/"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/5 text-slate-100 hover:border-amber-400 hover:text-amber-300"
+    aria-label="Instagram"
+  >
+    <InstagramIcon className="h-4 w-4" />
+  </a>
+  <a
+    href="https://www.tiktok.com/@visual.wraps"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/5 text-slate-100 hover:border-amber-400 hover:text-amber-300"
+    aria-label="TikTok"
+  >
+    <TiktokIcon className="h-4 w-4" />
+  </a>
+</div>
+
           </nav>
         )}
       </div>

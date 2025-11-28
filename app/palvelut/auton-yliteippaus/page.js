@@ -42,10 +42,15 @@ export default function AutonYliteippausPage() {
           </p>
         </div>
       </section>
+
+
+
 {/* HERO / JOHDANTO – vanha hero sisällöllisenä osiona videon alla */}
 <section className="border-b border-white/10 bg-slate-950">
   {/* Varsinainen sisältö */}
-  <div className="relative mx-auto max-w-6xl px-4 pt-24 pb-12 md:pt-28 md:pb-14">
+   <div className="relative mx-auto max-w-6xl px-4 pt-8 pb-12 md:pt-16 md:pb-14">
+
+
     {/* Otsikko – yhdelle riville, “sporttisempi” look */}
     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-[0.05em] uppercase md:whitespace-nowrap">
   MUUTA ULKONÄKÖÄ JA{" "}

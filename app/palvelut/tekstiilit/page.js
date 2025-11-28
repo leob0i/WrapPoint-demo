@@ -11,7 +11,7 @@ export default function VaateteippauksetPage() {
         {/* Taustakuva – vaihda omaan kuvaan */}
         <div className="absolute inset-0">
           <Image
-            src="/services/vaateteippaus.jpg"
+            src="/gallery/lippis.jpg"
             alt="Visual Wraps vaateteippaukset ja merch"
             fill
             priority
@@ -21,10 +21,12 @@ export default function VaateteippauksetPage() {
         </div>
 
         {/* Hero-tekstit */}
-        <div className="relative mx-auto max-w-6xl px-4 py-24 sm:py-28 lg:py-32">
+        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-20 lg:py-24">
+
           <div className="max-w-2xl space-y-4">
-            <p className="inline-flex rounded-full bg-amber-300/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-300">
-              Vaateteippaukset & merch
+            <p className="inline-flex rounded-full bg-amber-300/10 px-3 py-0.5 text-[9px] sm:px-4 sm:py-1 sm:text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-300">
+
+              Tekstiilipainatukset & merch
             </p>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
               Brändää tiimi, autot{" "}
@@ -124,73 +126,7 @@ export default function VaateteippauksetPage() {
         </div>
       </section>
 
-      {/* Prosessi + pieni kuvagalleria */}
-      <section className="bg-slate-950">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr,1.1fr] items-start">
-            {/* Prosessi */}
-            <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-                Näin vaateteippaus etenee
-              </h2>
-              <ol className="space-y-4 text-sm text-slate-200/90">
-                <li>
-                  <span className="font-semibold text-amber-300">
-                    1. Yhteys & ideointi
-                  </span>
-                  <br />
-                  Lähetä logo, määrä ja vaatemallit – katsotaan yhdessä
-                  sopivin toteutustapa.
-                </li>
-                <li>
-                  <span className="font-semibold text-amber-300">
-                    2. Vedos & hyväksyntä
-                  </span>
-                  <br />
-                  Teemme selkeän vedoksen, jossa näet logojen paikat ja koot
-                  ennen tuotantoa.
-                </li>
-                <li>
-                  <span className="font-semibold text-amber-300">
-                    3. Tuotanto & toimitus
-                  </span>
-                  <br />
-                  Valmistamme ja toimitamme valmiit vaatteet sovitussa
-                  aikataulussa.
-                </li>
-              </ol>
-            </div>
-
-            {/* Kuvagalleria (placeholdereita, vaihda omiin) */}
-            <div className="grid gap-3 sm:grid-cols-2">
-              <div className="relative h-40 sm:h-48 overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
-                <Image
-                  src="/gallery/vaate-1.jpg"
-                  alt="Brändätyt työvaatteet"
-                  fill
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="relative h-40 sm:h-48 overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
-                <Image
-                  src="/gallery/vaate-2.jpg"
-                  alt="Hupparit ja tiimivaatteet"
-                  fill
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="relative h-40 sm:h-48 overflow-hidden rounded-2xl border border-white/10 bg-slate-900 sm:col-span-2">
-                <Image
-                  src="/gallery/vaate-3.jpg"
-                  alt="Visual Wraps vaateteippaus esimerkki"
-                  fill
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+ 
 
                    {/* Yhteydenottolomake */}
       <section className="relative bg-slate-950 py-16 md:py-20">

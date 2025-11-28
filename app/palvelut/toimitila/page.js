@@ -144,12 +144,12 @@ export default function ToimitilatJaIkkunatPage() {
         </div>
       </section>
 
-                    {/* Yhteydenottolomake */}
+            {/* Yhteydenottolomake */}
       <section className="relative bg-slate-950 py-16 md:py-20">
         {/* Taustakuva */}
         <div className="absolute inset-0">
           <Image
-            src="/gallery/porsche-orange.jpg" // Taustakuva
+            src="/gallery/rautaranta.avif" // Taustakuva
             alt="Taustakuva kylteistä ja banderolleista."
             fill
             className="h-full w-full object-cover"
@@ -163,16 +163,18 @@ export default function ToimitilatJaIkkunatPage() {
             <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
               Pyydä tarjous tai kysy lisää{" "}
               <span className="text-amber-300">
-                teippauksista, tarroista ja kylteistä
+                toimitila- ja ikkunateippauksista
               </span>
             </h2>
             <p className="text-sm leading-relaxed text-slate-100 sm:text-base">
-              Kerro lyhyesti autosta, tilasta tai muusta kohteesta sekä toivotusta
-              ratkaisusta. Voit valita alta, mikä palvelu kiinnostaa eniten – ja
-              halutessasi voit liittää kuvan, luonnoksen tai PDF-tiedoston mukaan.
-              Palaamme sinulle mahdollisimman pian.
+              Kerro lyhyesti toimitiloista, julkisivusta tai ikkunapinnoista sekä
+              toivotusta ratkaisusta. Voit valita alta, mikä palvelu kiinnostaa
+              eniten – ja halutessasi voit liittää kuvan ikkunasta, lasiseinästä
+              tai julkisivusta helpottamaan suunnittelua. Palaamme sinulle
+              mahdollisimman pian.
             </p>
           </div>
+
       
           <form className="mt-10 space-y-6 rounded-2xl border border-white/10 bg-slate-900/70 p-6 shadow-xl backdrop-blur">
             <div className="grid gap-4 md:grid-cols-2">
