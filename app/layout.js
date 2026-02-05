@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Visual Wraps — demo layout",
+  title: "Wrap Point — demo layout",
   description:
     "Auton yliteippaus, PPF, teippaukset, lasien tummennukset ja pinnoitteet.",
 };
