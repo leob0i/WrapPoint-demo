@@ -91,8 +91,8 @@ export default function MainHeader() {
           >
             <div className="relative flex h-8 w-24 md:h-9 md:w-28 items-center justify-center overflow-visible">
               <img
-                src="/logo-visualwraps.png"
-                alt="Visual Wraps logo"
+                src="/wrap.point.logo.png"
+                alt="Wrap Point logo"
                 className="h-full w-auto object-contain scale-[7.5] md:scale-[4.6]"
               />
             </div>
@@ -102,7 +102,7 @@ export default function MainHeader() {
           <div className="flex flex-1 items-center justify-end gap-3">
             <div className="flex items-center gap-2">
               <a
-                href="https://www.instagram.com/visual.wraps/"
+                href="https://www.instagram.com/wrappoint.fi?fbclid=IwY2xjawPxOStleHRuA2FlbQIxMABicmlkETFBbjdNeGxmM1g3SkZ3eTJ2c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHpFUTiW0MSP53WN-TwQUskrXrD549OnrMI4ldhN9aOTJt4bBgvjVS5nG31jh_aem_qcHXusWpLTMnFc8mQdjx1w"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-white/5 text-slate-100 hover:border-amber-400 hover:text-amber-300"
@@ -111,7 +111,7 @@ export default function MainHeader() {
                 <InstagramIcon className="h-4.5 w-4.5" />
               </a>
               <a
-                href="https://www.tiktok.com/@visual.wraps"
+                href="https://www.tiktok.com/@wrappoint.fi?fbclid=IwY2xjawPxORdleHRuA2FlbQIxMABicmlkETFBbjdNeGxmM1g3SkZ3eTJ2c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHm1i3yDei2p3cnNn2FhRZaxHNtNLH7gMyUihDrG1f6MrMs1VvZxCMMXfkk7W_aem_-y9jyYerM9inAT4sbc6iaw"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-white/5 text-slate-100 hover:border-amber-400 hover:text-amber-300"

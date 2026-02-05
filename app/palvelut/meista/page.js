@@ -11,8 +11,8 @@ export default function MeistaPage() {
         {/* Taustakuva */}
         <div className="absolute inset-0">
           <Image
-            src="/services/visualwrapsmusta.png" // sama kuva kuin ennen
-            alt="Visual Wraps studio ja tiimi hallissa"
+            src="/services/wrap.point.musta.jpg" // sama kuva kuin ennen
+            alt="Wrap Point studio ja tiimi hallissa"
             fill
             priority
             className="h-full w-full object-cover"
@@ -30,17 +30,17 @@ export default function MeistaPage() {
                 Meistä
               </p>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
-                Visual Wraps on{" "}
+                Wrap Point on{" "}
                 <span className="text-amber-300">auto- ja mainosteippausten studio,</span>{" "}
                 jossa yksityiskohdat ratkaisevat.
               </h1>
               <p className="text-sm sm:text-base text-slate-200/85">
-               Tänne sivulle laitetaan Visual Wrapsin esittely ja vaikka enempi yhteystietoja kuten asentajien esittelyt yms.
+               Tänne sivulle laitetaan Wrap Pointin esittely ja vaikka enempi yhteystietoja kuten asentajien esittelyt yms.
               </p>
               <p className="text-sm sm:text-base text-slate-300/90">
-                Rakennamme autoista, vaatteista, ikkunoista ja julkisivuista
+                Rakennamme autoista, ikkunoista ja julkisivuista
                 yhtenäisiä kokonaisuuksia. Meille tärkeintä on, että työ näyttää
-                hyvältä läheltä katsottuna – ja erottuu kaukaa.
+                hyvältä ja kestää kauan joka olosuhteessa.
               </p>
             </div>
 
@@ -111,7 +111,7 @@ export default function MeistaPage() {
           <div className="grid gap-10 lg:grid-cols-[1.2fr,1fr] items-center">
             <div className="space-y-4">
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-                Kenelle Visual Wraps{" "}
+                Kenelle Wrap Point{" "}
                 <span className="text-amber-300">sopii kumppaniksi?</span>
               </h2>
               <p className="text-sm sm:text-base text-slate-300/90">
@@ -121,7 +121,7 @@ export default function MeistaPage() {
               </p>
               <p className="text-sm sm:text-base text-slate-300/90">
                 Voimme aloittaa yhdestä autosta tai julkisivusta ja laajentaa
-                myöhemmin vaatteisiin ja muihin pintoihin. Tärkeintä on, että
+                myöhemmin muihin pintoihin. Tärkeintä on, että
                 lopputulos näyttää siltä, että se voisi olla meidänkin
                 portfoliokuvissamme.
               </p>

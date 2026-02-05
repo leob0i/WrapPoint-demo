@@ -70,8 +70,8 @@ export default function GalleriaPage() {
                 </span>
               </h1>
               <p className="text-sm sm:text-base leading-relaxed text-slate-300">
-                Visual Wraps suunnittelee ja toteuttaa näyttävät yliteippaukset,
-                mainosteippaukset sekä yksityiskohdat, jotka keräävät katseet.
+                Wrap Point suunnittelee ja toteuttaa näyttävät yliteippaukset,
+                mainosteippaukset, kiinteistöteippaukset sekä yksityiskohdat, jotka keräävät katseet.
                 Alla näet esimerkkejä eri projekteista – sporttiautoista
                 yrityspakuihin.
               </p>

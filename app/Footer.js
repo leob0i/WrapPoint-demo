@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-slate-950">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          © {new Date().getFullYear()} Visual Wraps. Kaikki oikeudet pidätetään.
+          © {new Date().getFullYear()} Wrap Point. Kaikki oikeudet pidätetään.
         </div>
 
         <div className="flex flex-wrap gap-3 sm:justify-end">

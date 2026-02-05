@@ -30,7 +30,7 @@ export default function Home() {
           {/* Fallback-kuva, jos video ei toimi ollenkaan */}
           <img
             src="/gallery/esimerkkiautokeltainen.jpg" // 👈 sama kuva varalle
-            alt="Visual Wraps – auton teippaus"
+            alt="Wrap Point – auton teippaus"
             className="h-full w-full object-cover"
           />
         </video>
@@ -43,9 +43,7 @@ export default function Home() {
 
           {/* Tekstit vasemmalla */}
           <div className="space-y-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-300">
-              Teipit & ja mainokset
-            </p>
+           
 
             <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
               Teemme autostasi näyttävän
@@ -53,8 +51,8 @@ export default function Home() {
             </h1>
 
             <p className="max-w-xl text-sm leading-relaxed text-slate-100 sm:text-base">
-              Visual Wraps toteuttaa yliteippaukset, mainosteipit, tarrat, tekstiilit, banderollit, 
-              tummennukset huolellisesti. 
+              Wrap Point toteuttaa yliteippaukset, mainosteipit,
+              tummennukset ja kiinteistökalvot huolellisesti sekä näyttävästi.
             </p>
 
             {/* Pieni “luottamus”-boksi, vähän kuin arvostelut */}
@@ -94,88 +92,55 @@ export default function Home() {
         </div>
       </section>
 
-            {/* PALVELUT-OSIO – mobiilissa horisontaalinen slider, desktopissa grid */}
-      <section id="palvelut" className="bg-slate-950/90 py-16">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-violet-400">
-              Palvelut
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-              Auton suojaus ja teippaus yhdestä paikasta.
-            </h2>
-            <p className="mt-3 text-sm text-slate-300 md:text-base">
-              Teemme näyttävät yliteippaukset, kivensuojakalvot, lasien tummennukset
-              ja pinnoitukset – räätälöitynä sinun autollesi ja budjetillesi.
-            </p>
-          </div>
+           {/* PALVELUT-OSIO – 4 korttia, desktopissa samalla rivillä */}
+<section id="palvelut" className="bg-slate-950/90 py-16">
+  <div className="mx-auto max-w-6xl px-4">
+    <div className="max-w-2xl">
+      <p className="text-sm font-semibold uppercase tracking-[0.25em] text-violet-400">
+        Palvelut
+      </p>
+      <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+        Neljä selkeää palvelua – yksi tekijä.
+      </h2>
+      <p className="mt-3 text-sm text-slate-300 md:text-base">
+        Valitse mitä tarvitset: yliteippaus, ikkunakalvot, mainosteippaus tai
+        toimitilateippaukset. Toteutetaan huolellisesti ja näyttävästi.
+      </p>
+    </div>
 
-          {/* Kortit: mobiilissa vaakaskrollattava rivi, md+: grid */}
-          <div className="mt-8 -mx-4 px-4">
-            <div
-              className="
-                flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory
-                md:grid md:gap-6 md:overflow-visible md:snap-none
-                md:grid-cols-2 lg:grid-cols-3
-              "
-            >
-              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
-                <ServiceCard
-                  title="Auton yliteippaus"
-                  description="Vaihda auton ilme täysin ilman maalausta. Laadukkaat kalvot, siisti työnjälki ja helposti purettava pinta."
-                  imageSrc="/services/yliteippaus.jpg"
-                  href="/palvelut/auton-yliteippaus"
-                />
-              </div>
+    {/* 4 korttia samalla rivillä (lg+) */}
+    <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <ServiceCard
+        title="Auton yliteippaus"
+        description="Vaihda auton ilme täysin ilman maalausta. Laadukkaat kalvot ja siisti viimeistely."
+        imageSrc="/services/yliteippaus.jpg"
+        href="/palvelut/auton-yliteippaus"
+      />
 
-              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
-                <ServiceCard
-                  title="Mainosteippaukset"
-                  description="Näyttävät ja kestävät mainosteippaukset autoihin, pakettiautoihin ja ikkunoihin – muutetaan ajoneuvosi tehokkaaksi liikkuvaksi mainokseksi, joka jää mieleen."
-                  imageSrc="/gallery/Halonen.jpg"
-                  href="/palvelut/mainosteippaus"
-                />
-              </div>
+      <ServiceCard
+        title="Ikkunakalvot ja tummennukset"
+        description="Näkösuoja, aurinkosuoja ja viimeistelty ilme. Ratkaisut koteihin ja toimitiloihin."
+        imageSrc="gallery/gtr-green.jpg"
+        href="/palvelut/ikkunakalvot"
+        // jos sun sivu on eri polussa, vaihda esim: "/palvelut/kiinteistokalvot"
+      />
 
-              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
-                <ServiceCard
-                  title="Kyltit ja banderollit"
-                  description="Laadukkaat kyltit, opasteet ja banderollit yrityksen näkyvyyden lisäämiseen – sisä- ja ulkokäyttöön, kestävillä materiaaleilla."
-                  imageSrc="/gallery/rautaranta.avif"
-                   href="/palvelut/kyltit.banderollit"
-                />
-              </div>
+      <ServiceCard
+        title="Mainosteippaus"
+        description="Yritysautosta liikkuva mainos: logot, teippaukset ja brändi-ilme, joka erottuu."
+        imageSrc="/gallery/Halonen.jpg"
+        href="/palvelut/mainosteippaus"
+      />
 
-              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
-                <ServiceCard
-                  title="Vaatepainatukset"
-                  description="Räätälöidyt vaatteiden painatukset yrityksille ja yksityisille – logot, tekstit ja grafiikat terävällä ja kestävällä jäljellä."
-                  imageSrc="/gallery/lippis.jpg"
-                  href="/palvelut/tekstiilit"
-                />
-              </div>
-
-              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
-                <ServiceCard
-                  title="Toimitilateippaukset ja ikkunateippaukset"
-                  description="Yrityksen tilojen ja näyteikkunoiden teippaukset – logot, brändielementit ja opasteet, jotka tuovat näkyvyyttä ja ammattimaisen ilmeen."
-                  imageSrc="/services/Julkisivu.jpg"
-                  href="/palvelut/toimitila"
-                />
-              </div>
-
-              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
-                <ServiceCard
-                  title="Tarrat"
-                  description="Teetämme myös isoja ja pieniä sekä isolla määrällä tai ihan yksittäisiä tarroja esimerksiki messuille tai muutenvaan."
-                  imageSrc="/services/tarrat.jpg"
-                  href="/palvelut/tarrat"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceCard
+        title="Toimitila"
+        description="Näyteikkunat, lasiseinät ja opasteet – brändäys + käytännöllisyys samaan toteutukseen."
+        imageSrc="/services/Julkisivu.jpg"
+        href="/palvelut/toimitila"
+      />
+    </div>
+  </div>
+</section>
 
 
        {/* MEISTÄ-OSIO */}
@@ -186,8 +151,8 @@ export default function Home() {
   {/* Taustakuva + tumma overlay */}
   <div className="pointer-events-none absolute inset-0">
     <Image
-      src="/services/visualwrapsmusta.png" // taustakuva
-      alt="Visual Wraps – auton teippaus ja tiimi"
+      src="/services/wrap.point.musta.jpg" // taustakuva
+      alt="Wrap Point – auton teippaus ja tiimi"
       fill
       className="h-full w-full object-cover"
     />
@@ -199,7 +164,7 @@ export default function Home() {
     <div className="grid gap-10 md:grid-cols-2">
       <div className="space-y-4">
         <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-          Visual Wraps lyhyesti
+          Wrap Point lyhyesti
         </h2>
         <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
           Tähän tulee myöhemmin tarkempi “Meistä”-teksti: tarina,
@@ -357,7 +322,7 @@ export default function Home() {
               Asiakkaat kertovat yhteistyöstä
             </h2>
             <p className="mt-3 text-sm text-slate-300 md:text-base">
-              Tähän tuodaan myöhemmin oikeita palautteita Visual Wrapsin
+              Tähän tuodaan myöhemmin oikeita palautteita Wrap Pointin
               tekemistä yliteippauksista, PPF-suojauksista, tummennuksista ja
               mainosteippauksista. Alla esimerkkejä siitä, miltä sisältö voi
               näyttää valmiina.

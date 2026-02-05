@@ -1,7 +1,8 @@
+// app/layout.js
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import MainHeader from "./MainHeader";
-import Footer from "./Footer.js"; // 👈 UUSI RIVI
+import Footer from "./Footer"; // 👈 tärkeä: default-import
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,4 +33,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
