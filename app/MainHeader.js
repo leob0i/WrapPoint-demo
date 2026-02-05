@@ -164,8 +164,8 @@ export default function MainHeader() {
             <div className="relative flex h-10 w-32 items-center justify-center overflow-visible">
 
               <img
-                src="/logo-visualwraps.png"
-                alt="Visual Wraps logo"
+                src="/wrap.point.logo.png"
+                alt="Wrap Point logo"
                 className="h-full w-auto object-contain scale-[3.2]"
 
               />
