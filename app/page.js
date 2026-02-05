@@ -39,7 +39,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-slate-950/70" />
 
         {/* Sisältö videon päällä */}
-        <div className="relative mx-auto grid min-h-[520px] max-w-6xl gap-12 px-4 pt-24 pb-16 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:pt-32 md:pb-24">
+        <div className="relative mx-auto grid min-h-[520px] max-w-6xl gap-12 px-4 pt-32 pb-16 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:pt-32 md:pb-24">
 
           {/* Tekstit vasemmalla */}
           <div className="space-y-7">
