@@ -161,7 +161,7 @@ export default function AutonYliteippausPage() {
 
         {/* Teksti – oikealla */}
         <div className="space-y-4 text-sm leading-relaxed text-slate-100 sm:text-base md:pl-4 lg:pl-8">
-          <h2 className="text-xl sm:text-2xl font-semibold tracking-[0.05em] uppercase whitespace-nowrap">
+          <h2 className="text-xl sm:text-2xl font-semibold tracking-[0.05em] uppercase">
             Huolella viimeistelty joka kohtaan
           </h2>
           <p>

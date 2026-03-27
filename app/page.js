@@ -106,7 +106,7 @@ export default function Home() {
       <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
         Hemmottele autoasi
       </h2>
-      <p className="mt-3 text-sm text-slate-300 md:text-base whitespace-nowrap">
+      <p className="mt-3 text-sm text-slate-300 md:text-base">
         Tarjoamme monipuolisia ratkaisuja oli sitten kyseessä ajoneuvosi, kiinteistösi tai vaikka yrityksesi!
       </p>
     </div>
