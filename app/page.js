@@ -1,39 +1,46 @@
-// src/app/page.js TAI app/page.js
-// Visual Wraps - etusivun layout, inspiroitunut restyling.fi-rakenteesta,
-// mutta omilla teksteillä ja tyyleillä.
+// app/page.js
+
 
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
 
-      {/* HERO-OSIO (etusivun yläosa) */}
+
+
       {/* HERO-OSIO (etusivun yläosa) videotaustalla */}
       <section
         id="etusivu"
         className="relative border-b border-white/5 overflow-hidden"
       >
-        {/* Taustavideo */}
-                {/* Taustavideo */}
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/gallery/esimerkkiauto.jpg" // 👈 HERO-KUVAN POSTER, vaihda polku tarvittaessa
-        >
-          <source src="/visualwrap-hero.mp4" type="video/mp4" />
+        {/* Taustavideo – kommentoitu pois, asiakas lisää oman videonsa myöhemmin */}
+{/*
+<video
+  className="absolute inset-0 h-full w-full object-cover"
+  autoPlay
+  muted
+  loop
+  playsInline
+  poster="/gallery/esimerkkiauto.jpg"
+>
+  <source src="/visualwrap-hero.mp4" type="video/mp4" />
+  <img
+    src="/gallery/esimerkkiautokeltainen.jpg"
+    alt="Wrap Point – auton teippaus"
+    className="h-full w-full object-cover"
+  />
+</video>
+*/}
 
-          {/* Fallback-kuva, jos video ei toimi ollenkaan */}
-          <img
-            src="/gallery/esimerkkiautokeltainen.jpg" // 👈 sama kuva varalle
-            alt="Wrap Point – auton teippaus"
-            className="h-full w-full object-cover"
-          />
-        </video>
+{/* Väliaikainen hero-kuva */}
+<img
+  src="/gallery/bmw.custom.JPG"
+  alt="Wrap Point – auton teippaus"
+  className="absolute inset-0 h-full w-full object-cover"
+/>
 
         {/* Tumma overlay että teksti erottuu */}
         <div className="absolute inset-0 bg-slate-950/70" />
@@ -46,8 +53,8 @@ export default function Home() {
            
 
             <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
-              Teemme autostasi näyttävän
-              <span className="text-amber-300"> ja suojatun</span>.
+              Teemme autostasi <span className="text-amber-400">näyttävän</span>
+              {" "}ja <span className="text-amber-400">suojatun</span>.
             </h1>
 
             <p className="max-w-xl text-sm leading-relaxed text-slate-100 sm:text-base">
@@ -96,24 +103,20 @@ export default function Home() {
 <section id="palvelut" className="bg-slate-950/90 py-16">
   <div className="mx-auto max-w-6xl px-4">
     <div className="max-w-2xl">
-      <p className="text-sm font-semibold uppercase tracking-[0.25em] text-violet-400">
-        Palvelut
-      </p>
       <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-        Neljä selkeää palvelua – yksi tekijä.
+        Hemmottele autoasi
       </h2>
-      <p className="mt-3 text-sm text-slate-300 md:text-base">
-        Valitse mitä tarvitset: yliteippaus, ikkunakalvot, mainosteippaus tai
-        toimitilateippaukset. Toteutetaan huolellisesti ja näyttävästi.
+      <p className="mt-3 text-sm text-slate-300 md:text-base whitespace-nowrap">
+        Tarjoamme monipuolisia ratkaisuja oli sitten kyseessä ajoneuvosi, kiinteistösi tai vaikka yrityksesi!
       </p>
     </div>
 
-    {/* 4 korttia samalla rivillä (lg+) */}
-    <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {/* 5 korttia samalla rivillä (lg+) */}
+    <div className="mt-10 grid gap-4 lg:grid-cols-5">
       <ServiceCard
         title="Auton yliteippaus"
         description="Vaihda auton ilme täysin ilman maalausta. Laadukkaat kalvot ja siisti viimeistely."
-        imageSrc="/services/yliteippaus.jpg"
+        imageSrc="/gallery/bmw.lokari.webp"
         href="/palvelut/auton-yliteippaus"
       />
 
@@ -122,21 +125,27 @@ export default function Home() {
         description="Näkösuoja, aurinkosuoja ja viimeistelty ilme. Ratkaisut koteihin ja toimitiloihin."
         imageSrc="gallery/gtr-green.jpg"
         href="/palvelut/ikkunakalvot"
-        // jos sun sivu on eri polussa, vaihda esim: "/palvelut/kiinteistokalvot"
       />
 
       <ServiceCard
-        title="Mainosteippaus"
-        description="Yritysautosta liikkuva mainos: logot, teippaukset ja brändi-ilme, joka erottuu."
-        imageSrc="/gallery/Halonen.jpg"
-        href="/palvelut/mainosteippaus"
+        title="Auton sisäpuhdistus"
+        description="Oli autosi ainoastaan imurointia vailla tai kun pyörremyrskyn jäljiltä, me putsaamme sen."
+        imageSrc="/gallery/bmw.sisa.ratti.webp"
+        href="/palvelut/autonsisapuhdistus"
       />
 
       <ServiceCard
-        title="Toimitila"
-        description="Näyteikkunat, lasiseinät ja opasteet – brändäys + käytännöllisyys samaan toteutukseen."
-        imageSrc="/services/Julkisivu.jpg"
+        title="Kiinteistöön"
+        description="Aurinkosuojakalvot, peilikalvot, murtosuojakalvot ja muut kiinteistö kalvot."
+        imageSrc="/gallery/ikkuna.peilikalvo.jpg"
         href="/palvelut/toimitila"
+      />
+
+      <ServiceCard
+        title="Graafinen suunnittelu"
+        description="Valmistamme tarroja toiveesi mukaan. Isot ja pienet tarrat, custom teipit ja vaatepainatukset."
+        imageSrc="/gallery/pikku.tarrat.jpg"
+        href="/graafinen"
       />
     </div>
   </div>
@@ -166,15 +175,16 @@ export default function Home() {
         <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
           Wrap Point lyhyesti
         </h2>
-        <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
-          Tähän tulee myöhemmin tarkempi “Meistä”-teksti: tarina,
-          Mikä on yrityksesi?
+        <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
+          Tarjoamme monipuolisia ratkaisuja oli
+          sitten kyseessä ajoneuvosi, kiinteistösi
+          tai vaikka yrityksesi!
+          Olemme vuonna 2024 perustettu yritys
+          joka keskittyy ajoneuvojen sekä
+          kiinteistöjen teippauksiin ja kalvotuksiin.
         </p>
-        <p className="text-sm leading-relaxed text-slate-400">
-          Ajatuksena on sama kuin referenssisivulla: selkeä kokonaisuus,
-          jossa asiakas ymmärtää miksi juuri sinun yrityksesi on
-          turvallinen ja laadukas valinta auton suojaukseen ja
-          ulkonäön parantamiseen.
+        <p className="text-xl leading-relaxed text-white">
+          Käytössämme ovat markkinoiden laadukaimmat materiaalit.
         </p>
 
         {/* DESKTOP / TABLET -nappi tekstin jälkeen */}
@@ -188,66 +198,53 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
-  <div className="rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-sm px-4 py-4">
-    <div className="flex items-start gap-2">
-      <div className="text-xl pt-0.5">🎯</div>
-      <div>
-        <div className="text-sm font-semibold">
-          Laatu & viimeistelty työnjälki
+      <div className="flex flex-col gap-5 ml-auto mt-8">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-400">Sijainti</p>
+          <p className="mt-1 text-base font-medium text-white">Vantaa</p>
         </div>
-        <div className="mt-1 text-xs text-slate-400">
-          Tähän voit lisätä konkreettisia lupauksia, esim.
-          tarkastusprosessi, materiaalit ja tyytyväisyystakuu.
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-400">Sähköposti</p>
+          <p className="mt-1 text-base font-medium text-white">info@wrappoint.fi</p>
         </div>
-      </div>
-    </div>
-  </div>
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-400">Puhelinnumero</p>
+          <p className="mt-1 text-base font-medium text-white">050 531 5030</p>
+        </div>
 
-  <div className="rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-sm px-4 py-4">
-    <div className="flex items-start gap-2">
-      <div className="text-xl pt-0.5">🕒</div>
-      <div>
-        <div className="text-sm font-semibold">
-          Selkeä aikataulu & yhteydenpito
-        </div>
-        <div className="mt-1 text-xs text-slate-400">
-          Kerro, miten pidät asiakkaan ajan tasalla työn etenemisestä.
-        </div>
+        <Link
+          href="https://wa.me/358505315030"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Avaa WhatsApp ja ota yhteyttä"
+          className="group mt-2 inline-flex h-12 w-fit items-center gap-3 rounded-full bg-[#25D366] px-5 shadow-lg shadow-black/30 ring-1 ring-white/10 transition hover:bg-[#1EBE5D] hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+        >
+          <svg
+            viewBox="0 0 32 32"
+            className="h-7 w-7 shrink-0 text-white"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              fill="currentColor"
+              transform="translate(1.5 -0)"
+              d="M19.11 17.53c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.18.28-.74.9-.9 1.08-.17.18-.33.2-.6.06-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.66-1.56-1.94-.17-.28-.02-.43.13-.57.13-.13.28-.33.42-.49.14-.17.18-.28.28-.46.1-.18.05-.35-.02-.49-.07-.14-.64-1.55-.87-2.12-.23-.56-.46-.49-.64-.49h-.55c-.2 0-.49.07-.74.35-.26.28-.97.95-.97 2.32 0 1.37 1 2.69 1.14 2.88.14.18 1.97 3 4.77 4.2.67.29 1.19.46 1.6.59.67.21 1.28.18 1.76.11.54-.08 1.65-.67 1.88-1.32.23-.64.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"
+            />
+            <path
+              fill="currentColor"
+              d="M16.01 3.2c-7.03 0-12.75 5.7-12.75 12.7 0 2.23.6 4.41 1.73 6.33L3.2 28.8l6.75-1.77a12.8 12.8 0 0 0 6.06 1.54c7.03 0 12.75-5.7 12.75-12.7S23.04 3.2 16.01 3.2zm0 23.12c-1.93 0-3.82-.52-5.47-1.5l-.39-.23-4.01 1.05 1.07-3.9-.25-.4a10.51 10.51 0 0 1-1.61-5.57c0-5.8 4.75-10.52 10.66-10.52 5.9 0 10.66 4.72 10.66 10.52 0 5.8-4.76 10.55-10.66 10.55z"
+            />
+          </svg>
+          <span className="flex flex-col leading-[1.05]">
+            <span className="font-sans text-[15px] font-semibold tracking-tight text-white">
+              WhatsApp
+            </span>
+            <span className="font-sans text-[13px] font-semibold tracking-tight text-white/95 tabular-nums">
+              050 531 5030
+            </span>
+          </span>
+        </Link>
       </div>
-    </div>
-  </div>
-
-  <div className="rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-sm px-4 py-4">
-    <div className="flex items-start gap-2">
-      <div className="text-xl pt-0.5">🛡️</div>
-      <div>
-        <div className="text-sm font-semibold">
-          Huolella valitut kalvot ja pinnoitteet
-        </div>
-        <div className="mt-1 text-xs text-slate-400">
-          Tähän voidaan myöhemmin kirjoittaa brändit, takuut ja
-          sertifikaatit.
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div className="rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-sm px-4 py-4">
-    <div className="flex items-start gap-2">
-      <div className="text-xl pt-0.5">📍</div>
-      <div>
-        <div className="text-sm font-semibold">
-          Sijainti & toiminta-alue
-        </div>
-        <div className="mt-1 text-xs text-slate-400">
-          Kaupunki, alue ja miten asiakkaan on helpoin tuoda auto
-          paikalle.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
     </div>
 
@@ -604,7 +601,7 @@ function ServiceCard({ title, description, imageSrc, href }) {
       </div>
 
       {/* Kuvaus + nappi */}
-      <div className="flex flex-col gap-4 p-5">
+      <div className="flex flex-col gap-4 p-6">
         <p className="text-sm leading-relaxed text-slate-200">
           {description}
         </p>

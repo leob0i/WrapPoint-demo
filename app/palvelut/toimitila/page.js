@@ -11,7 +11,7 @@ export default function KiinteistokalvotPage() {
       <section className="relative border-b border-white/10 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/services/Julkisivu.jpg"
+            src="/gallery/ikkuna.peilikalvo.jpg"
             alt="Kiinteistökalvot lasipinnoille ja ikkunoihin"
             fill
             priority
@@ -20,11 +20,9 @@ export default function KiinteistokalvotPage() {
           <div className="absolute inset-0 bg-slate-950/70" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 py-24 sm:py-28 lg:py-32">
+        <div className="relative mx-auto max-w-6xl px-4 pt-40 pb-10 sm:pt-48 sm:pb-14 lg:pt-56 lg:pb-16">
           <div className="max-w-3xl space-y-4">
-            <p className="inline-flex rounded-full bg-amber-300/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-300">
-              Kiinteistökalvot
-            </p>
+            
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
               Lasipinnoista{" "}
@@ -35,17 +33,11 @@ export default function KiinteistokalvotPage() {
             <p className="text-sm sm:text-base text-slate-200/85">
               Toteutamme kaikki kiinteistöön liittyvät kalvotukset:
               näkösuojat, mainokset, aurinkosuojat, turvakalvot, sisustus- ja
-              brändikalvotukset sekä opasteet lasipinnoille. Ratkaisu valitaan
-              aina kohteen ja käyttötarpeen mukaan.
+              brändikalvotukset sekä opasteet lasipinnoille. 
             </p>
 
             <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Link
-                href="#yhteys"
-                className="inline-flex items-center justify-center rounded-full bg-amber-300 px-6 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-300/30 transition hover:bg-amber-200"
-              >
-                Kysy tarjous
-              </Link>
+              
 
               
             </div>
@@ -115,46 +107,9 @@ export default function KiinteistokalvotPage() {
                   </p>
                 </div>
               </div>
-
-              <div className="rounded-2xl border border-white/10 bg-slate-900/40 p-4 sm:p-5">
-                <p className="text-xs sm:text-sm text-slate-300/90">
-                  <span className="text-amber-300 font-semibold">
-                    Kohteita käytännössä kaikkiin tiloihin:
-                  </span>{" "}
-                  liiketilat ja näyteikkunat, toimistot, taloyhtiöt, julkiset
-                  tilat, koulut/päiväkodit, porraskäytävät, lasiseinät, ovet ja
-                  isot julkisivulasit.
-                </p>
-              </div>
             </div>
 
-            {/* Kuvapuoli */}
-            <div className="space-y-4">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60">
-                <Image
-                  src="/services/Julkisivu.jpg"
-                  alt="Esimerkki kiinteistökalvotuksesta"
-                  fill
-                  className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-amber-200/90">
-                    Esimerkki toteutuksesta
-                  </p>
-                  <p className="text-sm sm:text-base text-slate-50">
-                    Siisti ja yhtenäinen ilme, joka toimii arjessa – ja näyttää
-                    ammattimaiselta ulospäin.
-                  </p>
-                </div>
-              </div>
-
-              <ul className="space-y-1.5 text-xs sm:text-sm text-slate-300/90">
-                <li>• Kartoitus: mitä halutaan (näkösuoja / lämpö / turva / brändi)</li>
-                <li>• Materiaalivalinta ja mitoitus kohteen mukaan</li>
-                <li>• Asennus huolellisesti – lopputulos viimeistelty</li>
-              </ul>
-            </div>
+           
           </div>
         </div>
       </section>
@@ -163,7 +118,7 @@ export default function KiinteistokalvotPage() {
       <section id="yhteys" className="relative bg-slate-950 py-16 md:py-20">
         <div className="absolute inset-0">
           <Image
-            src="/gallery/rautaranta.avif"
+            src="/services/julkisivu.jpg"
             alt="Taustakuva – kiinteistökalvot ja lasipinnat"
             fill
             className="h-full w-full object-cover"

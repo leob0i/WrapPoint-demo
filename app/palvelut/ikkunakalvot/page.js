@@ -1,6 +1,5 @@
 import MainHeader from "../../MainHeader";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function TummennuksetPage() {
   return (
@@ -20,34 +19,15 @@ export default function TummennuksetPage() {
           <div className="absolute inset-0 bg-slate-950/70" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 py-24 sm:py-28 lg:py-32">
-          <div className="max-w-3xl space-y-4">
-            <p className="inline-flex rounded-full bg-amber-300/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-300">
-              Tummennukset
-            </p>
-
+        <div className="relative mx-auto max-w-6xl px-4 pt-24 pb-16 md:pt-28 md:pb-20">
+          <div className="max-w-3xl space-y-4 mt-12 md:mt-16">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
-              Viimeistelty ilme ja{" "}
-              <span className="text-amber-300">mukavampi ajaminen</span> – nopealla
-              asennuksella.
+              Lasien tummennukset
             </h1>
+            <p className="mt-2 text-white text-sm font-semibold uppercase tracking-[0.2em]">
+  Lasien ja valojen tummennukset autoon, <span className="text-amber-300">suojaa</span>, <span className="text-amber-300">tyyliä</span> ja <span className="text-amber-300">mukavuutta</span>.
+</p>
 
-            <p className="text-sm sm:text-base text-slate-200/85">
-              Tummennuskalvot lisäävät yksityisyyttä, vähentävät häikäisyä ja
-              auttavat pitämään auton viileämpänä. Valitaan tummuus ja kalvotyyppi
-              käyttötarpeen mukaan, ja lopputulos asennetaan siististi.
-            </p>
-
-            <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Link
-                href="#yhteys"
-                className="inline-flex items-center justify-center rounded-full bg-amber-300 px-6 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-300/30 transition hover:bg-amber-200"
-              >
-                Kysy tarjous
-              </Link>
-
-              
-            </div>
 
             
           </div>
@@ -56,102 +36,94 @@ export default function TummennuksetPage() {
 
       
 
-      {/* Hyödyt + vaihtoehdot */}
-      <section className="border-b border-white/5 bg-slate-950">
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr,1.1fr] items-start">
-            {/* Tekstipuoli */}
-            <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-                Tummennukset, jotka{" "}
-                <span className="text-amber-300">näyttävät hyvältä</span> ja
-                tuntuvat arjessa.
-              </h2>
+    {/* Hyödyt + vaihtoehdot */}
+<section className="bg-slate-950">
+  <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+    <div className="grid gap-8 md:grid-cols-2 md:items-start">
 
-              <p className="text-sm sm:text-base text-slate-300/90">
-                Oli tavoite sitten hillitty “OEM-look”, selkeä näkösuoja tai
-                häikäisyn vähentäminen, valitaan kalvo ja tummuus asteittain.
-                Asennus tehdään huolellisesti, jotta reunoista tulee siistit ja
-                lopputulos kestää.
-              </p>
+      {/* Tekstipuoli */}
+      <div className="space-y-4 text-sm sm:text-base text-slate-300/90">
 
-              {/* Luettavampi “hyödyt” -osuus (ei laatikkokortteja) */}
-<div className="mt-6 space-y-6">
-  <div className="space-y-2">
-    <h3 className="text-lg sm:text-xl font-semibold tracking-tight text-slate-50">
-      Mitä tummennuksilla saat
-    </h3>
-    <p className="text-sm sm:text-base text-slate-300/90">
-      Valitaan kalvo ja tummuus auton tyylin sekä käyttötarpeen mukaan.
-      Tavoite on aina sama: tasainen sävy, siistit reunat ja mukavampi ajaminen.
-    </p>
-  </div>
+        {/* Otsikko kahdelle riville – sama tyyli kuin yliteippaus */}
+        <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-[2.6rem] font-semibold tracking-[0.05em] uppercase text-slate-50">
+          Tummennukset, jotka <span className="text-amber-300">tuntuvat</span> ja <span className="text-amber-300">näkyvät</span> heti
+        </h2>
 
-  <div className="space-y-4">
-    <FeatureRow
-      title="Suosituin: takasivulasit + takalasi"
-      text="Kokonaisuus, joka lisää yksityisyyttä ja viimeistelee auton ilmeen heti. Sopii arkeen ja näyttää tehdasasenteiselta."
-    />
+        <p>
+          Olitpa hakemassa hillittyä OEM-tyyliä, parempaa yksityisyyttä tai vähemmän kuumuutta autoon – me toteutamme lasien tummennukset nopeasti, siististi ja kestävällä laadulla.
+        </p>
+        <p>✔ Vähemmän kuumuutta kesällä</p>
+        <p>✔ Suoja haitalliselta UV-säteilyltä</p>
+        <p>✔ Lisää yksityisyyttä ja ajomukavuutta</p>
+        <p>✔ Tyylikkäämpi ulkonäkö heti</p>
+        <p>
+          Asennamme kalvot huolellisesti ilman kuplia tai virheitä – lopputulos näyttää siltä kuin se olisi tullut tehtaalta.
+        </p>
+      </div>
 
-    <FeatureRow
-      title="Vähemmän häikäisyä, parempi mukavuus"
-      text="Erityisesti kesällä ja matalassa auringossa tummennus auttaa – ajaminen tuntuu rauhallisemmalta ja matkustus miellyttävämmältä."
-    />
-
-    <FeatureRow
-      title="Tummuusaste valitaan fiksusti"
-      text="Hillitystä tummasta todella tummaan. Valitaan näyttävyyden ja käytön mukaan – ja pidetään kokonaisuus tyylikkäänä."
-    />
-
-    <FeatureRow
-      title="Siisti viimeistely"
-      text="Tarkka leikkaus, puhdas asennus ja huolellinen viimeistely – lopputulos on tasainen ja näyttää premiumilta."
-    />
-  </div>
-
-  <div className="rounded-2xl border border-white/10 bg-slate-900/40 p-4 sm:p-5">
-    <p className="text-sm sm:text-base text-slate-200/90">
-      <span className="text-amber-300 font-semibold">Huom:</span>{" "}
-      Kerro viestissä auton merkki, malli, vuosimalli ja mitkä lasit haluat
-      (takasivut + takalasi / vain takalasi jne.). Saat nopeammin tarkan hinnan
-      ja aikataulun.
-    </p>
-  </div>
-</div>
-
-            </div>
-
-            {/* Kuvapuoli */}
-            <div className="space-y-4">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60">
-                <Image
-                  src="/porsche-orange.jpg"
-                  alt="Esimerkki tummennuksista"
-                  fill
-                  className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-amber-200/90">
-                    Lopputulos
-                  </p>
-                  <p className="text-sm sm:text-base text-slate-50">
-                    Tasainen sävy, siistit reunat ja premium-fiilis.
-                  </p>
-                </div>
-              </div>
-
-              <ul className="space-y-1.5 text-xs sm:text-sm text-slate-300/90">
-                <li>• Kalvon ja tummuuden valinta käyttötarpeen mukaan</li>
-                <li>• Huolellinen puhdistus ja asennus (ei ilmakuplia)</li>
-                <li>• Viimeistely niin, että reunoista tulee siistit</li>
-              </ul>
-            </div>
+      {/* Kuvapuoli */}
+      <div className="space-y-5 md:pl-4 lg:pl-8">
+        <div className="relative h-80 sm:h-[22rem] md:h-[23rem] w-full overflow-hidden rounded-2xl border border-white/20 bg-slate-900/70">
+          <Image
+            src="/gallery/ikkuna.tummennus.jpg"
+            alt="Esimerkki tummennuksista"
+            fill
+            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
+          <div className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-slate-950/80 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.18em] text-amber-200">
+            alk. 99,00€
           </div>
         </div>
-      </section>
+      </div>
 
+    </div>
+  </div>
+</section>
      
+
+      {/* Valojen tummennukset */}
+<section className="bg-slate-950 border-t border-white/10">
+  <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+    <div className="grid gap-8 md:grid-cols-2 md:items-start">
+
+      {/* Kuvapuoli – vasemmalle */}
+      <div className="space-y-5 md:pr-4 lg:pr-8">
+        <div className="relative h-80 sm:h-[22rem] md:h-[23rem] w-full overflow-hidden rounded-2xl border border-white/20 bg-slate-900/70">
+          <Image
+            src="/gallery/takavalo.tummennus.toyota.png"
+            alt="Valojen tummennukset"
+            fill
+            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
+          
+        </div>
+      </div>
+
+      {/* Tekstipuoli – oikealle */}
+      <div className="space-y-4 text-sm sm:text-base text-slate-300/90">
+        <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-[2.6rem] font-semibold tracking-[0.05em] uppercase text-slate-50">
+          Valojen<br />
+          <span className="text-amber-300">tummennukset</span>
+        </h2>
+
+        <p>
+          Tummennetut valot antavat autolle yhtenäisemmän, aggressiivisemman ilmeen – juuri sopivalla tasolla sinun makuusi.
+        </p>
+        <p>✔ Suojaa kiveniskuilta ja naarmuilta</p>
+        <p>✔ Estää UV-haalistumista</p>
+        <p>✔ Säilyttää valojen kunnon pidempään</p>
+        <p>✔ Poistettavissa ilman jälkiä</p>
+        <p>
+          Teemme tummennukset takavaloihin, ajovaloihin ja vilkkuihin.
+          Valittavana useita sävyjä kevyestä savusta täystummaan
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* Yhteydenottolomake */}
       <section id="yhteys" className="relative bg-slate-950 py-16 md:py-20">
@@ -324,24 +296,6 @@ export default function TummennuksetPage() {
         </div>
       </section>
     </main>
-  );
-}
-
-
-
-function FeatureRow({ title, text }) {
-  return (
-    <div className="flex gap-4">
-      <div className="mt-2 h-2.5 w-2.5 flex-none rounded-full bg-amber-300/90" />
-      <div className="space-y-1">
-        <h4 className="text-base sm:text-lg font-semibold text-slate-50">
-          {title}
-        </h4>
-        <p className="text-sm sm:text-base leading-relaxed text-slate-300/90">
-          {text}
-        </p>
-      </div>
-    </div>
   );
 }
 

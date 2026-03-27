@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function AutonYliteippausPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-50">
+    <main className="min-h-screen bg-zinc-950 text-slate-50">
       {/* HEADER tulee globaalisti MainHeader-komponentista */}
 
       {/* UUSI VIDEO-HERO – normaali taustavideo vain tälle herolle */}
-      <section className="relative overflow-hidden border-b border-white/10 bg-slate-950">
+      <section className="relative overflow-hidden border-b border-white/10 bg-zinc-950">
         {/* Taustavideo */}
         <div className="absolute inset-0">
           <video
@@ -23,7 +23,7 @@ export default function AutonYliteippausPage() {
           </video>
 
           {/* Tumma overlay, että teksti erottuu */}
-          <div className="absolute inset-0 bg-slate-950/70" />
+          <div className="absolute inset-0 bg-zinc-950/70" />
         </div>
 
         {/* Hero-tekstit videon päällä */}
@@ -46,107 +46,84 @@ export default function AutonYliteippausPage() {
 
 
 {/* HERO / JOHDANTO – vanha hero sisällöllisenä osiona videon alla */}
-<section className="border-b border-white/10 bg-slate-950">
+<section className="bg-zinc-950">
   {/* Varsinainen sisältö */}
    <div className="relative mx-auto max-w-6xl px-4 pt-8 pb-12 md:pt-16 md:pb-14">
 
 
     {/* Otsikko – yhdelle riville, “sporttisempi” look */}
-    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-[0.05em] uppercase md:whitespace-nowrap">
-  MUUTA ULKONÄKÖÄ JA{" "}
-  <span className="text-amber-300">EROTU JOUKOSTA</span>
+    {/* Grid – otsikko + teksti vasemmalla, kuvat oikealla samalta korkeudelta */}
+<div className="mt-6 grid gap-8 md:grid-cols-2 md:items-start">
+  <div className="space-y-4 text-sm leading-relaxed text-slate-100 sm:text-base">
+
+    {/* Otsikko kahdelle riville vasemmalle */}
+    <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-[2.6rem] font-semibold tracking-[0.05em] uppercase">
+  Muuta ulkonäköä
+  <br />
+  <span className="text-amber-300">Ja erotu joukosta</span>
 </h1>
 
-
-
-   
-
-    {/* Leveämpi grid + isommat kuvat */}
-    <div className="mt-6 grid gap-8 md:grid-cols-2 md:items-start">
-      {/* Tekstipuoli – tiputetaan hieman alas jotta linja on sama kuvan kanssa */}
-      <div className="space-y-4 text-sm leading-relaxed text-slate-100 sm:text-base md:pt-1.5 lg:pt-2">
-        <p>
+    <p>
           Auton yliteippaus on nopea ja kustannustehokas tapa vaihtaa auton
           ulkonäköä ilman pysyvää maalausta. Laadukkaat teippikalvot
           suojaavat alkuperäistä maalipintaa, tuovat uuden sävyn tai
           efektin ja voidaan tarvittaessa poistaa myöhemmin, kun haluat
-          auton takaisin alkuperäiseen ilmeeseen.
+          auton takaisin alkuperäiseen ilmeeseen vahingoittamatta alkuperäistä pintaa.
         </p>
         <p>
           Teemme yliteippaukset huolellisella esivalmistelulla ja
-          ammattimaisella asennuksella. Voit valita yksivärisen pinnan
+          ammattimaisella asennuksella. Oli kyseessä auto, moottoripyörä taikka vene, anna sille uusi ilme teippauksella!
+          <br></br>
+          <br></br> Valikoimassamme on satoja eri sävyjä laadukkaita materiaaleja. Voit valita yksivärisen pinnan
           (matta, kiiltävä, satin), erikoisefektit tai yrityksen
           brändivärit ja logot. Sivun alaosasta löydät suuntaa-antavan
           hinnaston ja lomakkeen tarkemman tarjouksen pyytämiseen.
         </p>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div className="rounded-xl border border-slate-700 bg-slate-900/80 p-4 shadow-sm shadow-black/30">
-            <h2 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-amber-300">
-              Miksi valita yliteippaus?
-            </h2>
-            <ul className="mt-2 space-y-1.5 text-sm text-slate-100">
-              <li>• Uusi väri ilman auton maalausta</li>
-              <li>
-                • Suojaa maalipintaa kiviltä, roiskeilta ja pieniltä
-                naarmuilta
-              </li>
-              <li>• Poistettavissa tai vaihdettavissa myöhemmin</li>
-            </ul>
-          </div>
+        
 
-          <div className="rounded-xl border border-slate-700 bg-slate-900/80 p-4 shadow-sm shadow-black/30">
-            <h2 className="text-[10px] font-semibold uppercase tracking-[0.2em] text-amber-300">
-              Tyypillisiä kohteita
-            </h2>
-            <ul className="mt-2 space-y-1.5 text-sm text-slate-100">
-              <li>• Henkilöautot ja pakettiautot</li>
-              <li>• Työ- ja yritysautot</li>
-              <li>• Brändätyt kuljetus- ja mainosautot</li>
-              <li>• Tuning- ja näyttelyautot</li>
-            </ul>
-          </div>
-        </div>
+          
+        
       </div>
 
       {/* Kuva / galleria – isompi pystysuunnassa */}
       <div className="space-y-5 md:pl-4 lg:pl-8">
         {/* Pääkuva */}
-        <div className="relative h-80 sm:h-[22rem] md:h-[23rem] w-full overflow-hidden rounded-2xl border border-white/20 bg-slate-900/70">
+        <div className="relative h-80 sm:h-[22rem] md:h-[23rem] w-full overflow-hidden rounded-2xl border border-white/20 bg-zinc-900/70">
           <img
-            src="/services/yliteippaus.jpg"
+            src="/gallery/bmw.lokari.webp"
             alt="Auton yliteippaus – esimerkkiauto"
             className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
           {/* Badge 1 */}
-          <div className="pointer-events-none absolute bottom-3 left-3 rounded-full bg-slate-950/80 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-amber-200">
+          <div className="pointer-events-none absolute bottom-3 left-3 rounded-full bg-zinc-950/80 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-amber-200">
             Laadukkaat materiaalit
           </div>
         </div>
 
         {/* Pienet lisäkuvat */}
         <div className="grid gap-3 sm:grid-cols-2">
-          <div className="relative h-32 sm:h-36 md:h-40 overflow-hidden rounded-xl border border-white/20 bg-slate-900/70">
+          <div className="relative h-32 sm:h-36 md:h-40 overflow-hidden rounded-xl border border-white/20 bg-zinc-900/70">
             <img
-              src="/gallery/esimerkkiauto.jpg"
+              src="/gallery/bmw.sivu.tarra.png"
               alt="Yliteippauksen yksityiskohta"
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
             />
             {/* Badge 2 */}
-            <div className="pointer-events-none absolute bottom-2 left-2 rounded-full bg-slate-950/80 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-amber-200">
+            <div className="pointer-events-none absolute bottom-2 left-2 rounded-full bg-zinc-950/80 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-amber-200">
               Yksilöllinen toteutus
             </div>
           </div>
 
-          <div className="relative h-32 sm:h-36 md:h-40 overflow-hidden rounded-xl border border-white/20 bg-slate-900/70">
+          <div className="relative h-32 sm:h-36 md:h-40 overflow-hidden rounded-xl border border-white/20 bg-zinc-900/70">
             <img
-              src="/gallery/esimerkkiautokeltainen.jpg"
+              src="/gallery/pinkki.audi.lokari.webp"
               alt="Toinen yliteippaus-esimerkki"
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
             />
             {/* Badge 3 */}
-            <div className="pointer-events-none absolute bottom-2 left-2 rounded-full bg-slate-950/80 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-amber-200">
+            <div className="pointer-events-none absolute bottom-2 left-2 rounded-full bg-zinc-950/80 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-amber-200">
               Laatutakuu
             </div>
           </div>
@@ -157,38 +134,60 @@ export default function AutonYliteippausPage() {
 </section>
 
 
-      <section className="border-t border-white/10 bg-slate-950">
+      {/* YKSITYISKOHDAT-SECTION */}
+      <section className="bg-zinc-950">
   <div className="mx-auto max-w-6xl px-4 py-12">
-    <div className="rounded-3xl border border-slate-700 bg-slate-900/85 px-6 py-8 md:px-8 md:py-10 shadow-[0_0_40px_rgba(15,23,42,0.75)]">
-      <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-amber-300">
-        TAATTU KESTÄVYYS
-      </h2>
-      <h3 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl text-slate-50">
-        Laadukas teippaus ja oikein tehty esivalmistelu
-      </h3>
-      <p className="mt-4 text-sm leading-relaxed text-slate-200 sm:text-base">
-        Ennen yliteippausta auto pestään ja puhdistetaan huolellisesti.
-        Poistamme lian, rasvan ja mahdolliset vahajäämät, jotta kalvo
-        tarttuu kunnolla ja pinta pysyy siistinä pitkään. Tarvittaessa
-        irrotamme listoja ja pienempiä osia, jotta teippauksen reunat
-        saadaan piiloon ja lopputulos näyttää mahdollisimman
-        tehdasmaiselta.
-      </p>
-      <p className="mt-3 text-sm leading-relaxed text-slate-200 sm:text-base">
-        Käytämme laadukkaita, valettavia teippikalvoja tunnetuilta
-        valmistajilta. Oikein hoidettuna yliteippaus kestää useita
-        vuosia ja suojaa auton maalipintaa samalla, kun ulkonäkö
-        päivittyy nykyiseen tyyliin.
-      </p>
-    </div>
+      <div className="grid gap-8 md:grid-cols-2 md:items-start">
+
+        {/* 2 kuvaa – vasemmalla, vierekkäin */}
+        <div className="grid grid-cols-2 gap-3">
+          <div className="relative h-44 sm:h-48 overflow-hidden rounded-2xl border border-white/20 bg-zinc-900/70">
+            <img
+              src="/gallery/pinkki.teipatta.kahva.JPG"
+              alt="Teipatttu ovenkahva"
+              className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
+          </div>
+          <div className="relative h-44 sm:h-48 overflow-hidden rounded-2xl border border-white/20 bg-zinc-900/70">
+            <img
+              src="/gallery/ovensisapinta.JPG"
+              alt="Ovikarmin sisäpinta teipattuna"
+              className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
+          </div>
+        </div>
+
+        {/* Teksti – oikealla */}
+        <div className="space-y-4 text-sm leading-relaxed text-slate-100 sm:text-base md:pl-4 lg:pl-8">
+          <h2 className="text-xl sm:text-2xl font-semibold tracking-[0.05em] uppercase whitespace-nowrap">
+            Huolella viimeistelty joka kohtaan
+          </h2>
+          <p>
+            Teippaamme ovenkahvat ja muutkin yksityiskohdat huolella ja laadusta tinkimättä. Tarvittaessa teippaamme myös ovikarmien sisäpinnat omalla designillä.
+          </p>
+          <div className="mt-3 flex justify-end">
+            <a
+              href="/palvelut/galleria"
+              className="inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/30 transition hover:bg-amber-400"
+            >
+              Katso töitämme
+            </a>
+          </div>
+        </div>
+
+      </div>
   </div>
 </section>
+
+      
 
 
       {/* HINNASTO */}
       <section
         id="hinnasto"
-        className="border-t border-white/10 bg-slate-950/90"
+        className="border-t border-white/10 bg-zinc-950/90"
       >
         <div className="mx-auto max-w-6xl px-4 py-12">
           <div className="mb-6 space-y-2">
@@ -198,66 +197,55 @@ export default function AutonYliteippausPage() {
             <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">
               Suuntaa-antava hinnasto auton yliteippaukselle
             </h3>
-            <p className="text-sm text-slate-200 sm:text-base">
-              Alla olevat hinnat ovat{" "}
-              <span className="font-semibold">
-                suuntaa-antavia alkaen-hintoja
-              </span>
-              . Lopullinen hinta tarkentuu auton mallin, kunnon, värivalinnan ja
-              teippauksen laajuuden mukaan.
-            </p>
-            <p className="text-xs text-slate-400 sm:text-sm">
-              Pyydä tarkka tarjous sivun alaosassa olevan lomakkeen kautta.
-            </p>
+            
           </div>
 
           <div className="grid gap-5 md:grid-cols-3">
-            <div className="flex flex-col rounded-2xl border border-white/15 bg-slate-900/70 p-4">
+            <div className="flex flex-col rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
               <h4 className="text-sm font-semibold text-slate-50 sm:text-base">
                 Henkilöauto – täysi yliteippaus
               </h4>
               <p className="mt-2 text-xs text-slate-300 sm:text-sm">
-                Koko auton värinvaihto (ei sisällä oviaukkojen sisäpintoja).
+                Koko auton yliteippaus 
               </p>
               <p className="mt-4 text-sm font-semibold text-amber-300 sm:text-base">
-                alk. 1&nbsp;800&nbsp;€ – 2&nbsp;400&nbsp;€
+                alk. 1&nbsp;899,00&nbsp;€
               </p>
             </div>
 
-            <div className="flex flex-col rounded-2xl border border-white/15 bg-slate-900/70 p-4">
+            <div className="flex flex-col rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
               <h4 className="text-sm font-semibold text-slate-50 sm:text-base">
-                Pakettiauto / suurempi ajoneuvo
+                Katon teippaus
               </h4>
               <p className="mt-2 text-xs text-slate-300 sm:text-sm">
-                Työ- ja yritysautot, laajemmat pinnat ja mainospohjat.
+                Katon teippaus ammattitaidolla.
               </p>
               <p className="mt-4 text-sm font-semibold text-amber-300 sm:text-base">
-                alk. 2&nbsp;200&nbsp;€ – 3&nbsp;200&nbsp;€
+                alk. 250&nbsp;€
               </p>
             </div>
 
-            <div className="flex flex-col rounded-2xl border border-white/15 bg-slate-900/70 p-4">
+            <div className="flex flex-col rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
               <h4 className="text-sm font-semibold text-slate-50 sm:text-base">
-                Osateippaus / tehosteet
+                Chrome delete
               </h4>
               <p className="mt-2 text-xs text-slate-300 sm:text-sm">
-                Katto, peilit, raidat, logot, listat ja muut yksityiskohdat.
+                Kromin poisto teippaamalla.
               </p>
               <p className="mt-4 text-sm font-semibold text-amber-300 sm:text-base">
-                alk. 250&nbsp;€ – 900&nbsp;€
+                alk. 150&nbsp;€
               </p>
             </div>
           </div>
 
           <p className="mt-5 text-xs text-slate-400 sm:text-sm">
-            Hinnat eivät ole lopullisia tarjouksia. Kerro meille tarkemmat
-            tiedot autosta, niin laskemme sinulle tarkan kirjallisen tarjouksen.
+            Hinnat eivät ole lopullisia tarjouksia. Lopullinen hinta tarkentuu kohteesta ja toiveista riippuen. Kysy lisää!
           </p>
         </div>
       </section>
 
       {/* Yhteydenottolomake */}
-      <section className="relative bg-slate-950 py-16 md:py-20">
+      <section className="relative bg-zinc-950 py-16 md:py-20">
         {/* Taustakuva */}
         <div className="absolute inset-0">
           <Image
@@ -267,7 +255,7 @@ export default function AutonYliteippausPage() {
             className="h-full w-full object-cover"
           />
           {/* Tumma overlay, että lomake erottuu */}
-          <div className="absolute inset-0 bg-slate-950/80" />
+          <div className="absolute inset-0 bg-zinc-950/80" />
         </div>
 
         <div className="relative mx-auto max-w-4xl px-4">
@@ -286,7 +274,7 @@ export default function AutonYliteippausPage() {
             </p>
           </div>
 
-          <form className="mt-10 space-y-6 rounded-2xl border border-white/10 bg-slate-900/70 p-6 shadow-xl backdrop-blur">
+          <form className="mt-10 space-y-6 rounded-2xl border border-white/10 bg-zinc-900/70 p-6 shadow-xl backdrop-blur">
             <div className="grid gap-4 md:grid-cols-2">
               <div className="space-y-1.5 text-sm">
                 <label

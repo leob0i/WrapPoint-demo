@@ -6,40 +6,64 @@ import Link from "next/link";
 
 const galleryImages = [
   {
-    src: "/gallery/gtr-perse.jpg",
-    alt: "Täysmatta yliteippaus urheiluautoon.",
-    title: "Täysmatta yliteippaus",
-    label: "Auton yliteippaus",
+    src: "/gallery/bmw.custom.jokeri.webp",
+    alt: "Custom jokeri teippaus autoon.",
+    
   },
   {
-    src: "/gallery/mustapaku.jpg",
-    alt: "Yrityspaku näyttävällä mainosteippauksella.",
-    title: "Yrityspakun mainosteippaus",
-    label: "Mainosteippaus",
+    src: "/gallery/bmw.wagon.redbull.webp",
+    alt: "Wagon red bull teippaus",
+    
   },
   {
-    src: "/gallery/porsche-orange.jpg",
-    alt: "Porschen teippaus korosteväreillä.",
-    title: "Korosteteipit & yksityiskohdat",
-    label: "Detailing & stripe",
+    src: "/gallery/bmw.custom.kuviot.webp",
+    alt: "Custom bemarin vihertävä teippaus",
+    
   },
   {
-    src: "/gallery/jdm.jpg",
-    alt: "JDM-tyylinen teippaus drift-autossa.",
-    title: "JDM & drift-teippaukset",
-    label: "Custom design",
+    src: "/gallery/bmw.custom.JPG",
+    alt: "BMW custom teippaus.",
+    
   },
   {
-    src: "/gallery/mustapaku.jpg",
-    alt: "Logo ja yhteystiedot pakettiautossa.",
-    title: "Logo & yhteystiedot",
-    label: "Yritysauto",
+    src: "/gallery/tesla.matta.chrome.delete.jpg",
+    alt: "Mattamusta tesla.",
+   
   },
   {
-    src: "/gallery/gtr-perse.jpg",
-    alt: "Sporttiauton takaviisto näkymä yliteippauksella.",
-    title: "Kokonaisuuden viimeistely",
-    label: "Premium wrap",
+    src: "/gallery/pinkki.audi.lokari.webp",
+    alt: "Audi pinkki teippaus.",
+    
+  },
+  {
+    src: "/gallery/rengas.center.banderolli.jpg",
+    alt: "Iso banderolli",
+    
+  },
+  {
+    src: "/gallery/liuku.ovi.jpg",
+    alt: "Mainosteipattu liukuovi",
+    
+  },
+  {
+    src: "/gallery/vene.teippi.jpg",
+    alt: "Buster veneen teippaus",
+    
+  },
+  {
+    src: "/gallery/vene.teippi.keskeneräinen.webp",
+    alt: "Iso teipattava vene",
+    
+  },
+  {
+    src: "/gallery/pikku.tarrat.jpg",
+    alt: "Custom tarroja",
+    
+  },
+  {
+    src: "/gallery/pieni.custom.tarra.png",
+    alt: "Tarroja tilauksesta",
+    
   },
 ];
 
@@ -50,8 +74,16 @@ export default function GalleriaPage() {
 
       {/* INTRO + 3 KUVA -OSIO */}
       <section className="relative border-b border-white/10 overflow-hidden">
-        {/* Taustagradientti, että sivu näyttää “premiumilta” */}
+        {/* Taustakuva + tumma overlay */}
         <div className="pointer-events-none absolute inset-0">
+          <Image
+            src="/gallery/bmw.sivu.custom.kokobody.webp"
+            alt=""
+            fill
+            priority
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/30" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(248,250,252,0.10),_rgba(15,23,42,1))]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(8,47,73,0.45),_transparent)]" />
         </div>
@@ -72,8 +104,7 @@ export default function GalleriaPage() {
               <p className="text-sm sm:text-base leading-relaxed text-slate-300">
                 Wrap Point suunnittelee ja toteuttaa näyttävät yliteippaukset,
                 mainosteippaukset, kiinteistöteippaukset sekä yksityiskohdat, jotka keräävät katseet.
-                Alla näet esimerkkejä eri projekteista – sporttiautoista
-                yrityspakuihin.
+                Alla näet esimerkkejä eri projekteista. 
               </p>
               <p className="text-xs sm:text-sm text-slate-400">
                 Kaikki toteutukset suunnitellaan auto ja brändi edellä. Värit,
@@ -85,10 +116,10 @@ export default function GalleriaPage() {
             {/* 3 kuvan mosaiikki */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4">
               {/* Iso pääkuva */}
-              <div className="col-span-2 row-span-2 relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/40 shadow-[0_22px_60px_rgba(0,0,0,0.65)]">
-                <div className="relative aspect-[4/3]">
+             <div className="col-span-2 row-span-2 relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/40 shadow-[0_22px_60px_rgba(0,0,0,0.65)]">
+  <div className="relative h-full min-h-[300px]">
                   <Image
-                    src="/gallery/gtr-perse.jpg"
+                    src="/gallery/bmw.sivu.tarra.png"
                     alt="Täysmatta yliteippaus urheiluautoon."
                     fill
                     priority
@@ -98,10 +129,7 @@ export default function GalleriaPage() {
                 </div>
                 <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 px-4 pb-3 pt-2 text-xs sm:text-sm">
                   <span className="font-medium text-slate-100">
-                    Täysmatta yliteippaus
-                  </span>
-                  <span className="text-[10px] uppercase tracking-[0.24em] text-amber-300">
-                    Premium wrap
+                    Custom teippaus
                   </span>
                 </div>
               </div>
@@ -110,7 +138,7 @@ export default function GalleriaPage() {
               <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 shadow-[0_18px_40px_rgba(0,0,0,0.6)]">
                 <div className="relative aspect-[4/5]">
                   <Image
-                    src="/gallery/mustapaku.jpg"
+                    src="/gallery/paku.rengascenter.jpg"
                     alt="Yrityspaku näyttävällä mainosteippauksella."
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-[1.06]"
@@ -125,7 +153,7 @@ export default function GalleriaPage() {
               <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 shadow-[0_18px_40px_rgba(0,0,0,0.6)]">
                 <div className="relative aspect-[4/5]">
                   <Image
-                    src="/gallery/porsche-orange.jpg"
+                    src="/gallery/ovensisapinta.jpg"
                     alt="Porschen teippaus korosteväreillä."
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-[1.06]"
@@ -133,10 +161,60 @@ export default function GalleriaPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                 </div>
                 <div className="absolute inset-x-0 bottom-0 px-3 pb-2 pt-1 text-[11px] text-slate-100">
-                  Korostevärit & yksityiskohdat
+                  Myös yksityiskohdat ratkaisevat
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* KUVABOXI + TEKSTI -OSIO */}
+      <section className="relative bg-slate-950 py-16 md:py-20 border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-14">
+
+            {/* Vasen: neliölaatikko kahdella kuvalla, terävät kulmat, ei rakoa kuvien väliin */}
+            <div className="w-full md:w-[420px] flex-shrink-0 aspect-square overflow-hidden flex flex-col">
+              <div className="relative flex-1">
+                <Image
+                  src="/gallery/bmw.pinkki.harmaa.JPG"
+                  alt="BMW pinkki harmaa teippaus"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative flex-1">
+                <Image
+                  src="/gallery/bmw.pinkki.harmaa.reflex.jpg"
+                  alt="BMW custom teippaus"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Oikea: tekstikenttä */}
+            <div className="space-y-5 max-w-lg">
+              
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+                <span className="text-amber-300">Designia</span> jota et saa muualta
+
+              </h2>
+              <p className="text-base sm:text-lg font-bold leading-relaxed text-slate-300">
+                Reflexoivalla teipillä teipattu bemari on hyvä esimerkki siitä,
+                miten voimme toteuttaa uniikitin pyynnöt. </p><p className="text-sm sm:text-base leading-relaxed text-slate-300"><br />
+                Tässä bemarissa ei näy teipin saumoja,
+                 vaikka auton takaosa heuijjastaa valoa ja etuosan teipit ei. 
+                Sama yhtenäinen rakenne ja laadukas asennus ja materiaalit ovat meille yökkösiä.
+              </p>
+              <p className="text-sm leading-relaxed text-slate-400">
+                Käytämme ainoastaan laadukkaita materiaaleja, jotka kestävät
+                aikaa ja säätä. Ammattitaitoinen asennus takaa, ettei
+                lopputuloksessa näy kuplia, saumoja tai epätasaisuuksia ja kestää pitkään.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
@@ -152,15 +230,9 @@ export default function GalleriaPage() {
         <div className="relative mx-auto max-w-6xl px-4 space-y-6">
           <div className="flex flex-wrap items-baseline justify-between gap-4">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight">
-              Toteutuksia eri{" "}
-              <span className="text-amber-300">autoista ja projekteista</span>
+              Toteutuksia vuosien varrelta, erilaisista autoista ja tarpeista.
             </h2>
-            <p className="max-w-md text-xs sm:text-sm text-slate-400">
-              Alla esimerkkejä yliteippauksista, mainosteippauksista ja
-              yksityiskohtien viimeistelystä. Selaa ja poimi ideoita omaan
-              projektiisi – toteutamme sekä hillityt että todella rohkeat
-              kokonaisuudet.
-            </p>
+            
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
