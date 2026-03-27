@@ -122,8 +122,8 @@ export default function Home() {
 
       <ServiceCard
         title="Ikkunakalvot ja tummennukset"
-        description="Näkösuoja, aurinkosuoja ja viimeistelty ilme. Ratkaisut koteihin ja toimitiloihin."
-        imageSrc="gallery/gtr-green.jpg"
+        description="Lasien ja valojen tummennukset tuovat suojaa, tyyliä ja näkyvyyttä."
+        imageSrc="/gallery/gtr-green.jpg"
         href="/palvelut/ikkunakalvot"
       />
 
@@ -151,6 +151,54 @@ export default function Home() {
   </div>
 </section>
 
+
+   {/* GALLERIA, HINNASTO & YHTEYS – placeholderit nyt, tarkennetaan myöhemmin */}
+<section id="galleria" className="border-b border-white/5 bg-slate-950">
+  <div className="mx-auto max-w-6xl px-4 py-14 md:py-18">
+    <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+      Galleria
+    </h2>
+
+    <div className="mt-6 grid gap-2 sm:grid-cols-3">
+      <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
+        <img
+          src="/gallery/bmw.custom.jokeri.webp"
+          alt="Auton custom teippaus"
+          className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
+        <img
+          src="/gallery/bmw.sivu.tarra.png"
+          alt="Tuningi tarra bemarissa"
+          className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
+        <img
+          src="/gallery/toyota.tummennus.delete.webp"
+          alt="Teipattu tuning toyota"
+          className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+    </div>
+
+    {/* MOBIILI – nappi galleriasivulle osion loppuun */}
+    <div className="mt-6 flex justify-center">
+
+
+      <a
+        href="/palvelut/galleria"
+       className="inline-flex w-full md:w-auto items-center justify-center rounded-full border border-amber-400/60 bg-amber-400/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-300 hover:bg-amber-400/20"
+
+      >
+        Katso galleriamme
+      </a>
+    </div>
+  </div>
+</section>
 
        {/* MEISTÄ-OSIO */}
 <section
@@ -260,54 +308,6 @@ export default function Home() {
   </div>
 </section>
 
-   {/* GALLERIA, HINNASTO & YHTEYS – placeholderit nyt, tarkennetaan myöhemmin */}
-<section id="galleria" className="border-b border-white/5 bg-slate-950">
-  <div className="mx-auto max-w-6xl px-4 py-14 md:py-18">
-    <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-      Galleria
-    </h2>
-    
-    <div className="mt-6 grid gap-2 sm:grid-cols-3">
-      <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
-        <img
-          src="/gallery/esimerkkiauto.jpg"
-          alt="Auton teippaus"
-          className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
-
-      <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
-        <img
-          src="/gallery/mustapaku.jpg"
-          alt="Mainosteippaukset pakettiautoon"
-          className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
-
-      <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
-        <img
-          src="/gallery/Halonen.jpg"
-          alt="Mainosteippaus"
-          className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
-    </div>
-
-    {/* MOBIILI – nappi galleriasivulle osion loppuun */}
-    <div className="mt-6 flex justify-center">
-
-
-      <a
-        href="/palvelut/galleria"
-       className="inline-flex w-full md:w-auto items-center justify-center rounded-full border border-amber-400/60 bg-amber-400/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-300 hover:bg-amber-400/20"
-
-      >
-        Katso galleriamme
-      </a>
-    </div>
-  </div>
-</section>
-
           {/* ARVOSTELUT – scrollattavat kortit mobiilissa */}
       <section id="arvostelut" className="border-b border-slate-800 bg-slate-900">
         <div className="mx-auto max-w-6xl px-4 py-14 md:py-18">
@@ -389,7 +389,7 @@ export default function Home() {
   {/* Taustakuva */}
   <div className="absolute inset-0">
     <Image
-      src="/gallery/porsche-orange.jpg" // Taustakuva
+      src="/gallery/bmw.sivu.tarra.png" // Taustakuva
       alt="Taustakuva kylteistä ja banderolleista."
       fill
       className="h-full w-full object-cover"

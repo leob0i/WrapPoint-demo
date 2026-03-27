@@ -13,7 +13,7 @@ export default function GraafinenSuunnitteluPage() {
           {/* Taustakuva – ei koko sivun kokoinen */}
           <div className="absolute inset-0">
             <Image
-              src="/gallery/Halonen.jpg"
+              src="/gallery/pikku.tarrat.jpg"
               alt="Graafinen suunnittelu – tarrat, teipit ja vaatepainatukset"
               fill
               priority
@@ -23,132 +23,122 @@ export default function GraafinenSuunnitteluPage() {
           </div>
 
           {/* Hero-sisältö – keskitetty, kohtuullinen korkeus */}
-          <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28 flex flex-col items-center text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-amber-300 mb-4">
-              Graafinen suunnittelu
-            </p>
+          <div className="relative mx-auto max-w-6xl px-4 pt-24 pb-16 md:pt-28 md:pb-20">
+            <div className="max-w-3xl space-y-4 mt-12 md:mt-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-              Graafinen suunnittelu
+              <span className="text-amber-300">Graafinen</span> suunnittelu
             </h1>
             <p className="mt-4 text-base sm:text-lg text-slate-200">
-              Mitä vain mieleesi juolahtaa!
+              Valmistamme tarroja, kalvoja ja vaatepainatuksia toiveidesi mukaan.
             </p>
+            </div>
           </div>
         </section>
 
-        {/* OSIO 1 – Custom tarrat autoihin */}
-        <section className="border-b border-white/10 bg-slate-900/40">
+{/* OSIO 1 – Custom grafiikka autoon */}
+        <section className="">
           <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+            <div className="grid gap-8 md:grid-cols-2 md:items-start">
+              <div className="space-y-4 text-sm leading-relaxed text-slate-100 sm:text-base">
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
+                  Custom grafiikka autoon
+                </h2>
+                <p>
+                  Toteutamme isompien ja vaativienkin kokonaisuuksien toteutus kuten custom grafiikka auton yliteippaukseen.
+                </p>
+                <p>
+                  Autamme tarvittaessa suunnittelussa ja jokainen työmme on meille ainutlaatuinen.
+                </p>
+                <p className="text-lg sm:text-xl font-medium text-slate-50 mt-12">
+                  Voit lähettää meille kuvan tai PDF-dokumentin ideastasi,<br /> ja otamme sinuun yhteyttä!
+                </p>
+                <a
+                  href="#yhteydenotto"
+                  className="inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-500/30 transition hover:bg-amber-400"
+                >
+                  Lähetä kuva/PDF
+                </a>
+              </div>
+
+              <div className="relative h-72 sm:h-80 md:h-[22rem] w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/70">
+                <Image
+                  src="/gallery/bmw.sivu.custom.kokobody.webp"
+                  alt="Custom grafiikka autoon"
+                  fill
+                  className="h-full w-full object-cover"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* OSIO 2 – Custom tarrat autoihin */}
+        <section className="border-b border-white/10">
+          <div className="mx-auto max-w-6xl px-4 pt-0 pb-12 md:pb-16">
             <div className="max-w-3xl space-y-4">
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-                Custom tarrat{" "}
-                <span className="text-amber-300">autoihin ja ajoneuvoihin</span>
+                Mitä vain mieleesi juolahtaa!
               </h2>
               <p className="text-sm sm:text-base text-slate-200">
                 Suunnittelemme ja valmistamme custom tarrat juuri sinun toiveidesi mukaan.
-                Isot kylkitarrat, tuulilasin banderollit, sponsoritarrat ja pienet
-                yksityiskohtia viimeistelevät tarrat – kaikki onnistuvat.
+                Isot kylkitarrat, tuulilasin banderollit, sponsori- ja mainostarrat.
               </p>
               <p className="text-sm sm:text-base text-slate-200">
-                Tarrat sopivat henkilöautoihin, pakettiautoihin, moottoripyöriin,
-                drifting- ja kilpa-autoihin sekä muihin ajoneuvoihin. Voit tuoda valmiin
-                kuvan tai ideoimme yhdessä sinulle sopivan ulkoasun.
+                Meiltä onnistuu myös vaatepainatukset vaikka tiimeille, yrityksellesi tai itsellesi.
               </p>
             </div>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden border border-white/10 bg-slate-950/70">
                 <Image
-                  src="/gallery/jdm.jpg"
-                  alt="Custom tarrat autoon"
+                  src="/gallery/pikku.tarrat.jpg"
+                  alt="Tarrat omalla kuvalla"
                   fill
                   className="h-full w-full object-cover"
                 />
+                <div className="absolute inset-0 bg-slate-950/20" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3 text-xs text-slate-100">
-                  Pienet ja isot custom tarrat ajoneuvoihin.
+                <div className="absolute bottom-3 left-3 right-3 text-lg font-semibold text-slate-100">
+                  Valmistamme tarroja joka lähtöön!
                 </div>
               </div>
 
               <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden border border-white/10 bg-slate-950/70">
                 <Image
-                  src="/gallery/gtr-perse.jpg"
-                  alt="Tarrat ja kylkiteippaukset"
+                  src="/gallery/paku.rengascenter.jpg"
+                  alt="Mainostarrat"
                   fill
                   className="h-full w-full object-cover"
                 />
+                <div className="absolute inset-0 bg-slate-950/20" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3 text-xs text-slate-100">
-                  Kilpa- ja drifting-autoihin yksilölliset liveryt.
+                <div className="absolute bottom-3 left-3 right-3 text-lg font-semibold text-slate-100">
+                  Mainostarrat
                 </div>
               </div>
 
               <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden border border-white/10 bg-slate-950/70">
                 <Image
-                  src="/gallery/esimerkkiauto.jpg"
-                  alt="Custom teippaukset ja tarrat"
+                  src="/services/wrap.point.musta.jpg"
+                  alt="Tekstiilipainatukset"
                   fill
                   className="h-full w-full object-cover"
                 />
+                <div className="absolute inset-0 bg-slate-950/20" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3 text-xs text-slate-100">
-                  Toteutamme kaikki toiveet yksityiskohtaisesti.
+                <div className="absolute bottom-3 left-3 right-3 text-lg font-semibold text-slate-100">
+                  Vaatepainatukset
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* OSIO 2 – Mainokset ja vaatepainatukset */}
-        <section className="border-b border-white/10">
-          <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-            <div className="max-w-3xl space-y-4">
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-                Mainokset, custom teipit{" "}
-                <span className="text-amber-300">ja vaatepainatukset</span>
-              </h2>
-              <p className="text-sm sm:text-base text-slate-200">
-                Graafinen suunnittelumme kattaa laajasti erilaisia kokonaisuuksia:
-                auton kylkeen isot mainostarrat, räätälöidyt custom teipit brändin
-                mukaan sekä vaatepainatukset tiimeille, yrityksille ja tapahtumiin.
-              </p>
-              <p className="text-sm sm:text-base text-slate-200">
-                Oli kyse sitten yksittäisestä tarrasta tai kokonaisesta
-                brändi-ilmeestä – autamme ideoimisessa, suunnittelussa ja toteutuksessa.
-                Lähetä meille idea tai luonnos, niin rakennetaan yhdessä toimiva kokonaisuus.
-              </p>
-            </div>
-
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="rounded-2xl border border-white/10 bg-slate-900/40 p-6 space-y-2">
-                <div className="text-2xl">🎨</div>
-                <div className="font-semibold text-sm">Custom tarrat autoihin</div>
-                <p className="text-xs text-slate-400">
-                  Isot ja pienet tarrat, kylkitarrat, tuulilasin banderollit ja felgitarrat.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-slate-900/40 p-6 space-y-2">
-                <div className="text-2xl">📢</div>
-                <div className="font-semibold text-sm">Mainokset ja teipit</div>
-                <p className="text-xs text-slate-400">
-                  Yrityksen logo, yhteystiedot ja mainokset suoraan auton kylkeen tai ikkunaan.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-slate-900/40 p-6 space-y-2">
-                <div className="text-2xl">👕</div>
-                <div className="font-semibold text-sm">Vaatepainatukset</div>
-                <p className="text-xs text-slate-400">
-                  Painatukset tiimeille, yrityksille ja tapahtumiin – paidoista huppareihin.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Yhteydenottolomake */}
-        <section className="relative bg-slate-950 py-16 md:py-20">
+        <section id="yhteydenotto" className="relative bg-slate-950 py-16 md:py-20">
 
           {/* Taustakuva */}
           <div className="absolute inset-0">
