@@ -72,7 +72,7 @@ export default function TummennuksetPage() {
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
           <div className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-slate-950/80 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.18em] text-amber-200">
-            alk. 99,00€
+            Lasien tummennukset alk. 99,00€
           </div>
         </div>
       </div>

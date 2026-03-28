@@ -74,8 +74,8 @@ export default function MainHeader() {
               Galleria
             </a>
             
-            <a href="/#yhteys" className="transition-colors hover:text-amber-300">
-  Yhteystiedot
+            <a href="/#meista" className="transition-colors hover:text-amber-300">
+  Meistä
 </a>
 
           </nav>
@@ -189,7 +189,7 @@ export default function MainHeader() {
       { href: "/palvelut/toimitila", label: "Kiinteistöön" },
       { href: "/graafinen", label: "Graafinen suunnittelu" },
       { href: "/palvelut/galleria", label: "Galleria" },
-      { href: "/#yhteys", label: "Yhteystiedot" },
+      { href: "/#meista", label: "Meistä" },
 
     ].map((item) => (
 

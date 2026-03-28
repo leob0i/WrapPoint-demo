@@ -17,7 +17,7 @@ export default function AutonYliteippausPage() {
             muted
             loop
             playsInline
-            poster="/gallery/gtr-perse.jpg" // valinnainen placeholder-kuva
+            poster="/gallery/bmw.lokari.webp" // valinnainen placeholder-kuva
           >
             <source src="/services/hero2.mp4" type="video/mp4" />
           </video>
@@ -249,11 +249,12 @@ export default function AutonYliteippausPage() {
         {/* Taustakuva */}
         <div className="absolute inset-0">
           <Image
-            src="/gallery/gtr-green.jpg" // Taustakuva
-            alt="Taustakuva kylteistä ja banderolleista."
-            fill
-            className="h-full w-full object-cover"
-          />
+  src="/gallery/pinkki.audi.lokari.webp"
+  alt="Taustakuva kylteistä ja banderolleista."
+  fill
+  className="h-full w-full object-cover"
+  style={{ transform: 'translateZ(0)', willChange: 'transform' }}
+/>
           {/* Tumma overlay, että lomake erottuu */}
           <div className="absolute inset-0 bg-zinc-950/80" />
         </div>

@@ -40,13 +40,14 @@ export default function Home() {
   src="/gallery/bmw.custom.jpg"
   alt="Wrap Point – auton teippaus"
   className="absolute inset-0 h-full w-full object-cover"
+  style={{ transform: 'translateZ(0)', willChange: 'transform' }}
 />
 
         {/* Tumma overlay että teksti erottuu */}
         <div className="absolute inset-0 bg-slate-950/70" />
 
         {/* Sisältö videon päällä */}
-        <div className="relative mx-auto grid min-h-[520px] max-w-6xl gap-12 px-4 pt-32 pb-16 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:pt-32 md:pb-24">
+        <div className="relative mx-auto flex flex-col justify-end min-h-[520px] max-w-6xl gap-12 px-4 pt-16 pb-10 md:grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:pt-32 md:pb-24">
 
           {/* Tekstit vasemmalla */}
           <div className="space-y-7">
@@ -211,11 +212,12 @@ export default function Home() {
   {/* Taustakuva + tumma overlay */}
   <div className="pointer-events-none absolute inset-0">
     <Image
-      src="/services/wrap.point.musta.jpg" // taustakuva
-      alt="Wrap Point – auton teippaus ja tiimi"
-      fill
-      className="h-full w-full object-cover"
-    />
+  src="/services/wrap.point.musta.jpg"
+  alt="Wrap Point – auton teippaus ja tiimi"
+  fill
+  className="h-full w-full object-cover"
+  style={{ transform: 'translateZ(0)', willChange: 'transform' }}
+/>
     <div className="absolute inset-0 bg-slate-950/80" /> {/* tumma overlay */}
   </div>
 
@@ -412,11 +414,12 @@ export default function Home() {
   {/* Taustakuva */}
   <div className="absolute inset-0">
     <Image
-      src="/gallery/bmw.sivu.tarra.png" // Taustakuva
-      alt="Taustakuva kylteistä ja banderolleista."
-      fill
-      className="h-full w-full object-cover"
-    />
+  src="/gallery/bmw.sivu.tarra.png"
+  alt="Taustakuva kylteistä ja banderolleista."
+  fill
+  className="h-full w-full object-cover"
+  style={{ transform: 'translateZ(0)', willChange: 'transform' }}
+/>
     {/* Tumma overlay, että lomake erottuu */}
     <div className="absolute inset-0 bg-slate-950/80" />
   </div>

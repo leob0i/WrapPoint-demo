@@ -11,12 +11,13 @@ export default function KiinteistokalvotPage() {
       <section className="relative border-b border-white/10 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/gallery/ikkuna.peilikalvo.jpg"
-            alt="Kiinteistökalvot lasipinnoille ja ikkunoihin"
-            fill
-            priority
-            className="h-full w-full object-cover opacity-60"
-          />
+  src="/gallery/ikkuna.peilikalvo.jpg"
+  alt="Kiinteistökalvot lasipinnoille ja ikkunoihin"
+  fill
+  priority
+  className="h-full w-full object-cover opacity-60"
+  style={{ transform: 'translateZ(0)', willChange: 'transform' }}
+/>
           <div className="absolute inset-0 bg-slate-950/70" />
         </div>
 
@@ -118,11 +119,12 @@ export default function KiinteistokalvotPage() {
       <section id="yhteys" className="relative bg-slate-950 py-16 md:py-20">
         <div className="absolute inset-0">
           <Image
-            src="/services/julkisivu.jpg"
-            alt="Taustakuva – kiinteistökalvot ja lasipinnat"
-            fill
-            className="h-full w-full object-cover"
-          />
+  src="/gallery/rengas.center.banderolli.jpg"
+  alt="Taustakuva – kiinteistökalvot ja lasipinnat"
+  fill
+  className="h-full w-full object-cover"
+  style={{ transform: 'translateZ(0)', willChange: 'transform' }}
+/>
           <div className="absolute inset-0 bg-slate-950/80" />
         </div>
 
