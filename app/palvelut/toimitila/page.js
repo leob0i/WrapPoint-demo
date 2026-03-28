@@ -224,10 +224,12 @@ export default function KiinteistokalvotPage() {
                   className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none transition focus:border-amber-400"
                 >
                   <option value="">Valitse aihe</option>
-                  <option>Teippaukset</option>
+                  <option>Auton yliteippaus</option>
                   <option>Tummennukset</option>
-                  <option>Kiinteistökalvot</option>
-                  <option>Muu</option>
+                  <option>Sisäpuhdistus</option>
+                  <option>Graafinen suunnittelu</option>
+                  <option>Kiinteistöt</option>
+                  <option>Vaatepainatukset</option>
                 </select>
               </div>
 

@@ -74,10 +74,6 @@ export default function MainHeader() {
               Galleria
             </a>
             
-           <a href="/palvelut/meista" className="transition-colors hover:text-amber-300">
-
-              Meistä
-            </a>
             <a href="/#yhteys" className="transition-colors hover:text-amber-300">
   Yhteystiedot
 </a>
@@ -132,7 +128,28 @@ export default function MainHeader() {
 
         {/* MOBIILI: hampurilainen vasemmalla, logo keskellä, CTA oikealla */}
         <div className="flex items-center justify-between md:hidden">
-          {/* Hampurilainen */}
+          {/* CTA vasemmalla – vie etusivun yhteysosioon */}
+<a
+  href="/#yhteys"
+  className="text-[8px] font-semibold uppercase tracking-[0.16em] text-amber-300"
+>
+  Pyydä tarjous
+</a>
+
+          {/* Logo keskellä – vie aina etusivun hero-osioon */}
+          <a href="/#etusivu" className="flex items-center">
+            <div className="relative flex h-10 w-32 items-center justify-center overflow-visible">
+
+              <img
+                src="/wrap.point.logo.png"
+                alt="Wrap Point logo"
+                className="h-full w-auto object-contain scale-[3.2]"
+
+              />
+            </div>
+          </a>
+
+          {/* Hampurilainen oikealla */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -159,28 +176,6 @@ export default function MainHeader() {
             </div>
           </button>
 
-          {/* Logo keskellä – vie aina etusivun hero-osioon */}
-          <a href="/#etusivu" className="flex items-center">
-            <div className="relative flex h-10 w-32 items-center justify-center overflow-visible">
-
-              <img
-                src="/wrap.point.logo.png"
-                alt="Wrap Point logo"
-                className="h-full w-auto object-contain scale-[3.2]"
-
-              />
-            </div>
-          </a>
-
-          
-          {/* CTA oikealla – vie etusivun yhteysosioon */}
-<a
-  href="/#yhteys"
-  className="text-[8px] font-semibold uppercase tracking-[0.16em] text-amber-300"
->
-  Pyydä tarjous
-</a>
-
         </div>
 
         {/* MOBIILI: avautuva valikko hampurilaisesta */}
@@ -188,9 +183,12 @@ export default function MainHeader() {
           <nav className="mt-2 flex flex-col gap-1 pb-2 text-sm text-slate-100 md:hidden">
                 {[
       { href: "/#etusivu", label: "Etusivu" },
-      { href: "/#palvelut", label: "Palvelut" },
+      { href: "/palvelut/auton-yliteippaus", label: "Yliteippaus" },
+      { href: "/palvelut/ikkunakalvot", label: "Ikkunakalvot" },
+      { href: "/palvelut/autonsisapuhdistus", label: "Sisäpuhdistus" },
+      { href: "/palvelut/toimitila", label: "Kiinteistöön" },
+      { href: "/graafinen", label: "Graafinen suunnittelu" },
       { href: "/palvelut/galleria", label: "Galleria" },
-      { href: "/palvelut/meista", label: "Meistä" },
       { href: "/#yhteys", label: "Yhteystiedot" },
 
     ].map((item) => (

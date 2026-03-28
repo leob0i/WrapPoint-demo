@@ -143,7 +143,7 @@ export default function AutonYliteippausPage() {
         <div className="grid grid-cols-2 gap-3">
           <div className="relative h-44 sm:h-48 overflow-hidden rounded-2xl border border-white/20 bg-zinc-900/70">
             <img
-              src="/gallery/pinkki.teipatta.kahva.JPG"
+              src="/gallery/pinkki.teipatta.kahva.jpg"
               alt="Teipatttu ovenkahva"
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
             />
@@ -151,7 +151,7 @@ export default function AutonYliteippausPage() {
           </div>
           <div className="relative h-44 sm:h-48 overflow-hidden rounded-2xl border border-white/20 bg-zinc-900/70">
             <img
-              src="/gallery/ovensisapinta.JPG"
+              src="/gallery/ovensisapinta.jpg"
               alt="Ovikarmin sisäpinta teipattuna"
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
             />

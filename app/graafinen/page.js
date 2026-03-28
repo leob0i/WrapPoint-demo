@@ -252,12 +252,12 @@ export default function GraafinenSuunnitteluPage() {
                     className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none transition focus:border-amber-400"
                   >
                     <option value="">Valitse aihe</option>
-                    <option>Custom tarrat autoihin</option>
-                    <option>Mainosteippaukset</option>
+                    <option>Auton yliteippaus</option>
+                    <option>Tummennukset</option>
+                    <option>Sisäpuhdistus</option>
+                    <option>Graafinen suunnittelu</option>
+                    <option>Kiinteistöt</option>
                     <option>Vaatepainatukset</option>
-                    <option>Kyltit ja banderollit</option>
-                    <option>Kuvan ja teippauksen suunnittelu</option>
-                    <option>Muu</option>
                   </select>
                 </div>
 
