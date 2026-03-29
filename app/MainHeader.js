@@ -180,7 +180,7 @@ export default function MainHeader() {
 
         {/* MOBIILI: avautuva valikko hampurilaisesta */}
         {mobileMenuOpen && (
-          <nav className="mt-2 flex flex-col gap-1 pb-2 text-sm text-slate-100 md:hidden">
+          <nav className="mt-2 flex flex-col gap-0.5 pb-3 text-slate-100 md:hidden">
                 {[
       { href: "/#etusivu", label: "Etusivu" },
       { href: "/palvelut/auton-yliteippaus", label: "Yliteippaus" },
@@ -197,14 +197,14 @@ export default function MainHeader() {
                 key={item.href + item.label}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-lg px-3 py-2 text-[13px] font-medium text-slate-100/90 hover:bg-slate-800/80 hover:text-amber-300"
+                className="rounded-lg px-4 py-3 text-[17px] font-semibold tracking-wide text-slate-100 hover:bg-slate-800/80 hover:text-amber-300"
               >
                 {item.label}
               </a>
             ))}
 
             {/* SOME-ikonit viimeiseksi, samalle riville – SAMAT KUIN EKA HEADER */}
-            <div className="mt-2 flex items-center justify-start gap-2 pl-3">
+            <div className="mt-3 flex items-center justify-start gap-3 pl-4 pb-1">
   <a
     href="https://www.instagram.com/visual.wraps/"
     target="_blank"
