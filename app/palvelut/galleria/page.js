@@ -1,7 +1,33 @@
 import MainHeader from "../../MainHeader";
 import Image from "next/image";
-import Link from "next/link";
 
+
+
+export const metadata = {
+  title: "Galleria – Auton teippaukset, mainosteipit ja kalvotukset | Wrap Point",
+  description:
+    "Katso Wrap Pointin töitä: yliteippaukset, mainosteippaukset, tummennukset ja kiinteistökalvot. Toteutuksia erilaisista autoista ja tarpeista.",
+  alternates: {
+    canonical: "https://www.wrappoint.fi/palvelut/galleria",
+  },
+  openGraph: {
+    title: "Galleria – Wrap Point",
+    description:
+      "Yliteippaukset, mainosteippaukset ja kalvotukset. Katso töitämme.",
+    url: "https://www.wrappoint.fi/palvelut/galleria",
+    siteName: "Wrap Point",
+    locale: "fi_FI",
+    type: "website",
+    images: [
+      {
+        url: "https://www.wrappoint.fi/gallery/bmw.sivu.custom.kokobody.webp",
+        width: 1200,
+        height: 630,
+        alt: "Wrap Point – auton teippaus galleria",
+      },
+    ],
+  },
+};
 
 
 const galleryImages = [
@@ -21,7 +47,7 @@ const galleryImages = [
     
   },
   {
-    src: "/gallery/bmw.custom.JPG",
+    src: "/gallery/bmw.custom.jpg",
     alt: "BMW custom teippaus.",
     
   },
@@ -81,6 +107,7 @@ export default function GalleriaPage() {
             alt=""
             fill
             priority
+            sizes="100vw"
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/30" />
@@ -123,6 +150,7 @@ export default function GalleriaPage() {
                     alt="Täysmatta yliteippaus urheiluautoon."
                     fill
                     priority
+                     sizes="(max-width: 768px) 66vw, 40vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-slate-950/70 via-slate-950/10 to-transparent" />
@@ -141,6 +169,7 @@ export default function GalleriaPage() {
                     src="/gallery/paku.rengascenter.jpg"
                     alt="Yrityspaku näyttävällä mainosteippauksella."
                     fill
+                     sizes="(max-width: 768px) 33vw, 20vw" 
                     className="object-cover transition-transform duration-700 hover:scale-[1.06]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
@@ -156,6 +185,7 @@ export default function GalleriaPage() {
                     src="/gallery/ovensisapinta.jpg"
                     alt="Porschen teippaus korosteväreillä."
                     fill
+                    sizes="(max-width: 768px) 33vw, 20vw"
                     className="object-cover transition-transform duration-700 hover:scale-[1.06]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
@@ -181,6 +211,8 @@ export default function GalleriaPage() {
                   src="/gallery/bmw.pinkki.harmaa.JPG"
                   alt="BMW pinkki harmaa teippaus"
                   fill
+                   sizes="(max-width: 768px) 100vw, 420px"
+                  loading="lazy"
                   className="object-cover"
                 />
               </div>
@@ -189,6 +221,8 @@ export default function GalleriaPage() {
                   src="/gallery/bmw.pinkki.harmaa.reflex.jpg"
                   alt="BMW custom teippaus"
                   fill
+                   sizes="(max-width: 768px) 100vw, 420px"
+                    loading="lazy"
                   className="object-cover"
                 />
               </div>
@@ -203,10 +237,10 @@ export default function GalleriaPage() {
               </h2>
               <p className="text-base sm:text-lg font-bold leading-relaxed text-slate-300">
                 Reflexoivalla teipillä teipattu bemari on hyvä esimerkki siitä,
-                miten voimme toteuttaa uniikitin pyynnöt. </p><p className="text-sm sm:text-base leading-relaxed text-slate-300"><br />
+                miten voimme toteuttaa uniikitkin pyynnöt. </p><p className="text-sm sm:text-base leading-relaxed text-slate-300"><br />
                 Tässä bemarissa ei näy teipin saumoja,
-                 vaikka auton takaosa heuijjastaa valoa ja etuosan teipit ei. 
-                Sama yhtenäinen rakenne ja laadukas asennus ja materiaalit ovat meille yökkösiä.
+                 vaikka auton takaosa heijastaa valoa ja etuosan teipit ei. 
+                Sama yhtenäinen rakenne, laadukas asennus ja materiaalit ovat meille ykkösiä!
               </p>
               <p className="text-sm leading-relaxed text-slate-400">
                 Käytämme ainoastaan laadukkaita materiaaleja, jotka kestävät
@@ -243,21 +277,20 @@ export default function GalleriaPage() {
               >
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.06]"
-                  />
+  src={image.src}
+  alt={image.alt}
+  fill
+  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" 
+  loading="lazy"  
+  className="object-cover transition-transform duration-500 group-hover:scale-[1.06]"
+/>
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 </div>
-                <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 px-3 pb-2 pt-1 text-[11px] sm:text-xs text-slate-100 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <span className="font-medium line-clamp-1">
-                    {image.title}
-                  </span>
-                  <span className="text-[9px] uppercase tracking-[0.22em] text-amber-300/90">
-                    {image.label}
-                  </span>
-                </figcaption>
+               <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center gap-2 px-3 pb-2 pt-1 text-[11px] sm:text-xs text-slate-100 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+  <span className="font-medium line-clamp-1">
+    {image.alt}
+  </span>
+</figcaption>
               </figure>
             ))}
           </div>

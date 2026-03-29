@@ -1,6 +1,32 @@
 import MainHeader from "../../MainHeader";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Ikkunatummennukset ja valojen tummennukset Vantaa | Wrap Point",
+  description:
+    "Wrap Point toteuttaa lasien ja valojen tummennukset Vantaalla. Ikkunakalvot alk. 99 €. UV-suoja, yksityisyys ja tyyli – pyydä tarjous!",
+  alternates: {
+    canonical: "https://www.wrappoint.fi/palvelut/ikkunakalvot",
+  },
+  openGraph: {
+    title: "Ikkunatummennukset – Wrap Point Vantaa",
+    description:
+      "Lasien ja valojen tummennukset ammattitaidolla. Alk. 99 €. Pyydä tarjous.",
+    url: "https://www.wrappoint.fi/palvelut/ikkunakalvot",
+    siteName: "Wrap Point",
+    locale: "fi_FI",
+    type: "website",
+    images: [
+      {
+        url: "https://www.wrappoint.fi/gallery/gtr-green.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ikkunatummennukset – Wrap Point Vantaa",
+      },
+    ],
+  },
+};
+
 export default function TummennuksetPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
@@ -14,6 +40,7 @@ export default function TummennuksetPage() {
             alt="Auton lasien tummennukset"
             fill
             priority
+            sizes="100vw"
             className="h-full w-full object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-slate-950/70" />
@@ -68,6 +95,8 @@ export default function TummennuksetPage() {
             src="/gallery/ikkuna.tummennus.jpg"
             alt="Esimerkki tummennuksista"
             fill
+             sizes="(max-width: 768px) 100vw, 50vw"   
+              loading="lazy"  
             className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
@@ -94,6 +123,8 @@ export default function TummennuksetPage() {
             src="/gallery/takavalo.tummennus.toyota.png"
             alt="Valojen tummennukset"
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            loading="lazy"
             className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
@@ -117,7 +148,7 @@ export default function TummennuksetPage() {
         <p>✔ Poistettavissa ilman jälkiä</p>
         <p>
           Teemme tummennukset takavaloihin, ajovaloihin ja vilkkuihin.
-          Valittavana useita sävyjä kevyestä savusta täystummaan
+          Valittavana useita sävyjä kevyestä sävystä täystummaan.
         </p>
       </div>
 
@@ -132,6 +163,8 @@ export default function TummennuksetPage() {
             src="/services/lighttint.jpg"
             alt="Taustakuva tummennukset"
             fill
+            sizes="100vw"    
+            loading="lazy"  
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-slate-950/80" />

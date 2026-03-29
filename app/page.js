@@ -5,11 +5,74 @@ import Image from "next/image";
 import Link from "next/link";
 
 
+export const metadata = {
+  title: "Wrap Point – Auton teippaus, tummennukset ja kalvotukset | Vantaa",
+  description:
+    "Wrap Point toteuttaa autojen yliteippaukset, ikkunatummennukset, sisäpuhdistukset ja kiinteistökalvotukset Vantaalla. Pyydä tarjous – nopea vastaus.",
+  keywords: [
+    "auton teippaus Vantaa",
+    "yliteippaus Helsinki",
+    "ikkunatummennus",
+    "PPF suojaus",
+    "mainosteippaus",
+    "auton kalvotus",
+    "wrap Vantaa",
+  ],
+  alternates: {
+    canonical: "https://www.wrappoint.fi/",
+  },
+  openGraph: {
+    title: "Wrap Point – Auton teippaus ja kalvotukset Vantaalla",
+    description:
+      "Yliteippaukset, tummennukset, sisäpuhdistukset ja kiinteistökalvot – laadukkaat materiaalit, siisti viimeistely.",
+    url: "https://www.wrappoint.fi/",
+    siteName: "Wrap Point",
+    locale: "fi_FI",
+    type: "website",
+    images: [
+      {
+        url: "https://www.wrappoint.fi/gallery/bmw.custom.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Wrap Point – auton teippaus Vantaalla",
+      },
+    ],
+  },
+};
+
+
+
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
 
-
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Wrap Point",
+      image: "https://www.wrappoint.fi/gallery/bmw.custom.jpg",
+      url: "https://www.wrappoint.fi",
+      telephone: "+358505315030",
+      email: "info@wrappoint.fi",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Vantaa",
+        addressCountry: "FI",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 60.2934,
+        longitude: 25.0378,
+      },
+      priceRange: "€€",
+      openingHoursSpecification: [],
+    }),
+  }}
+/>
 
       {/* HERO-OSIO (etusivun yläosa) videotaustalla */}
       <section
@@ -38,9 +101,11 @@ export default function Home() {
 {/* Väliaikainen hero-kuva */}
 <img
   src="/gallery/bmw.custom.jpg"
-  alt="Wrap Point – auton teippaus"
+  alt="Wrap Point – auton teippaus Vantaalla"
   className="absolute inset-0 h-full w-full object-cover"
-  style={{ transform: 'translateZ(0)', willChange: 'transform' }}
+  fetchPriority="high" 
+  loading="eager"        
+  decoding="async"
 />
 
         {/* Tumma overlay että teksti erottuu */}
@@ -132,14 +197,14 @@ export default function Home() {
 
       <ServiceCard
         title="Auton sisäpuhdistus"
-        description="Oli autosi ainoastaan imurointia vailla tai kun pyörremyrskyn jäljiltä, me putsaamme sen."
+        description="Oli autosi ainoastaan imurointia vailla, tai kun pyörremyrskyn jäljiltä, me putsaamme sen."
         imageSrc="/gallery/bmw.sisa.ratti.webp"
         href="/palvelut/autonsisapuhdistus"
       />
 
       <ServiceCard
         title="Kiinteistöön"
-        description="Aurinkosuojakalvot, peilikalvot, murtosuojakalvot ja muut kiinteistö kalvot."
+        description="Aurinkosuojakalvot, peilikalvot, murtosuojakalvot ja muut kiinteistökalvot."
         imageSrc="/gallery/ikkuna.peilikalvo.jpg"
         href="/palvelut/toimitila"
       />
@@ -167,6 +232,8 @@ export default function Home() {
         <img
           src="/gallery/bmw.custom.jokeri.webp"
           alt="Auton custom teippaus"
+           loading="lazy"
+           decoding="async"
           className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
@@ -174,7 +241,9 @@ export default function Home() {
       <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
         <img
           src="/gallery/bmw.sivu.tarra.png"
-          alt="Tuningi tarra bemarissa"
+          alt="Tuning-tarra BMW:ssä"
+           loading="lazy"
+           decoding="async"
           className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
@@ -182,7 +251,9 @@ export default function Home() {
       <div className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
         <img
           src="/gallery/toyota.tummennus.delete.webp"
-          alt="Teipattu tuning toyota"
+          alt="Teipattu Toyota – auton teippaus"
+           loading="lazy"
+           decoding="async"
           className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
@@ -215,8 +286,9 @@ export default function Home() {
   src="/services/wrap.point.musta.jpg"
   alt="Wrap Point – auton teippaus ja tiimi"
   fill
+  sizes="100vw"
   className="h-full w-full object-cover"
-  style={{ transform: 'translateZ(0)', willChange: 'transform' }}
+  loading="lazy"
 />
     <div className="absolute inset-0 bg-slate-950/80" /> {/* tumma overlay */}
   </div>
@@ -240,13 +312,13 @@ export default function Home() {
 
 
         <p className="text-xl leading-relaxed text-white">
-          Käytössämme ovat markkinoiden laadukaimmat materiaalit.
+          Käytössämme ovat markkinoiden laadukkaimmat materiaalit!
         </p>
 
         <div className="flex items-center gap-3">
           <span className="text-xl text-amber-400">Seuraa meitä somessa!</span>
           <a
-            href="https://www.instagram.com/wrappoint.fi?fbclid=IwY2xjawPxOStleHRuA2FlbQIxMABicmlkETFBbjdNeGxmM1g3SkZ3eTJ2c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHpFUTiW0MSP53WN-TwQUskrXrD549OnrMI4ldhN9aOTJt4bBgvjVS5nG31jh_aem_qcHXusWpLTMnFc8mQdjx1w"
+            href="https://www.instagram.com/wrappoint.fi"
             target="_blank"
             rel="noreferrer"
             aria-label="Instagram"
@@ -259,7 +331,7 @@ export default function Home() {
             </svg>
           </a>
           <a
-            href="https://www.tiktok.com/@wrappoint.fi?fbclid=IwY2xjawPxORdleHRuA2FlbQIxMABicmlkETFBbjdNeGxmM1g3SkZ3eTJ2c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHm1i3yDei2p3cnNn2FhRZaxHNtNLH7gMyUihDrG1f6MrMs1VvZxCMMXfkk7W_aem_-y9jyYerM9inAT4sbc6iaw"
+            href="https://www.tiktok.com/@wrappoint.fi"
             target="_blank"
             rel="noreferrer"
             aria-label="TikTok"
@@ -331,83 +403,6 @@ export default function Home() {
 
 
 
-          {/* ARVOSTELUT – scrollattavat kortit mobiilissa */}
-{false && (
-      <section id="arvostelut" className="border-b border-slate-800 bg-slate-900">
-        <div className="mx-auto max-w-6xl px-4 py-14 md:py-18">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-amber-300">
-              Arvostelut
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold text-slate-50 md:text-4xl">
-              Asiakkaat kertovat yhteistyöstä
-            </h2>
-            <p className="mt-3 text-sm text-slate-300 md:text-base">
-              Tähän tuodaan myöhemmin oikeita palautteita Wrap Pointin
-              tekemistä yliteippauksista, PPF-suojauksista, tummennuksista ja
-              mainosteippauksista. Alla esimerkkejä siitä, miltä sisältö voi
-              näyttää valmiina.
-            </p>
-          </div>
-
-          <div className="mt-8 -mx-4 px-4">
-            <div
-              className="
-                flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory
-                md:grid md:gap-6 md:overflow-visible md:snap-none
-                md:grid-cols-3
-              "
-            >
-              {/* Arvostelu 1 */}
-              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
-                <div className="flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-sm">
-                  <div className="mb-2 text-lg">⭐⭐⭐⭐⭐</div>
-                  <p className="text-sm text-slate-200">
-                    "Auton yliteippaus onnistui juuri niin kuin toivoin. Auto
-                    näyttää nyt täysin uudelta ja viimeistely on todella siisti."
-                  </p>
-                  <div className="mt-4 text-xs font-semibold text-slate-200">
-                    – Antti, BMW 5-sarja
-                  </div>
-                </div>
-              </div>
-
-              {/* Arvostelu 2 */}
-              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
-                <div className="flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-sm">
-                  <div className="mb-2 text-lg">⭐⭐⭐⭐⭐</div>
-                  <p className="text-sm text-slate-200">
-                    "PPF-suojaus tehtiin uuteen autoon heti luovutuksen jälkeen.
-                    Kivet ja pesujäljet eivät enää pelota, ja pinta on helppo
-                    pitää puhtaana."
-                  </p>
-                  <div className="mt-4 text-xs font-semibold text-slate-200">
-                    – Laura, Tesla Model Y
-                  </div>
-                </div>
-              </div>
-
-              {/* Arvostelu 3 */}
-              <div className="snap-start min-w-[80%] max-w-[80%] flex-shrink-0 md:min-w-0 md:max-w-none">
-                <div className="flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-sm">
-                  <div className="mb-2 text-lg">⭐⭐⭐⭐⭐</div>
-                  <p className="text-sm text-slate-200">
-                    "Yritysauton mainosteippaus saatiin tehtyä sovitussa
-                    aikataulussa. Auto toimii nyt liikkuvana mainoksena ja
-                    ilme sopii brändiin täydellisesti."
-                  </p>
-                  <div className="mt-4 text-xs font-semibold text-slate-200">
-                    – Jari, yritysasiakas
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-)}
-
-
  {/* Yhteydenottolomake */}
 <section id="yhteys" className="relative bg-slate-950 py-16 md:py-20">
 
@@ -415,10 +410,11 @@ export default function Home() {
   <div className="absolute inset-0">
     <Image
   src="/gallery/bmw.sivu.tarra.png"
-  alt="Taustakuva kylteistä ja banderolleista."
+  alt="Wrap Point – auton teippaus taustakuva"
   fill
+  sizes="100vw"
   className="h-full w-full object-cover"
-  style={{ transform: 'translateZ(0)', willChange: 'transform' }}
+  loading="lazy"
 />
     {/* Tumma overlay, että lomake erottuu */}
     <div className="absolute inset-0 bg-slate-950/80" />
@@ -606,6 +602,8 @@ function ServiceCard({ title, description, imageSrc, href }) {
           <img
             src={imageSrc}
             alt={title}
+            loading="lazy"          
+            decoding="async"        
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (

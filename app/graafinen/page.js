@@ -1,6 +1,32 @@
 import MainHeader from "../MainHeader";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Graafinen suunnittelu – Tarrat, teipit ja vaatepainatukset | Wrap Point",
+  description:
+    "Wrap Point suunnittelee ja valmistaa custom tarrat, mainosteipit ja vaatepainatukset. Lähetä kuva tai PDF-luonnos – teemme juuri sinun toiveesi mukaan.",
+  alternates: {
+    canonical: "https://www.wrappoint.fi/graafinen",
+  },
+  openGraph: {
+    title: "Graafinen suunnittelu – Wrap Point",
+    description:
+      "Custom tarrat, kylkitarrat, banderollit ja vaatepainatukset. Ota yhteyttä ja pyydä tarjous.",
+    url: "https://www.wrappoint.fi/graafinen",
+    siteName: "Wrap Point",
+    locale: "fi_FI",
+    type: "website",
+    images: [
+      {
+        url: "https://www.wrappoint.fi/gallery/pikku.tarrat.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Graafinen suunnittelu – tarrat ja teipit",
+      },
+    ],
+  },
+};
+
 export default function GraafinenSuunnitteluPage() {
   return (
     <>
@@ -17,6 +43,7 @@ export default function GraafinenSuunnitteluPage() {
               alt="Graafinen suunnittelu – tarrat, teipit ja vaatepainatukset"
               fill
               priority
+              sizes="100vw"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-slate-950/75" />
@@ -44,7 +71,7 @@ export default function GraafinenSuunnitteluPage() {
                   Custom grafiikka autoon
                 </h2>
                 <p>
-                  Toteutamme isompien ja vaativienkin kokonaisuuksien toteutus kuten custom grafiikka auton yliteippaukseen.
+                  Toteutamme isompien ja vaativienkin kokonaisuuksien toteutuksen, kuten custom grafiikka auton yliteippaukseen.
                 </p>
                 <p>
                   Autamme tarvittaessa suunnittelussa ja jokainen työmme on meille ainutlaatuinen.
@@ -65,6 +92,8 @@ export default function GraafinenSuunnitteluPage() {
                   src="/gallery/bmw.sivu.custom.kokobody.webp"
                   alt="Custom grafiikka autoon"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"  
+                  loading="lazy"                             
                   className="h-full w-full object-cover"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
@@ -93,11 +122,13 @@ export default function GraafinenSuunnitteluPage() {
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden border border-white/10 bg-slate-950/70">
                 <Image
-                  src="/gallery/pikku.tarrat.jpg"
-                  alt="Tarrat omalla kuvalla"
-                  fill
-                  className="h-full w-full object-cover"
-                />
+  src="/gallery/pikku.tarrat.jpg"
+  alt="Tarrat omalla kuvalla"
+  fill
+  sizes="(max-width: 640px) 100vw, 33vw"   
+  loading="lazy"                             
+  className="h-full w-full object-cover"
+/>
                 <div className="absolute inset-0 bg-slate-950/20" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3 text-lg font-semibold text-slate-100">
@@ -110,6 +141,8 @@ export default function GraafinenSuunnitteluPage() {
                   src="/gallery/paku.rengascenter.jpg"
                   alt="Mainostarrat"
                   fill
+                  sizes="(max-width: 640px) 100vw, 33vw"  
+                  loading="lazy"
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-slate-950/20" />
@@ -124,6 +157,8 @@ export default function GraafinenSuunnitteluPage() {
                   src="/services/wrap.point.musta.jpg"
                   alt="Tekstiilipainatukset"
                   fill
+                  sizes="(max-width: 640px) 100vw, 33vw"  
+                  loading="lazy"
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-slate-950/20" />
@@ -137,15 +172,71 @@ export default function GraafinenSuunnitteluPage() {
         </section>
 
 
+ {/* KUVABOXI + TEKSTI -OSIO */}
+      <section className="relative bg-slate-950 py-16 md:py-20 border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-14">
+
+            {/* Vasen: neliölaatikko kahdella kuvalla, terävät kulmat, ei rakoa kuvien väliin */}
+            <div className="w-full md:w-[420px] flex-shrink-0 aspect-square overflow-hidden flex flex-col">
+              <div className="relative flex-1">
+                <Image
+                  src="/gallery/bmw.pinkki.harmaa.JPG"
+                  alt="BMW pinkki harmaa teippaus"
+                  fill
+                   sizes="(max-width: 768px) 100vw, 420px"
+                  loading="lazy"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative flex-1">
+                <Image
+                  src="/gallery/bmw.pinkki.harmaa.reflex.jpg"
+                  alt="BMW custom teippaus"
+                  fill
+                   sizes="(max-width: 768px) 100vw, 420px"
+                    loading="lazy"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Oikea: tekstikenttä */}
+            <div className="space-y-5 max-w-lg">
+              
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+                <span className="text-amber-300">Designia</span> jota et saa muualta
+
+              </h2>
+              <p className="text-base sm:text-lg font-bold leading-relaxed text-slate-300">
+                Reflexoivalla teipillä teipattu bemari on hyvä esimerkki siitä,
+                miten voimme toteuttaa uniikitkin pyynnöt. </p><p className="text-sm sm:text-base leading-relaxed text-slate-300"><br />
+                Tässä bemarissa ei näy teipin saumoja,
+                 vaikka auton takaosa heijastaa valoa ja etuosan teipit ei. 
+                Sama yhtenäinen rakenne, laadukas asennus ja materiaalit ovat meille ykkösiä!
+              </p>
+              <p className="text-sm leading-relaxed text-slate-400">
+                Käytämme ainoastaan laadukkaita materiaaleja, jotka kestävät
+                aikaa ja säätä. Ammattitaitoinen asennus takaa, ettei
+                lopputuloksessa näy kuplia, saumoja tai epätasaisuuksia ja kestää pitkään.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
         {/* Yhteydenottolomake */}
         <section id="yhteydenotto" className="relative bg-slate-950 py-16 md:py-20">
 
           {/* Taustakuva */}
           <div className="absolute inset-0">
             <Image
-              src="/gallery/porsche-orange.jpg"
-              alt="Taustakuva graafisesta suunnittelusta"
+              src="/gallery/bmw.custom.jokeri.webp"
+              alt="Wrap Point – auton teippaus ja graafinen suunnittelu"
               fill
+               sizes="100vw"    
+               loading="lazy"  
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-slate-950/80" />

@@ -2,6 +2,33 @@
 import MainHeader from "../../MainHeader";
 import Image from "next/image";
 
+
+export const metadata = {
+  title: "Auton yliteippaus Vantaa – Henkilöauto, pakettiauto, tuning | Wrap Point",
+  description:
+    "Wrap Point toteuttaa auton yliteippaukset Vantaalla. Täysi yliteippaus alk. 1 899 €. Matta, kiiltävä, satin ja erikoisefektit – pyydä tarjous!",
+  alternates: {
+    canonical: "https://www.wrappoint.fi/palvelut/auton-yliteippaus",
+  },
+  openGraph: {
+    title: "Auton yliteippaus – Wrap Point Vantaa",
+    description:
+      "Laadukkaat teippikalvot, ammattitaitoinen asennus. Täysi yliteippaus alk. 1 899 €. Pyydä tarjous.",
+    url: "https://www.wrappoint.fi/palvelut/auton-yliteippaus",
+    siteName: "Wrap Point",
+    locale: "fi_FI",
+    type: "website",
+    images: [
+      {
+        url: "https://www.wrappoint.fi/gallery/bmw.lokari.webp",
+        width: 1200,
+        height: 630,
+        alt: "Auton yliteippaus – Wrap Point Vantaa",
+      },
+    ],
+  },
+};
+
 export default function AutonYliteippausPage() {
   return (
     <main className="min-h-screen bg-zinc-950 text-slate-50">
@@ -29,16 +56,16 @@ export default function AutonYliteippausPage() {
         {/* Hero-tekstit videon päällä */}
         <div className="relative mx-auto max-w-6xl px-4 pt-24 pb-16 md:pt-28 md:pb-20">
           
-          <p className="mt-3 max-w-3xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
+          <h1  className="mt-3 max-w-3xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
   Auton{" "}
   <span className="text-amber-300">
     yliteippaus
   </span>
-</p>
+</h1>
 
 
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-100 sm:text-base">
-            Henkilöauton, pakettiauton tai muun ajoneuvvon yliteippaus samasta paikasta. On kyse sitten yritysautosta, virka-autosta tai tuning-projektista, meiltä saat laadukkaan teippauksen ammattitaidolla.
+            Henkilöauton, pakettiauton tai muun ajoneuvon yliteippaus samasta paikasta. On kyse sitten yritysautosta, virka-autosta tai tuning-projektista, meiltä saat laadukkaan teippauksen ammattitaidolla.
           </p>
         </div>
       </section>
@@ -57,11 +84,11 @@ export default function AutonYliteippausPage() {
   <div className="space-y-4 text-sm leading-relaxed text-slate-100 sm:text-base">
 
     {/* Otsikko kahdelle riville vasemmalle */}
-    <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-[2.6rem] font-semibold tracking-[0.05em] uppercase">
+    <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-[2.6rem] font-semibold tracking-[0.05em] uppercase">
   Muuta ulkonäköä
   <br />
   <span className="text-amber-300">Ja erotu joukosta</span>
-</h1>
+</h2>
 
     <p>
           Auton yliteippaus on nopea ja kustannustehokas tapa vaihtaa auton
@@ -93,6 +120,8 @@ export default function AutonYliteippausPage() {
           <img
             src="/gallery/bmw.lokari.webp"
             alt="Auton yliteippaus – esimerkkiauto"
+            loading="eager"
+  decoding="async"
             className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
@@ -108,6 +137,8 @@ export default function AutonYliteippausPage() {
             <img
               src="/gallery/bmw.sivu.tarra.png"
               alt="Yliteippauksen yksityiskohta"
+              loading="eager"
+  decoding="async"
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
             />
             {/* Badge 2 */}
@@ -117,11 +148,15 @@ export default function AutonYliteippausPage() {
           </div>
 
           <div className="relative h-32 sm:h-36 md:h-40 overflow-hidden rounded-xl border border-white/20 bg-zinc-900/70">
-            <img
-              src="/gallery/pinkki.audi.lokari.webp"
-              alt="Toinen yliteippaus-esimerkki"
-              className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-            />
+           <Image
+  src="/gallery/pinkki.audi.lokari.webp"
+  alt="Wrap Point – auton yliteippaus, pinkki Audi"
+  fill
+   sizes="(max-width: 768px) 50vw, 25vw"        
+  loading="lazy"        
+  className="h-full w-full object-cover"
+  
+/>
             {/* Badge 3 */}
             <div className="pointer-events-none absolute bottom-2 left-2 rounded-full bg-zinc-950/80 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-amber-200">
               Laatutakuu
@@ -142,19 +177,23 @@ export default function AutonYliteippausPage() {
         {/* 2 kuvaa – vasemmalla, vierekkäin */}
         <div className="grid grid-cols-2 gap-3">
           <div className="relative h-44 sm:h-48 overflow-hidden rounded-2xl border border-white/20 bg-zinc-900/70">
-            <img
-              src="/gallery/pinkki.teipatta.kahva.jpg"
-              alt="Teipatttu ovenkahva"
-              className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-            />
+           <img
+  src="/gallery/pinkki.teipatta.kahva.jpg"
+  alt="Teipattu ovenkahva"
+  loading="lazy"
+  decoding="async"
+  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+/>
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
           </div>
           <div className="relative h-44 sm:h-48 overflow-hidden rounded-2xl border border-white/20 bg-zinc-900/70">
             <img
-              src="/gallery/ovensisapinta.jpg"
-              alt="Ovikarmin sisäpinta teipattuna"
-              className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-            />
+  src="/gallery/ovensisapinta.jpg"
+  alt="Ovikarmin sisäpinta teipattuna"
+  loading="lazy"
+  decoding="async"
+  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+/>
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
           </div>
         </div>
@@ -250,10 +289,12 @@ export default function AutonYliteippausPage() {
         <div className="absolute inset-0">
           <Image
   src="/gallery/pinkki.audi.lokari.webp"
-  alt="Taustakuva kylteistä ja banderolleista."
+  alt="Wrap Point – auton yliteippaus Vantaa"  
   fill
+  sizes="100vw"
+  loading="lazy"
   className="h-full w-full object-cover"
-  style={{ transform: 'translateZ(0)', willChange: 'transform' }}
+  
 />
           {/* Tumma overlay, että lomake erottuu */}
           <div className="absolute inset-0 bg-zinc-950/80" />
@@ -406,7 +447,7 @@ export default function AutonYliteippausPage() {
                 rows={4}
                 required
                 className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none transition focus:border-amber-400"
-                placeholder="Missä kyltti/banderolli sijaitsee, millaista näkyvyyttä haet, aikataulu, budjettiraami..."
+                placeholder="Auton merkki ja malli, toivottu väri tai efekti, aikataulu ja budjettiraami ja aikataulu..."
               />
             </div>
 

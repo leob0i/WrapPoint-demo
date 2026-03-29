@@ -1,6 +1,32 @@
 import MainHeader from "../../MainHeader";
 import Image from "next/image";
-import Link from "next/link";
+
+
+export const metadata = {
+  title: "Auton sisäpuhdistus Vantaa – Henkilöauto ja pakettiauto | Wrap Point",
+  description:
+    "Wrap Point puhdistaa auton sisätilat Vantaalla. Sisäpuhdistus alk. 34,90 €. Kangas-, mokka- ja nahkaistuimet – pyydä tarjous!",
+  alternates: {
+    canonical: "https://www.wrappoint.fi/palvelut/autonsisapuhdistus",
+  },
+  openGraph: {
+    title: "Auton sisäpuhdistus – Wrap Point Vantaa",
+    description:
+      "Sisäpuhdistus alk. 34,90 €. Henkilöauto, pakettiauto tai muu ajoneuvo – me hoidamme sen.",
+    url: "https://www.wrappoint.fi/palvelut/autonsisapuhdistus",
+    siteName: "Wrap Point",
+    locale: "fi_FI",
+    type: "website",
+    images: [
+      {
+        url: "https://www.wrappoint.fi/gallery/bmw.etupenkit.2.webp",
+        width: 1200,
+        height: 630,
+        alt: "Auton sisäpuhdistus – Wrap Point Vantaa",
+      },
+    ],
+  },
+};
 
 export default function AutonSisapuhdistusPage() {
   return (
@@ -17,6 +43,7 @@ export default function AutonSisapuhdistusPage() {
               alt="Auton sisäpuhdistus."
               fill
               priority
+              sizes="100vw"   
               className="h-full w-full object-cover"
             />
             {/* Tumma overlay + liukuväri, että teksti erottuu */}
@@ -64,6 +91,8 @@ export default function AutonSisapuhdistusPage() {
               src="/gallery/bmw.sisa.ratti.webp"
               alt="Taustakuva auton sisäpuhdistuksesta."
               fill
+               sizes="100vw"    
+              loading="lazy"
               className="h-full w-full object-cover"
             />
             {/* Tumma overlay, että lomake erottuu */}
@@ -171,9 +200,9 @@ export default function AutonSisapuhdistusPage() {
                   >
                     <option value="">Valitse aihe</option>
                     <option>Auton yliteippaus</option>
-                    <option>Mainosteippaukset</option>
-                    <option>Custom tarrat</option>
-                    <option>Kyltit ja banderollit</option>
+                    <option>Ikkunan tummennukset</option>
+                    <option>Custom- ja mainos tarrat</option>
+                    <option>Auton sisäpuhdistus</option>
                     <option>Vaatepainatukset</option>
                     <option>Toimitilateippaukset ja ikkunateippaukset</option>
                     <option>Kuvan ja teippauksen suunnittelu</option>

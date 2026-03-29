@@ -1,6 +1,33 @@
 import MainHeader from "../../MainHeader";
 import Image from "next/image";
-import Link from "next/link";
+
+
+
+export const metadata = {
+  title: "Kiinteistökalvot – Näkösuoja, aurinkosuoja ja turvakalvot | Wrap Point",
+  description:
+    "Wrap Point toteuttaa kiinteistökalvotukset Vantaalla. Näkösuojat, aurinkosuojat, turvakalvot ja brändikalvot lasipinnoille – pyydä tarjous!",
+  alternates: {
+    canonical: "https://www.wrappoint.fi/palvelut/toimitila",
+  },
+  openGraph: {
+    title: "Kiinteistökalvot – Wrap Point Vantaa",
+    description:
+      "Näkösuoja, aurinkosuoja, turvakalvot ja brändi lasipinnoille. Pyydä tarjous.",
+    url: "https://www.wrappoint.fi/palvelut/toimitila",
+    siteName: "Wrap Point",
+    locale: "fi_FI",
+    type: "website",
+    images: [
+      {
+        url: "https://www.wrappoint.fi/gallery/ikkuna.peilikalvo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kiinteistökalvot – Wrap Point Vantaa",
+      },
+    ],
+  },
+};
 
 export default function KiinteistokalvotPage() {
   return (
@@ -15,8 +42,8 @@ export default function KiinteistokalvotPage() {
   alt="Kiinteistökalvot lasipinnoille ja ikkunoihin"
   fill
   priority
+   sizes="100vw" 
   className="h-full w-full object-cover opacity-60"
-  style={{ transform: 'translateZ(0)', willChange: 'transform' }}
 />
           <div className="absolute inset-0 bg-slate-950/70" />
         </div>
@@ -37,11 +64,7 @@ export default function KiinteistokalvotPage() {
               brändikalvotukset sekä opasteet lasipinnoille. 
             </p>
 
-            <div className="flex flex-wrap items-center gap-3 pt-2">
-              
-
-              
-            </div>
+            
           </div>
         </div>
       </section>
@@ -122,8 +145,9 @@ export default function KiinteistokalvotPage() {
   src="/gallery/rengas.center.banderolli.jpg"
   alt="Taustakuva – kiinteistökalvot ja lasipinnat"
   fill
+   sizes="100vw"  
+  loading="lazy"   
   className="h-full w-full object-cover"
-  style={{ transform: 'translateZ(0)', willChange: 'transform' }}
 />
           <div className="absolute inset-0 bg-slate-950/80" />
         </div>
