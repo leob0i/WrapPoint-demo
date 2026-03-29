@@ -181,7 +181,7 @@ export default function GraafinenSuunnitteluPage() {
             <div className="w-full md:w-[420px] flex-shrink-0 aspect-square overflow-hidden flex flex-col">
               <div className="relative flex-1">
                 <Image
-                  src="/gallery/bmw.pinkki.harmaa.JPG"
+                  src="/gallery/bmw.pinkki.harmaa.jpg"
                   alt="BMW pinkki harmaa teippaus"
                   fill
                    sizes="(max-width: 768px) 100vw, 420px"
