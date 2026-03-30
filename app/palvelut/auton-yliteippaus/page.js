@@ -35,41 +35,33 @@ export default function AutonYliteippausPage() {
       {/* HEADER tulee globaalisti MainHeader-komponentista */}
 
       {/* UUSI VIDEO-HERO – normaali taustavideo vain tälle herolle */}
-      <section className="relative overflow-hidden border-b border-white/10 bg-zinc-950">
-        {/* Taustavideo */}
-        <div className="absolute inset-0">
-          <video
-            className="h-full w-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/gallery/bmw.lokari.webp" // valinnainen placeholder-kuva
-          >
-            <source src="/services/hero2.mp4" type="video/mp4" />
-          </video>
+      {/* UUSI VIDEO-HERO – normaali taustavideo vain tälle herolle */}
+<section className="relative overflow-hidden border-b border-white/10 bg-zinc-950">
+  {/* Taustakuva */}
+  <div className="absolute inset-0">
+    <Image
+      src="/gallery/lime.bmw.webp"
+      alt="Auton yliteippaus Vantaa"
+      fill
+      priority
+      sizes="100vw"
+      className="h-full w-full object-cover object-[center_50%]"
+    />
 
-          {/* Tumma overlay, että teksti erottuu */}
-          <div className="absolute inset-0 bg-zinc-950/70" />
-        </div>
+    {/* Tumma overlay, että teksti erottuu */}
+    <div className="absolute inset-0 bg-zinc-950/70" />
+  </div>
 
-        {/* Hero-tekstit videon päällä */}
-        <div className="relative mx-auto max-w-6xl px-4 pt-24 pb-16 md:pt-28 md:pb-20">
-          
-          <h1  className="mt-3 max-w-3xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
-  Auton{" "}
-  <span className="text-amber-300">
-    yliteippaus
-  </span>
-</h1>
-
-
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-100 sm:text-base">
-            Henkilöauton, pakettiauton tai muun ajoneuvon yliteippaus samasta paikasta. On kyse sitten yritysautosta, virka-autosta tai tuning-projektista, meiltä saat laadukkaan teippauksen ammattitaidolla.
-          </p>
-        </div>
-      </section>
-
+  {/* Hero-tekstit kuvan päällä */}
+  <div className="relative mx-auto max-w-6xl px-4 pt-24 pb-16 md:pt-28 md:pb-20">
+    <h1 className="mt-3 max-w-3xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight">
+      Teippaukset
+    </h1>
+    <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-100 sm:text-base">
+      Muuta ajoneuvosi ulkonäköä kätevästi teippauksella, näin säilytät alkuperäisen pinnan jälleenmyyntiarvon.
+    </p>
+  </div>
+</section>
 
 
 {/* HERO / JOHDANTO – vanha hero sisällöllisenä osiona videon alla */}
@@ -92,19 +84,12 @@ export default function AutonYliteippausPage() {
 
     <p>
           Auton yliteippaus on nopea ja kustannustehokas tapa vaihtaa auton
-          ulkonäköä ilman pysyvää maalausta. Laadukkaat teippikalvot
-          suojaavat alkuperäistä maalipintaa, tuovat uuden sävyn tai
-          efektin ja voidaan tarvittaessa poistaa myöhemmin, kun haluat
-          auton takaisin alkuperäiseen ilmeeseen vahingoittamatta alkuperäistä pintaa.
+          ulkonäköä ilman pysyvää maalausta. Ammattitaitoinen asennus suojaa alkuperäistä maalipintaa, tuoden ajoneuvolle täysin uuden ilmeen.
         </p>
         <p>
-          Teemme yliteippaukset huolellisella esivalmistelulla ja
-          ammattimaisella asennuksella. Oli kyseessä auto, moottoripyörä taikka vene, anna sille uusi ilme teippauksella!
+          Toteutamme niin yliteippaukset kuin osittaiset teippaukset laadusta tinkimättä.
           <br></br>
-          <br></br> Valikoimassamme on satoja eri sävyjä laadukkaita materiaaleja. Voit valita yksivärisen pinnan
-          (matta, kiiltävä, satin), erikoisefektit tai yrityksen
-          brändivärit ja logot. Sivun alaosasta löydät suuntaa-antavan
-          hinnaston ja lomakkeen tarkemman tarjouksen pyytämiseen.
+          <br></br> Valikoimassamme on satoja eri sävyjä: kiiltävää, mattaa, satiinia sekä paljon erilaisia tekstuuripintoja. Tarvittaessa toteutamme myös täysin yksilölliset kuosit tulostamalla.
         </p>
 
         
@@ -204,7 +189,7 @@ export default function AutonYliteippausPage() {
             Huolella viimeistelty joka kohtaan
           </h2>
           <p>
-            Teippaamme ovenkahvat ja muutkin yksityiskohdat huolella ja laadusta tinkimättä. Tarvittaessa teippaamme myös ovikarmien sisäpinnat omalla designillä.
+         Käytössämme olevat materiaalit ovat tarvittaessa Teippauksen yhteydessä saat mukaasi kattavat hoito-ohjeet.
           </p>
           <div className="mt-3 flex justify-end">
             <a
@@ -230,11 +215,9 @@ export default function AutonYliteippausPage() {
       >
         <div className="mx-auto max-w-6xl px-4 py-12">
           <div className="mb-6 space-y-2">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-amber-300">
-              HINNASTO
-            </h2>
+           
             <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-              Suuntaa-antava hinnasto auton yliteippaukselle
+              Hinnasto
             </h3>
             
           </div>
@@ -242,7 +225,7 @@ export default function AutonYliteippausPage() {
           <div className="grid gap-5 md:grid-cols-3">
             <div className="flex flex-col rounded-2xl border border-white/15 bg-zinc-900/70 p-4">
               <h4 className="text-sm font-semibold text-slate-50 sm:text-base">
-                Henkilöauto – täysi yliteippaus
+                Henkilöauto – yliteippaus
               </h4>
               <p className="mt-2 text-xs text-slate-300 sm:text-sm">
                 Koko auton yliteippaus 
@@ -278,7 +261,7 @@ export default function AutonYliteippausPage() {
           </div>
 
           <p className="mt-5 text-xs text-slate-400 sm:text-sm">
-            Hinnat eivät ole lopullisia tarjouksia. Lopullinen hinta tarkentuu kohteesta ja toiveista riippuen. Kysy lisää!
+            Hinnat ovat suuntaa antavia ja sisältävät alv 25,5%.
           </p>
         </div>
       </section>
@@ -305,13 +288,12 @@ export default function AutonYliteippausPage() {
             <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
               Pyydä tarjous{" "}
               <span className="text-amber-300">
-                Auton yliteippauksesta
+                teippauksesta
               </span>
             </h2>
             <p className="text-sm leading-relaxed text-slate-100 sm:text-base">
               Kerro lyhyesti kohteesta, mitoista ja toivotusta ratkaisusta.
-              Voit mainita myös, onko sinulla valmiit aineistot vai tarvetta
-              suunnittelulle – ja halutessasi voit liittää kuvan, luonnoksen
+              Halutessasi voit liittää kuvan, luonnoksen
               tai PDF-tiedoston mukaan. Palaamme sinulle mahdollisimman pian.
             </p>
           </div>
@@ -401,14 +383,14 @@ export default function AutonYliteippausPage() {
                   className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none transition focus:border-amber-400"
                 >
                   <option value="">Valitse aihe</option>
-                  <option>Auton yliteippaus</option>
-                  <option>Mainosteippaukset</option>
-                  <option>Custom tarrat</option>
-                  <option>Kyltit ja banderollit</option>
-                  <option>Vaatepainatukset</option>
-                  <option>Toimitilateippaukset ja ikkunateippaukset</option>
-                  <option>Kuvan ja teippauksen suunnittelu</option>
-                  <option>Muu</option>
+                    <option>Auton yliteippaus</option>
+                    <option>Ikkunan tummennukset</option>
+                    <option>Custom- ja mainos tarrat</option>
+                    <option>PPF-suojaus</option>
+                   
+                    <option>Toimitilateippaukset ja ikkunateippaukset</option>
+
+                    <option>Muu</option>
                 </select>
               </div>
 
@@ -447,7 +429,7 @@ export default function AutonYliteippausPage() {
                 rows={4}
                 required
                 className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none transition focus:border-amber-400"
-                placeholder="Auton merkki ja malli, toivottu väri tai efekti, aikataulu ja budjettiraami ja aikataulu..."
+                placeholder="Auton merkki ja malli, toivottu väri tai efekti, aikataulu ja budjettiraami..."
               />
             </div>
 

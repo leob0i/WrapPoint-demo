@@ -38,22 +38,33 @@ const galleryImages = [
   },
   {
     src: "/gallery/bmw.wagon.redbull.webp",
-    alt: "Wagon red bull teippaus",
+    alt: "Red bull teippaus",
     
   },
   {
     src: "/gallery/bmw.custom.kuviot.webp",
-    alt: "Custom bemarin vihertävä teippaus",
+    alt: "Custom bemarin jokeri teippaus",
     
   },
   {
-    src: "/gallery/bmw.custom.jpg",
+    src: "/gallery/blurrattu.custom.bmw.webp",
     alt: "BMW custom teippaus.",
     
   },
+{
+    src: "/gallery/bmw.pinkki.harmaa.jpg",
+    alt: "Heijastava custom teippaus",
+    
+  },
+  {
+    src: "/gallery/bmw.pinkki.harmaa.reflex.jpg",
+    alt: "Heijastava custom teippaus",
+    
+  },
+
   {
     src: "/gallery/tesla.matta.chrome.delete.jpg",
-    alt: "Mattamusta tesla.",
+    alt: "Satiinimusta tesla.",
    
   },
   {
@@ -61,14 +72,34 @@ const galleryImages = [
     alt: "Audi pinkki teippaus.",
     
   },
+   {
+    src: "/gallery/lime.bmw.webp",
+    alt: "Värinmuutos teippauksella",
+    
+  },
+   {
+    src: "/gallery/savulasi.webp",
+    alt: "Lasien sävytys",
+    
+  }, {
+    src: "/gallery/lasit.tummennettu.volvo.jpg",
+    alt: "Lasien tummennus",
+    
+  },
+  {
+    src: "/gallery/lasit.tummennettu.jpg",
+    alt: "Lasien tummennus",
+    
+  },
+  
   {
     src: "/gallery/rengas.center.banderolli.jpg",
-    alt: "Iso banderolli",
+    alt: "Iso dibond kyltti",
     
   },
   {
     src: "/gallery/liuku.ovi.jpg",
-    alt: "Mainosteipattu liukuovi",
+    alt: "Toimitilan teippaus",
     
   },
   {
@@ -123,14 +154,14 @@ export default function GalleriaPage() {
                 GALLERIA
               </p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-                Teippaukset, jotka{" "}
+                Teippaukset{" "}
                 <span className="text-amber-300">
-                  erottuvat kadulla ja somessa
+                joilla erotut eduksesi
                 </span>
               </h1>
               <p className="text-sm sm:text-base leading-relaxed text-slate-300">
                 Wrap Point suunnittelee ja toteuttaa näyttävät yliteippaukset,
-                mainosteippaukset, kiinteistöteippaukset sekä yksityiskohdat, jotka keräävät katseet.
+                mainosteippaukset, kiinteistöteippaukset sekä yksityiskohdat, jotka kestävät.
                 Alla näet esimerkkejä eri projekteista. 
               </p>
               <p className="text-xs sm:text-sm text-slate-400">
@@ -199,59 +230,7 @@ export default function GalleriaPage() {
         </div>
       </section>
 
-      {/* KUVABOXI + TEKSTI -OSIO */}
-      <section className="relative bg-slate-950 py-16 md:py-20 border-b border-white/10">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-14">
-
-            {/* Vasen: neliölaatikko kahdella kuvalla, terävät kulmat, ei rakoa kuvien väliin */}
-            <div className="w-full md:w-[420px] flex-shrink-0 aspect-square overflow-hidden flex flex-col">
-              <div className="relative flex-1">
-                <Image
-                  src="/gallery/bmw.pinkki.harmaa.jpg"
-                  alt="BMW pinkki harmaa teippaus"
-                  fill
-                   sizes="(max-width: 768px) 100vw, 420px"
-                  loading="lazy"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative flex-1">
-                <Image
-                  src="/gallery/bmw.pinkki.harmaa.reflex.jpg"
-                  alt="BMW custom teippaus"
-                  fill
-                   sizes="(max-width: 768px) 100vw, 420px"
-                    loading="lazy"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Oikea: tekstikenttä */}
-            <div className="space-y-5 max-w-lg">
-              
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-                <span className="text-amber-300">Designia</span> jota et saa muualta
-
-              </h2>
-              <p className="text-base sm:text-lg font-bold leading-relaxed text-slate-300">
-                Reflexoivalla teipillä teipattu bemari on hyvä esimerkki siitä,
-                miten voimme toteuttaa uniikitkin pyynnöt. </p><p className="text-sm sm:text-base leading-relaxed text-slate-300"><br />
-                Tässä bemarissa ei näy teipin saumoja,
-                 vaikka auton takaosa heijastaa valoa ja etuosan teipit ei. 
-                Sama yhtenäinen rakenne, laadukas asennus ja materiaalit ovat meille ykkösiä!
-              </p>
-              <p className="text-sm leading-relaxed text-slate-400">
-                Käytämme ainoastaan laadukkaita materiaaleja, jotka kestävät
-                aikaa ja säätä. Ammattitaitoinen asennus takaa, ettei
-                lopputuloksessa näy kuplia, saumoja tai epätasaisuuksia ja kestää pitkään.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
+     
 
       {/* VARSINAINEN GALLERIA – ENEMMÄN KUVIA */}
       <section className="relative bg-slate-950 py-14 md:py-18">

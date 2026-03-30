@@ -53,7 +53,7 @@ export default function KiinteistokalvotPage() {
             
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
-              Lasipinnoista{" "}
+              Pinnoista{" "}
               <span className="text-amber-300">toimivammat, siistimmät</span>{" "}
               ja turvallisemmat.
             </h1>
@@ -76,7 +76,7 @@ export default function KiinteistokalvotPage() {
             <div className="space-y-4">
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
                 Näkösuoja,{" "}
-                <span className="text-amber-300">aurinkosuoja</span> ja{" "}
+                <span className="text-amber-300">aurinkosuoja</span> tai{" "}
                 <span className="text-amber-300">turva</span> – yhdellä
                 viimeistelyllä.
               </h2>
@@ -84,7 +84,7 @@ export default function KiinteistokalvotPage() {
               <p className="text-sm sm:text-base text-slate-300/90">
                 Kiinteistökalvot ovat fiksu tapa parantaa tilojen mukavuutta ja
                 ulkonäköä ilman isoja remontteja. Saat enemmän yksityisyyttä,
-                vähemmän häikäisyä ja paremman ilmeen – ja tarvittaessa myös
+                energiatehokkuutta ja paremman ilmeen – ja tarvittaessa myös
                 lisäturvaa lasipinnoille.
               </p>
 
@@ -250,12 +250,14 @@ export default function KiinteistokalvotPage() {
                   className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none transition focus:border-amber-400"
                 >
                   <option value="">Valitse aihe</option>
-                  <option>Auton yliteippaus</option>
-                  <option>Tummennukset</option>
-                  <option>Sisäpuhdistus</option>
-                  <option>Graafinen suunnittelu</option>
-                  <option>Kiinteistöt</option>
-                  <option>Vaatepainatukset</option>
+                    <option>Auton yliteippaus</option>
+                    <option>Ikkunan tummennukset</option>
+                    <option>Custom- ja mainos tarrat</option>
+                    <option>PPF-suojaus</option>
+                    
+                    <option>Toimitilateippaukset ja ikkunateippaukset</option>
+
+                    <option>Muu</option>
                 </select>
               </div>
 

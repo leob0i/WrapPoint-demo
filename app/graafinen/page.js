@@ -56,7 +56,7 @@ export default function GraafinenSuunnitteluPage() {
               <span className="text-amber-300">Graafinen</span> suunnittelu
             </h1>
             <p className="mt-4 text-base sm:text-lg text-slate-200">
-              Valmistamme tarroja, kalvoja ja vaatepainatuksia toiveidesi mukaan.
+              Valmistamme tarrat tai custom teippaukset toiveidesi mukaan.
             </p>
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function GraafinenSuunnitteluPage() {
                   Custom grafiikka autoon
                 </h2>
                 <p>
-                  Toteutamme isompien ja vaativienkin kokonaisuuksien toteutuksen, kuten custom grafiikka auton yliteippaukseen.
+                  Meiltä onnistuu myös isompien kokonaisuuksien toteutus, kuten custom grafiikka auton yliteippaukseen.
                 </p>
                 <p>
                   Autamme tarvittaessa suunnittelussa ja jokainen työmme on meille ainutlaatuinen.
@@ -112,11 +112,9 @@ export default function GraafinenSuunnitteluPage() {
               </h2>
               <p className="text-sm sm:text-base text-slate-200">
                 Suunnittelemme ja valmistamme custom tarrat juuri sinun toiveidesi mukaan.
-                Isot kylkitarrat, tuulilasin banderollit, sponsori- ja mainostarrat.
+                Isot kylkitarrat, tuulilasin bannerit, sponsori- ja mainostarrat.
               </p>
-              <p className="text-sm sm:text-base text-slate-200">
-                Meiltä onnistuu myös vaatepainatukset vaikka tiimeille, yrityksellesi tai itsellesi.
-              </p>
+             
             </div>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
@@ -154,8 +152,8 @@ export default function GraafinenSuunnitteluPage() {
 
               <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden border border-white/10 bg-slate-950/70">
                 <Image
-                  src="/services/wrap.point.musta.jpg"
-                  alt="Tekstiilipainatukset"
+                  src="/gallery/bmw.custom.jokeri.webp"
+                  alt="Custom grafiikat"
                   fill
                   sizes="(max-width: 640px) 100vw, 33vw"  
                   loading="lazy"
@@ -164,7 +162,7 @@ export default function GraafinenSuunnitteluPage() {
                 <div className="absolute inset-0 bg-slate-950/20" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3 text-lg font-semibold text-slate-100">
-                  Vaatepainatukset
+                  Custom grafiikat
                 </div>
               </div>
             </div>
@@ -172,59 +170,7 @@ export default function GraafinenSuunnitteluPage() {
         </section>
 
 
- {/* KUVABOXI + TEKSTI -OSIO */}
-      <section className="relative bg-slate-950 py-16 md:py-20 border-b border-white/10">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-14">
-
-            {/* Vasen: neliölaatikko kahdella kuvalla, terävät kulmat, ei rakoa kuvien väliin */}
-            <div className="w-full md:w-[420px] flex-shrink-0 aspect-square overflow-hidden flex flex-col">
-              <div className="relative flex-1">
-                <Image
-                  src="/gallery/bmw.pinkki.harmaa.jpg"
-                  alt="BMW pinkki harmaa teippaus"
-                  fill
-                   sizes="(max-width: 768px) 100vw, 420px"
-                  loading="lazy"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative flex-1">
-                <Image
-                  src="/gallery/bmw.pinkki.harmaa.reflex.jpg"
-                  alt="BMW custom teippaus"
-                  fill
-                   sizes="(max-width: 768px) 100vw, 420px"
-                    loading="lazy"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Oikea: tekstikenttä */}
-            <div className="space-y-5 max-w-lg">
-              
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-                <span className="text-amber-300">Designia</span> jota et saa muualta
-
-              </h2>
-              <p className="text-base sm:text-lg font-bold leading-relaxed text-slate-300">
-                Reflexoivalla teipillä teipattu bemari on hyvä esimerkki siitä,
-                miten voimme toteuttaa uniikitkin pyynnöt. </p><p className="text-sm sm:text-base leading-relaxed text-slate-300"><br />
-                Tässä bemarissa ei näy teipin saumoja,
-                 vaikka auton takaosa heijastaa valoa ja etuosan teipit ei. 
-                Sama yhtenäinen rakenne, laadukas asennus ja materiaalit ovat meille ykkösiä!
-              </p>
-              <p className="text-sm leading-relaxed text-slate-400">
-                Käytämme ainoastaan laadukkaita materiaaleja, jotka kestävät
-                aikaa ja säätä. Ammattitaitoinen asennus takaa, ettei
-                lopputuloksessa näy kuplia, saumoja tai epätasaisuuksia ja kestää pitkään.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
+ 
 
         {/* Yhteydenottolomake */}
         <section id="yhteydenotto" className="relative bg-slate-950 py-16 md:py-20">
@@ -247,13 +193,13 @@ export default function GraafinenSuunnitteluPage() {
               <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
                 Pyydä tarjous tai kysy lisää{" "}
                 <span className="text-amber-300">
-                  tarroista, teipeistä ja vaatepainatuksista
+                  tarroista ja tepeistä
                 </span>
               </h2>
               <p className="text-sm leading-relaxed text-slate-100 sm:text-base">
-                Kerro lyhyesti mitä haluat: custom tarra autoihin, mainos, vaatepainatus
-                tai muu graafinen työ. Voit valita alta, mikä palvelu kiinnostaa eniten –
-                ja halutessasi voit liittää kuvan, luonnoksen tai PDF-tiedoston mukaan.
+                Kerro lyhyesti mitä haluat: custom tarra autoihin, mainos
+                tai muu graafinen työ. Voit valita alta, mikä palvelu kiinnostaa eniten.
+                Halutessasi voit liittää kuvan, luonnoksen tai PDF-tiedoston mukaan.
                 Palaamme sinulle mahdollisimman pian.
               </p>
             </div>
@@ -344,11 +290,13 @@ export default function GraafinenSuunnitteluPage() {
                   >
                     <option value="">Valitse aihe</option>
                     <option>Auton yliteippaus</option>
-                    <option>Tummennukset</option>
-                    <option>Sisäpuhdistus</option>
-                    <option>Graafinen suunnittelu</option>
-                    <option>Kiinteistöt</option>
-                    <option>Vaatepainatukset</option>
+                    <option>Ikkunan tummennukset</option>
+                    <option>Custom- ja mainos tarrat</option>
+                    <option>PPF-suojaus</option>
+                    
+                    <option>Toimitilateippaukset ja ikkunateippaukset</option>
+
+                    <option>Muu</option>
                   </select>
                 </div>
 

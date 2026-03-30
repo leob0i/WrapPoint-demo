@@ -36,12 +36,13 @@ export default function TummennuksetPage() {
       <section className="relative border-b border-white/10 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/gallery/gtr-green.jpg"
+            src="/gallery/lasien_valojen.tummennus.webp
+            "
             alt="Auton lasien tummennukset"
             fill
             priority
             sizes="100vw"
-            className="h-full w-full object-cover opacity-60"
+            className="h-full w-full object-cover object-[center_30%] opacity-60"
           />
           <div className="absolute inset-0 bg-slate-950/70" />
         </div>
@@ -49,7 +50,7 @@ export default function TummennuksetPage() {
         <div className="relative mx-auto max-w-6xl px-4 pt-24 pb-16 md:pt-28 md:pb-20">
           <div className="max-w-3xl space-y-4 mt-12 md:mt-16">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
-              Lasien tummennukset
+              Tummennukset
             </h1>
             <p className="mt-2 text-white text-sm font-semibold uppercase tracking-[0.2em]">
   Lasien ja valojen tummennukset autoon, <span className="text-amber-300">suojaa</span>, <span className="text-amber-300">tyyliä</span> ja <span className="text-amber-300">mukavuutta</span>.
@@ -73,18 +74,19 @@ export default function TummennuksetPage() {
 
         {/* Otsikko kahdelle riville – sama tyyli kuin yliteippaus */}
         <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-[2.6rem] font-semibold tracking-[0.05em] uppercase text-slate-50">
-          Tummennukset, jotka <span className="text-amber-300">tuntuvat</span> ja <span className="text-amber-300">näkyvät</span> heti
+          Lasien <br />
+          <span className="text-amber-300">tummennukset</span>
         </h2>
 
         <p>
-          Olitpa hakemassa hillittyä OEM-tyyliä, parempaa yksityisyyttä tai vähemmän kuumuutta autoon – me toteutamme lasien tummennukset nopeasti, siististi ja kestävällä laadulla.
+           Lasien tummennus tuo tyylin lisäksi mukavuutta ja toiminnallisuutta. Se suojaa auton sisäpintoja sekä helpottaa pitämään sisätilat viileänä.
         </p>
         <p>✔ Vähemmän kuumuutta kesällä</p>
         <p>✔ Suoja haitalliselta UV-säteilyltä</p>
         <p>✔ Lisää yksityisyyttä ja ajomukavuutta</p>
         <p>✔ Tyylikkäämpi ulkonäkö heti</p>
         <p>
-          Asennamme kalvot huolellisesti ilman kuplia tai virheitä – lopputulos näyttää siltä kuin se olisi tullut tehtaalta.
+          Valikoimasta löytyy: 50%, 35%, 20%, 15% ja 5% kalvojen lisäksi myös erivärisiä sävykalvoja.
         </p>
       </div>
 
@@ -101,7 +103,7 @@ export default function TummennuksetPage() {
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
           <div className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-slate-950/80 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.18em] text-amber-200">
-            Lasien tummennukset alk. 99,00€
+            Lasien tummennukset alk. 100€
           </div>
         </div>
       </div>
@@ -128,7 +130,9 @@ export default function TummennuksetPage() {
             className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
-          
+          <div className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-slate-950/80 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.18em] text-amber-200">
+            Valojen tummennukset alk. 100€
+          </div>
         </div>
       </div>
 
@@ -140,7 +144,7 @@ export default function TummennuksetPage() {
         </h2>
 
         <p>
-          Tummennetut valot antavat autolle yhtenäisemmän, aggressiivisemman ilmeen – juuri sopivalla tasolla sinun makuusi.
+          Tummennetut valot antavat autolle aggressiivisemman ilmeen – juuri sopivalla tasolla sinun makuusi.
         </p>
         <p>✔ Suojaa kiveniskuilta ja naarmuilta</p>
         <p>✔ Estää UV-haalistumista</p>
@@ -177,9 +181,8 @@ export default function TummennuksetPage() {
               <span className="text-amber-300">tummennuksista</span>
             </h2>
             <p className="text-sm leading-relaxed text-slate-100 sm:text-base">
-              Kerro auton merkki, malli ja vuosimalli sekä mitkä lasit haluat
-              tummennettavan. Voit myös mainita, haluatko hillityn vai tummemman
-              lopputuloksen.
+              Kerro auton merkki, malli ja vuosimalli sekä mitkä lasit/valot haluat
+              tummennettavan. 
             </p>
           </div>
 
@@ -268,12 +271,14 @@ export default function TummennuksetPage() {
                   className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none transition focus:border-amber-400"
                 >
                   <option value="">Valitse aihe</option>
-                  <option>Auton yliteippaus</option>
-                  <option>Tummennukset</option>
-                  <option>Sisäpuhdistus</option>
-                  <option>Graafinen suunnittelu</option>
-                  <option>Kiinteistöt</option>
-                  <option>Vaatepainatukset</option>
+                    <option>Auton yliteippaus</option>
+                    <option>Ikkunan tummennukset</option>
+                    <option>Custom- ja mainos tarrat</option>
+                    <option>PPF-suojaus</option>
+                   
+                    <option>Toimitilateippaukset ja ikkunateippaukset</option>
+
+                    <option>Muu</option>
                 </select>
               </div>
 

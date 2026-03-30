@@ -3,26 +3,26 @@ import Image from "next/image";
 
 
 export const metadata = {
-  title: "Auton sisäpuhdistus Vantaa – Henkilöauto ja pakettiauto | Wrap Point",
+  title: "PPF-suojaus Vantaa – Auton maalipinnan suojaus | Wrap Point",
   description:
-    "Wrap Point puhdistaa auton sisätilat Vantaalla. Sisäpuhdistus alk. 34,90 €. Kangas-, mokka- ja nahkaistuimet – pyydä tarjous!",
+    "Wrap Point asentaa PPF-kalvon Vantaalla. Näkymätön suoja naarmuilta ja kiveniskuilta – saatavilla kiiltävänä, mattana ja eri väreissä. Pyydä tarjous!",
   alternates: {
-    canonical: "https://www.wrappoint.fi/palvelut/autonsisapuhdistus",
+    canonical: "https://www.wrappoint.fi/palvelut/ppf",
   },
   openGraph: {
-    title: "Auton sisäpuhdistus – Wrap Point Vantaa",
+    title: "PPF-suojaus – Wrap Point Vantaa",
     description:
-      "Sisäpuhdistus alk. 34,90 €. Henkilöauto, pakettiauto tai muu ajoneuvo – me hoidamme sen.",
-    url: "https://www.wrappoint.fi/palvelut/autonsisapuhdistus",
+      "PPF-kalvo suojaa maalipintaa naarmuilta ja kiveniskuilta huomaamattomasti. Saatavilla kiiltävänä, mattana ja eri väreissä.",
+    url: "https://www.wrappoint.fi/palvelut/ppf",
     siteName: "Wrap Point",
     locale: "fi_FI",
     type: "website",
     images: [
       {
-        url: "https://www.wrappoint.fi/gallery/bmw.etupenkit.2.webp",
+        url: "https://www.wrappoint.fi/gallery/ppf.webp",
         width: 1200,
         height: 630,
-        alt: "Auton sisäpuhdistus – Wrap Point Vantaa",
+        alt: "PPF-suojaus – Wrap Point Vantaa",
       },
     ],
   },
@@ -39,8 +39,8 @@ export default function AutonSisapuhdistusPage() {
           {/* Taustakuva */}
           <div className="absolute inset-0">
             <Image
-              src="/gallery/bmw.etupenkit.2.webp"
-              alt="Auton sisäpuhdistus."
+              src="/gallery/ppf.webp"
+              alt="Auton ppf-suojaus."
               fill
               priority
               sizes="100vw"   
@@ -51,34 +51,62 @@ export default function AutonSisapuhdistusPage() {
           </div>
 
           {/* Varsinainen sisältö */}
-          <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-18">
+          <div className="relative mx-auto max-w-6xl px-4 pt-24 pb-16 md:pt-28 md:pb-20 min-h-[60vh] flex flex-col justify-end">
 
             <div className="max-w-xl space-y-6">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-                Anna itsellesi ripaus{" "}
+                Suojateippaus eli{" "}
                 <span className="text-amber-300">
-                 ajomukavuutta!
+                 PPF
                 </span>
-                
+
               </h1>
 
               <p className="text-sm sm:text-base text-slate-200 max-w-lg">
-                Oli sitten autosi ainoastaan imurointia vailla tai kuin
-                pyörremyrskyn jäljiltä, me hoidamme sen. Pesemme myös sekä
-                kangas-, mokka- ja nahkaistuimet.
+                Kalvo suojaa ajoneuvoasi tien päällä. Se on paksumpi ja joustavampi kuin tavallinen teippi, sekä sen hydrofobinen pinta hylkii vettä ja likaa. Kalvo omaa myös "self healing" ominaisuuden.
               </p>
+            </div>
+          </div>
+        </section>
 
-              <p className="text-sm sm:text-base text-slate-200 max-w-lg">
-                Putsaamme kaikki kulkuneuvot, oli sitten kyseessä pakettiauto,
-                henkilöauto taikka muu vehje! Me putsaamme sen kaikista
-                epäpuhtaukista!
+
+         {/* Hyödyt + vaihtoehdot */}
+        <section className="bg-slate-950">
+          <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+            <div className="grid gap-8 md:grid-cols-2 md:items-start">
+        
+              {/* Tekstipuoli */}
+              <div className="space-y-4 text-sm sm:text-base text-slate-300/90">
+        
+                {/* Otsikko kahdelle riville – sama tyyli kuin yliteippaus */}
+                <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-[2.6rem] font-semibold tracking-[0.05em] uppercase text-slate-50">
+                  <span className="text-amber-300">Suojaa</span> huomaamatta
+                </h2>
+        
+                
+                <p></p>PPF säilyttää maalipinnan täydellisenä ja näin ollen jälleenmyyntiarvokin säilyy parempana. PPF kalvo on lähes huomaamaton. Asennetaan tyypillisesti alueille jotka ovat alttiina kovalle rasitukselle (etupuskuri, konepelti, ajovalot, helmat)
+                <br></br> <br></br>
+                <p className="text-sm sm:text-base font-semibold text-amber-300">
+                Saatavilla kiiltävänä ja mattana, läpinäkyvänä sekä eri väreissä.
               </p>
-
-              <p className="text-sm sm:text-base font-semibold text-amber-300">
-                Auton sisäpuhdistus alk. 34,90€
-              </p>
-
-              
+              </div>
+        
+              {/* Kuvapuoli */}
+              <div className="space-y-5 md:pl-4 lg:pl-8">
+                <div className="relative h-80 sm:h-[22rem] md:h-[23rem] w-full overflow-hidden rounded-2xl border border-white/20 bg-slate-900/70">
+                  <Image
+                    src="/gallery/ppf.sivu.webp"
+                    alt="Esimerkki PPF-kalvosta"
+                    fill
+                     sizes="(max-width: 768px) 100vw, 50vw"   
+                      loading="lazy"  
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
+                  
+                </div>
+              </div>
+        
             </div>
           </div>
         </section>
@@ -88,7 +116,7 @@ export default function AutonSisapuhdistusPage() {
           {/* Taustakuva */}
           <div className="absolute inset-0">
             <Image
-              src="/gallery/bmw.sisa.ratti.webp"
+              src="/gallery/bmw.lokari.webp"
               alt="Taustakuva auton sisäpuhdistuksesta."
               fill
                sizes="100vw"    
@@ -102,13 +130,13 @@ export default function AutonSisapuhdistusPage() {
           <div className="relative mx-auto max-w-4xl px-4">
             <div className="mx-auto max-w-2xl space-y-3 text-center">
               <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                Pyydä tarjous{" "}
+                Pyydä tarjous ajoneuvon{" "}
                 <span className="text-amber-300">
-                  sisäpuhdistuksesta
+                  suojauksesta
                 </span>
               </h2>
               <p className="text-sm leading-relaxed text-slate-100 sm:text-base">
-                Kerro lyhyesti ajoneuvostasi ja toivotusta puhdistuksen tasosta.
+                Kerro lyhyesti ajoneuvostasi ja toivotusta suojauksen tasosta.
                 Voit mainita myös ajoneuvon tyyppi ja kunto – palaamme sinulle
                 mahdollisimman pian.
               </p>
@@ -202,10 +230,10 @@ export default function AutonSisapuhdistusPage() {
                     <option>Auton yliteippaus</option>
                     <option>Ikkunan tummennukset</option>
                     <option>Custom- ja mainos tarrat</option>
-                    <option>Auton sisäpuhdistus</option>
-                    <option>Vaatepainatukset</option>
+                    <option>PPF-suojaus</option>
+                    
                     <option>Toimitilateippaukset ja ikkunateippaukset</option>
-                    <option>Kuvan ja teippauksen suunnittelu</option>
+
                     <option>Muu</option>
                   </select>
                 </div>

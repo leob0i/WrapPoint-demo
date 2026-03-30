@@ -185,7 +185,7 @@ export default function MainHeader() {
       { href: "/#etusivu", label: "Etusivu" },
       { href: "/palvelut/auton-yliteippaus", label: "Yliteippaus" },
       { href: "/palvelut/ikkunakalvot", label: "Ikkunakalvot" },
-      { href: "/palvelut/autonsisapuhdistus", label: "Sisäpuhdistus" },
+      { href: "/palvelut/ppf", label: "PPF" },
       { href: "/palvelut/toimitila", label: "Kiinteistöön" },
       { href: "/graafinen", label: "Graafinen suunnittelu" },
       { href: "/palvelut/galleria", label: "Galleria" },

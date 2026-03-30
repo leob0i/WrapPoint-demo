@@ -100,7 +100,7 @@ export default function Home() {
 
 {/* Väliaikainen hero-kuva */}
 <img
-  src="/gallery/bmw.custom.jpg"
+  src="/gallery/blurrattu.custom.bmw.webp"
   alt="Wrap Point – auton teippaus Vantaalla"
   className="absolute inset-0 h-full w-full object-cover"
   fetchPriority="high" 
@@ -172,46 +172,46 @@ export default function Home() {
   <div className="mx-auto max-w-6xl px-4">
     <div className="max-w-2xl">
       <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-        Hemmottele autoasi
+        Palvelut
       </h2>
       <p className="mt-3 text-sm text-slate-300 md:text-base">
-        Tarjoamme monipuolisia ratkaisuja oli sitten kyseessä ajoneuvosi, kiinteistösi tai vaikka yrityksesi!
+        Tarjoamme monipuolisia ratkaisuja oli sitten kyseessä ajoneuvosi, kiinteistösi tai yrityksesi!
       </p>
     </div>
 
     {/* 5 korttia samalla rivillä (lg+) */}
     <div className="mt-10 grid gap-4 lg:grid-cols-5">
       <ServiceCard
-        title="Auton yliteippaus"
-        description="Vaihda auton ilme täysin ilman maalausta. Laadukkaat kalvot ja siisti viimeistely."
+        title="Teippaukset"
+        description="Erotu joukosta! Anna ajoneuvollesi uusi ilme ja suojaa teippauksella."
         imageSrc="/gallery/bmw.lokari.webp"
         href="/palvelut/auton-yliteippaus"
       />
 
       <ServiceCard
-        title="Ikkunakalvot ja tummennukset"
-        description="Lasien ja valojen tummennukset tuovat suojaa, tyyliä ja näkyvyyttä."
-        imageSrc="/gallery/toyota.tummennus.delete.webp"
+        title="Tummennukset"
+        description="Tyyliä ja suojaa autollesi! Lasien tummennus suojaa uv-säteiltä tuoden tyylikkään ulkonäön autollesi."
+        imageSrc="/gallery/lasien_valojen.tummennus.webp"
         href="/palvelut/ikkunakalvot"
       />
 
       <ServiceCard
-        title="Auton sisäpuhdistus"
-        description="Oli autosi ainoastaan imurointia vailla, tai kun pyörremyrskyn jäljiltä, me putsaamme sen."
-        imageSrc="/gallery/bmw.sisa.ratti.webp"
-        href="/palvelut/autonsisapuhdistus"
+        title="PPF"
+        description="Anna ajoneuvollesi sen ansaitsema suoja. Kiveniskukalvolla säilytät ajoneuvosi pinnan uudenveroisena."
+        imageSrc="/gallery/ppf.webp"
+        href="/palvelut/ppf"
       />
 
       <ServiceCard
         title="Kiinteistöön"
-        description="Aurinkosuojakalvot, peilikalvot, murtosuojakalvot ja muut kiinteistökalvot."
+        description="Mukavuutta, turvaa ja tyyliä kiinteistöösi! Kiinteistökalvoilla energiatehokkuutta sekä yksityisyyttä, sisustusteipeillä kodin pinnata uusiksi."
         imageSrc="/gallery/ikkuna.peilikalvo.jpg"
         href="/palvelut/toimitila"
       />
 
       <ServiceCard
         title="Graafinen suunnittelu"
-        description="Valmistamme tarroja toiveesi mukaan. Isot ja pienet tarrat, custom teipit ja vaatepainatukset."
+        description="Valmistamme tarroja toiveesi mukaan. Isot ja pienet tarrat, custom teipit."
         imageSrc="/gallery/pikku.tarrat.jpg"
         href="/graafinen"
       />
@@ -303,10 +303,10 @@ export default function Home() {
         <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
           Tarjoamme monipuolisia ratkaisuja oli
           sitten kyseessä ajoneuvosi, kiinteistösi
-          tai vaikka yrityksesi!
+          tai yrityksesi!
           Olemme vuonna 2024 perustettu yritys
           joka keskittyy ajoneuvojen sekä
-          kiinteistöjen teippauksiin ja kalvotuksiin. Myös isommat custom projektit onnistuu luotettavasti ja nopeasti.
+          kiinteistöjen teippauksiin ja kalvotuksiin. Meiltä onnistuu myös isommatkin projektit suunnittelusta toteutukseen.
         </p>
 
 
@@ -343,7 +343,7 @@ export default function Home() {
           </a>
         </div>
 
-        <p className="text-xs leading-relaxed text-slate-300">
+        <p className="text-sm leading-relaxed text-slate-300">
 
   Y-tunnus: 3432572-7
  </p>
@@ -520,13 +520,15 @@ export default function Home() {
             name="type"
             className="w-full rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-sm text-slate-50 outline-none transition focus:border-amber-400"
           >
-            <option value="">Valitse aihe</option>
-            <option>Auton yliteippaus</option>
-            <option>Tummennukset</option>
-            <option>Sisäpuhdistus</option>
-            <option>Graafinen suunnittelu</option>
-            <option>Kiinteistöt</option>
-            <option>Vaatepainatukset</option>
+           <option value="">Valitse aihe</option>
+                    <option>Auton yliteippaus</option>
+                    <option>Ikkunan tummennukset</option>
+                    <option>Custom- ja mainos tarrat</option>
+                    <option>PPF-suojaus</option>
+                    
+                    <option>Toimitilateippaukset ja ikkunateippaukset</option>
+
+                    <option>Muu</option>
           </select>
         </div>
 
