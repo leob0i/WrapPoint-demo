@@ -137,7 +137,7 @@ export default function AutonSisapuhdistusPage() {
               </h2>
               <p className="text-sm leading-relaxed text-slate-100 sm:text-base">
                 Kerro lyhyesti ajoneuvostasi ja toivotusta suojauksen tasosta.
-                Voit mainita myös ajoneuvon tyyppi ja kunto – palaamme sinulle
+                Voit mainita myös ajoneuvon merkin ja mallin. Palaamme sinulle
                 mahdollisimman pian.
               </p>
             </div>

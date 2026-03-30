@@ -204,7 +204,7 @@ export default function Home() {
 
       <ServiceCard
         title="Kiinteistöön"
-        description="Mukavuutta, turvaa ja tyyliä kiinteistöösi! Kiinteistökalvoilla energiatehokkuutta sekä yksityisyyttä, sisustusteipeillä kodin pinnata uusiksi."
+        description="Mukavuutta, turvaa ja tyyliä kiinteistöösi! Kiinteistökalvoilla energiatehokkuutta sekä yksityisyyttä, sisustusteipeillä kodin pinnat uusiksi."
         imageSrc="/gallery/ikkuna.peilikalvo.jpg"
         href="/palvelut/toimitila"
       />

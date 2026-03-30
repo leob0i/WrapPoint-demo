@@ -79,7 +79,7 @@ export default function AutonYliteippausPage() {
     <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-[2.6rem] font-semibold tracking-[0.05em] uppercase">
   Muuta ulkonäköä
   <br />
-  <span className="text-amber-300">Ja erotu joukosta</span>
+  <span className="text-amber-300">ja erotu joukosta</span>
 </h2>
 
     <p>
@@ -189,7 +189,7 @@ export default function AutonYliteippausPage() {
             Huolella viimeistelty joka kohtaan
           </h2>
           <p>
-         Käytössämme olevat materiaalit ovat tarvittaessa Teippauksen yhteydessä saat mukaasi kattavat hoito-ohjeet.
+        Teippauksen yhteydessä saat mukaasi kattavat hoito-ohjeet.
           </p>
           <div className="mt-3 flex justify-end">
             <a

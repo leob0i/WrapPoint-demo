@@ -193,7 +193,7 @@ export default function GraafinenSuunnitteluPage() {
               <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
                 Pyydä tarjous tai kysy lisää{" "}
                 <span className="text-amber-300">
-                  tarroista ja tepeistä
+                  tarroista ja teipeistä
                 </span>
               </h2>
               <p className="text-sm leading-relaxed text-slate-100 sm:text-base">
